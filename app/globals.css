@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/*
+  Design tokens, from portfolio-structure.md (locked design system).
+  Edit the values below to adjust the whole site's look.
+*/
+:root {
+  /* Base neutrals */
+  --color-base: #faf9f6; /* page background */
+  --color-surface: #f0eee8; /* card/section background */
+  --color-charcoal: #2a2a28; /* body text */
+  --color-muted: #9a9690; /* secondary text */
+
+  /* Accent trio — rotates across company cards/tags, never tied to real brand colors */
+  --color-amber: #ba7517;
+  --color-olive: #3b6d11;
+  --color-terracotta: #d85a30;
+
+  /* Work card gradient tints (light tint -> base), one pair per accent */
+  --gradient-amber-from: #faeeda;
+  --gradient-olive-from: #eaf1e2;
+  --gradient-terracotta-from: #fbe8e0;
+}
+
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+
+  /* Colors, exposed as Tailwind utilities: bg-base, text-charcoal, etc. */
+  --color-base: var(--color-base);
+  --color-surface: var(--color-surface);
+  --color-charcoal: var(--color-charcoal);
+  --color-muted: var(--color-muted);
+  --color-amber: var(--color-amber);
+  --color-olive: var(--color-olive);
+  --color-terracotta: var(--color-terracotta);
+
+  /* Rounded throughout — applies via rounded-* utilities, default radius bumped up */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--color-charcoal);
+}
