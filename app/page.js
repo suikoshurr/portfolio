@@ -1,17 +1,25 @@
+import Header from "@/components/home/Header";
+import Hero from "@/components/home/Hero";
+import IconMarquee from "@/components/home/IconMarquee";
+import Work from "@/components/home/Work";
+import About from "@/components/home/About";
+import Testimonials from "@/components/home/Testimonials";
+import OffDuty from "@/components/home/OffDuty";
+import Tools from "@/components/home/Tools";
+import Footer from "@/components/home/Footer";
+
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center justify-center p-16">
-      <div className="rounded-xl bg-surface p-12 text-center">
-        <h1 className="font-serif text-4xl text-charcoal">sabeel dhar</h1>
-        <p className="mt-2 font-sans text-sm text-muted">
-          design tokens are wired up — fonts, colors, radius.
-        </p>
-        <div className="mt-6 flex justify-center gap-3">
-          <span className="rounded-full bg-amber px-3 py-1 text-xs text-white">amber</span>
-          <span className="rounded-full bg-olive px-3 py-1 text-xs text-white">olive</span>
-          <span className="rounded-full bg-terracotta px-3 py-1 text-xs text-white">terracotta</span>
-        </div>
-      </div>
+    <main className="mx-auto w-full max-w-2xl px-6 py-8">
+      <Header />
+      <Hero />
+      <IconMarquee />
+      <Work />
+      <About />
+      <Testimonials />
+      <OffDuty />
+      <Tools />
+      <Footer />
     </main>
   );
 }
