@@ -20,6 +20,14 @@
   --gradient-amber-from: #faeeda;
   --gradient-olive-from: #eaf1e2;
   --gradient-terracotta-from: #fbe8e0;
+
+  /* Motion — change these to retune feel sitewide */
+  --hover-scale: 1.02;
+  --hover-duration: 180ms;
+  --reveal-distance: 16px;
+  --reveal-duration: 400ms;
+  --reveal-stagger: 60ms;
+  --marquee-duration: 32s;
 }
 
 @theme inline {
@@ -46,4 +54,53 @@
 body {
   background: var(--color-base);
   color: var(--color-charcoal);
+}
+
+/* Shared hover lift — used by work cards, tool tiles, testimonial cards */
+.hover-lift {
+  transition: transform var(--hover-duration) ease-out;
+}
+.hover-lift:hover {
+  transform: scale(var(--hover-scale));
+}
+
+/* Scroll reveal: fade + rise. JS toggles .is-visible once an element enters view. */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition: opacity var(--reveal-duration) ease-out,
+    transform var(--reveal-duration) ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquee: duplicated track scrolls continuously, pauses on hover */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+}
+.marquee-pause-on-hover:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Work card gradient tints — 135deg, light tint fading to base, per accent */
+.gradient-amber {
+  background: linear-gradient(135deg, var(--gradient-amber-from), var(--color-base));
+}
+.gradient-olive {
+  background: linear-gradient(135deg, var(--gradient-olive-from), var(--color-base));
+}
+.gradient-terracotta {
+  background: linear-gradient(135deg, var(--gradient-terracotta-from), var(--color-base));
 }

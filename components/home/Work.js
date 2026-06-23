@@ -1,16 +1,19 @@
 import { workEntries, originEntry } from "@/lib/data";
+import Reveal from "./Reveal";
 
 function WorkCard({ entry }) {
   return (
-    <div className="flex items-start gap-4 rounded-xl bg-surface p-5">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-base text-xs text-muted">
+    <div
+      className={`hover-lift gradient-${entry.accent} flex items-start gap-4 rounded-xl p-5`}
+    >
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-base/70 text-xs text-muted">
         lg
       </div>
 
       <div className="flex-1">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <p className="font-sans text-sm">
-            <span className="font-medium">{entry.role}</span>{" "}
+            <span className="font-medium text-charcoal">{entry.role}</span>{" "}
             <span className="text-muted">{entry.dates}</span>
           </p>
           <p className="text-xs text-muted">
@@ -25,7 +28,7 @@ function WorkCard({ entry }) {
           {entry.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-base px-2 py-0.5 text-xs text-muted"
+              className="rounded-full bg-base/70 px-2 py-0.5 text-xs text-muted"
             >
               {tag}
             </span>
@@ -39,7 +42,7 @@ function WorkCard({ entry }) {
 function OriginCard() {
   return (
     <div className="flex items-start gap-4 rounded-xl border border-dashed border-muted/50 p-5">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-base text-xs text-muted">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
         lg
       </div>
       <div className="flex-1">
@@ -55,13 +58,19 @@ function OriginCard() {
 
 export default function Work() {
   return (
-    <section id="work" className="mt-12">
-      <h2 className="text-sm text-muted">— work</h2>
+    <section id="work" className="mt-16">
+      <Reveal>
+        <h2 className="text-sm tracking-wide text-muted">— work</h2>
+      </Reveal>
       <div className="mt-4 flex flex-col gap-3">
-        {workEntries.map((entry) => (
-          <WorkCard key={entry.company} entry={entry} />
+        {workEntries.map((entry, i) => (
+          <Reveal key={entry.company} delay={i * 60}>
+            <WorkCard entry={entry} />
+          </Reveal>
         ))}
-        <OriginCard />
+        <Reveal delay={workEntries.length * 60}>
+          <OriginCard />
+        </Reveal>
       </div>
     </section>
   );

@@ -1,17 +1,24 @@
 import { testimonials } from "@/lib/data";
+import Reveal from "./Reveal";
 
 export default function Testimonials() {
   return (
-    <section className="mt-12">
-      <h2 className="text-sm text-muted">— what peers say</h2>
+    <section className="mt-16">
+      <Reveal>
+        <h2 className="text-sm tracking-wide text-muted">— what peers say</h2>
+      </Reveal>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {testimonials.map((t, i) => (
-          <div key={i} className="rounded-xl bg-surface p-4">
-            <p className="text-sm italic text-charcoal">&ldquo;{t.quote}&rdquo;</p>
-            <p className="mt-3 text-xs text-muted">
-              {t.name}, {t.role} · {t.company}
-            </p>
-          </div>
+          <Reveal key={i} delay={i * 60}>
+            <div className="hover-lift rounded-xl bg-surface p-4">
+              <p className="text-sm italic leading-relaxed text-charcoal">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <p className="mt-3 text-xs text-muted">
+                {t.name}, {t.role} · {t.company}
+              </p>
+            </div>
+          </Reveal>
         ))}
       </div>
     </section>

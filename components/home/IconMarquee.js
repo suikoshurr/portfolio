@@ -1,14 +1,17 @@
-// Placeholder shapes — final custom icon set (7 marks) comes in a later session.
-const placeholderShapes = ["◆", "+", "◈", "✶", "⬡", "◇", "✦", "◎"];
+import { marqueeIcons } from "./icons";
 
 export default function IconMarquee() {
+  const icons = [...marqueeIcons, ...marqueeIcons]; // duplicated track for seamless loop
+
   return (
-    <div className="mt-8 flex items-center gap-6 overflow-hidden rounded-xl bg-surface px-6 py-5 text-muted">
-      {placeholderShapes.map((shape, i) => (
-        <span key={i} className="text-lg">
-          {shape}
-        </span>
-      ))}
+    <div className="marquee-pause-on-hover mt-8 overflow-hidden rounded-xl bg-surface py-5 opacity-70">
+      <div className="marquee-track">
+        {icons.map((Icon, i) => (
+          <span key={i} className="mx-6 flex items-center">
+            <Icon />
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

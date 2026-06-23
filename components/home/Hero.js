@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Reveal from "./Reveal";
 
 const CAREER_START = new Date("2018-01-01T00:00:00Z");
 
@@ -23,14 +24,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="mt-10">
-      <h1 className="font-serif text-3xl leading-snug sm:text-4xl">
-        a designer caring <em>a bit more</em> about users — right now, leading
-        design across the project management vertical at progress sharefile.
-      </h1>
-      <span className="mt-4 inline-block rounded-full bg-surface px-3 py-1 text-xs text-muted">
-        designing software for {uptime}
-      </span>
+    <section className="mt-14">
+      <Reveal>
+        <h1 className="font-serif text-3xl font-light leading-snug text-charcoal sm:text-4xl sm:leading-snug">
+          a designer caring <em className="font-semibold italic text-amber">a bit more</em>{" "}
+          about users — right now, leading design across the project
+          management vertical at{" "}
+          <span className="font-semibold not-italic">progress sharefile</span>.
+        </h1>
+      </Reveal>
+      <Reveal delay={120}>
+        <span className="mt-5 inline-block rounded-full bg-surface px-3 py-1.5 text-xs text-muted">
+          designing software for {uptime}
+        </span>
+      </Reveal>
     </section>
   );
 }
