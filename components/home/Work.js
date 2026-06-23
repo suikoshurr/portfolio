@@ -83,7 +83,7 @@ function OriginCard() {
 
 export default function Work() {
   return (
-    <section id="work" className="mt-16">
+    <section id="work" className="anchor-target mt-16">
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— work</h2>
       </Reveal>

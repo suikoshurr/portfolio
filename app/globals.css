@@ -51,9 +51,19 @@
   --radius-xl: 1.75rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-base);
   color: var(--color-charcoal);
+}
+
+/* Anchor targets (#work, #about) need breathing room so the sticky header
+   doesn't cover their heading when a nav link jumps to them. */
+.anchor-target {
+  scroll-margin-top: 6rem;
 }
 
 /* Shared hover lift — used by work cards, tool tiles, testimonial cards */
