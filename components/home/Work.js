@@ -1,6 +1,29 @@
 import { workEntries, originEntry } from "@/lib/data";
 import Reveal from "./Reveal";
 
+// Small rounded lock mark for gated companies — matches the site's rounded language.
+function LockIcon() {
+  return (
+    <svg
+      width="11"
+      height="11"
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+      className="inline-block -translate-y-px"
+    >
+      <rect x="3" y="7" width="10" height="7" rx="2" fill="currentColor" />
+      <path
+        d="M5.5 7V5.5a2.5 2.5 0 0 1 5 0V7"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
 function WorkCard({ entry }) {
   return (
     <div
@@ -16,9 +39,11 @@ function WorkCard({ entry }) {
             <span className="font-medium text-charcoal">{entry.role}</span>{" "}
             <span className="text-muted">{entry.dates}</span>
           </p>
-          <p className="text-xs text-muted">
-            {entry.projectCount} project{entry.projectCount === 1 ? "" : "s"}
-            {entry.gated ? " 🔒" : ""}
+          <p className="flex items-center gap-1 text-xs text-muted">
+            <span>
+              {entry.projectCount} project{entry.projectCount === 1 ? "" : "s"}
+            </span>
+            {entry.gated && <LockIcon />}
           </p>
         </div>
 
