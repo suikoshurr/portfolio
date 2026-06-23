@@ -1,5 +1,6 @@
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import DesignControls from "@/components/DesignControls";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-base text-charcoal font-sans">
         {children}
+        <DesignControls />
       </body>
     </html>
   );
