@@ -83,11 +83,11 @@ function OriginCard() {
 
 export default function Work() {
   return (
-    <section id="work" className="anchor-target mt-16">
+    <section id="work" className="anchor-target mt-24 sm:mt-32">
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— work</h2>
       </Reveal>
-      <div className="mt-4 flex flex-col gap-3">
+      <div className="mt-6 flex flex-col gap-4">
         {workEntries.map((entry, i) => (
           <Reveal key={entry.company} delay={i * 60}>
             <WorkCard entry={entry} />

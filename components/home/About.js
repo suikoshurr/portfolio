@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="anchor-target mt-16">
+    <section id="about" className="anchor-target mt-24 sm:mt-32">
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— about</h2>
       </Reveal>

@@ -46,7 +46,7 @@ function ToolTile({ tool }) {
 
 export default function Tools() {
   return (
-    <section className="mt-16">
+    <section className="mt-24 sm:mt-32">
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— tools</h2>
       </Reveal>

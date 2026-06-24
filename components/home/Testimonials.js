@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Testimonials() {
   return (
-    <section className="mt-16">
+    <section className="mt-24 sm:mt-32">
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— what peers say</h2>
       </Reveal>
