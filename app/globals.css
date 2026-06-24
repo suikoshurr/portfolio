@@ -80,6 +80,46 @@ body {
   transform: scale(var(--hover-scale));
 }
 
+/* "View work" label fades/rises in on card hover. */
+.view-work-label {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+.work-card:hover .view-work-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent-colored bar that sweeps across the divider on card hover. */
+.accent-bar {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease-out;
+}
+.work-card:hover .accent-bar {
+  transform: scaleX(1);
+}
+
+.accent-text-amber {
+  color: var(--color-amber);
+}
+.accent-text-olive {
+  color: var(--color-olive);
+}
+.accent-text-terracotta {
+  color: var(--color-terracotta);
+}
+.accent-bg-amber {
+  background-color: var(--color-amber);
+}
+.accent-bg-olive {
+  background-color: var(--color-olive);
+}
+.accent-bg-terracotta {
+  background-color: var(--color-terracotta);
+}
+
 /* Scroll reveal: fade + rise. JS toggles .is-visible once an element enters view. */
 .reveal {
   opacity: 0;

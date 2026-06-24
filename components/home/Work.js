@@ -27,7 +27,7 @@ function LockIcon() {
 function WorkCard({ entry, isFirst }) {
   return (
     <div
-      className={`work-card grid cursor-pointer grid-cols-1 gap-10 ${
+      className={`work-card relative grid cursor-pointer grid-cols-1 gap-10 ${
         isFirst
           ? "items-start pb-12 pt-0 sm:pb-16"
           : "min-h-[85vh] items-start py-12 sm:py-16"
@@ -35,6 +35,11 @@ function WorkCard({ entry, isFirst }) {
     >
       {/* Left: company meta */}
       <div className="ml-auto flex max-w-sm flex-col justify-start">
+        <p
+          className={`view-work-label accent-text-${entry.accent} mb-3 text-xs font-medium`}
+        >
+          View work →
+        </p>
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
@@ -73,6 +78,9 @@ function WorkCard({ entry, isFirst }) {
       <div
         className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
       />
+
+      {/* Progress-bar sweep across the divider below this card, in the card's accent color */}
+      <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 bottom-0 h-px`} />
     </div>
   );
 }
