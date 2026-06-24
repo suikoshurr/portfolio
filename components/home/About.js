@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="anchor-target mt-24 sm:mt-32">
       <Reveal>
-        <h2 className="text-sm tracking-wide text-muted">— about</h2>
+        <h2 className="text-sm tracking-wide text-muted">— About</h2>
       </Reveal>
       <Reveal delay={60}>
         <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start">

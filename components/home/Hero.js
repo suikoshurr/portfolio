@@ -24,22 +24,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="flex min-h-[85vh] max-w-3xl flex-col justify-center">
+    <section className="flex min-h-[85vh] flex-col justify-center">
       <Reveal>
-        <h1 className="font-serif text-3xl leading-snug text-charcoal sm:text-4xl sm:leading-snug lg:text-5xl">
-          <span className="font-semibold">
-            a designer caring a bit more about users —
+        <h1 className="font-serif text-3xl leading-snug sm:text-4xl sm:leading-snug lg:text-5xl">
+          <span className="font-semibold text-charcoal">
+            Caring a bit more about users —
           </span>{" "}
-          <span className="font-normal text-muted">
-            right now, leading design across the project management vertical
-            at sharefile
+          <span className="font-normal text-charcoal/60">
+            right now, leading design in work management vertical at
+            Sharefile.
           </span>
-          .
         </h1>
       </Reveal>
       <Reveal delay={120}>
         <span className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-amber/15 px-4 py-2 text-sm text-amber">
-          designing software <span aria-hidden="true">·</span> {uptime}
+          Designing software <span aria-hidden="true">·</span> {uptime}
         </span>
       </Reveal>
     </section>

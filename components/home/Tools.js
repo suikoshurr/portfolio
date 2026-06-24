@@ -48,10 +48,10 @@ export default function Tools() {
   return (
     <section className="mt-24 sm:mt-32">
       <Reveal>
-        <h2 className="text-sm tracking-wide text-muted">— tools</h2>
+        <h2 className="text-sm tracking-wide text-muted">— Tools</h2>
       </Reveal>
       <Reveal delay={60}>
-        <p className="mt-1 text-xs text-muted">hover or tap to see how I use each</p>
+        <p className="mt-1 text-xs text-muted">Hover or tap to see how I use each</p>
       </Reveal>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
         {tools.map((tool, i) => (

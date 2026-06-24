@@ -29,12 +29,12 @@ function WorkCard({ entry, isFirst }) {
     <div
       className={`grid grid-cols-1 gap-10 ${
         isFirst
-          ? "items-start pb-12 pt-0 sm:pb-16"
-          : "min-h-[85vh] items-center py-12 sm:py-16"
-      } lg:grid-cols-2 lg:gap-16`}
+          ? "items-stretch pb-12 pt-0 sm:pb-16"
+          : "min-h-[85vh] items-stretch py-12 sm:py-16"
+      } lg:grid-cols-[5fr_7fr] lg:gap-16`}
     >
       {/* Left: company meta */}
-      <div>
+      <div className="flex flex-col justify-center">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
@@ -71,7 +71,7 @@ function WorkCard({ entry, isFirst }) {
 
       {/* Right: visual placeholder */}
       <div
-        className={`hover-lift gradient-${entry.accent} h-[320px] w-full overflow-hidden rounded-xl`}
+        className={`hover-lift gradient-${entry.accent} h-[920px] w-full overflow-hidden rounded-xl`}
       />
     </div>
   );
@@ -95,7 +95,7 @@ function OriginCard() {
         </div>
       </div>
       <p className="whitespace-nowrap text-xs italic text-muted">
-        no case studies yet
+        No case studies yet
       </p>
     </div>
   );
@@ -105,9 +105,9 @@ export default function Work() {
   return (
     <section id="work" className="anchor-target mt-24 sm:mt-32">
       <Reveal>
-        <h2 className="text-sm tracking-wide text-muted">— work</h2>
+        <h2 className="text-sm tracking-wide text-muted">— Work</h2>
       </Reveal>
-      <div className="mt-1 divide-y divide-muted/20">
+      <div className="mt-8 divide-y divide-muted/20">
         {workEntries.map((entry, i) => (
           <Reveal key={entry.company} delay={i === 0 ? 0 : 60}>
             <WorkCard entry={entry} isFirst={i === 0} />

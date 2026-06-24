@@ -5,7 +5,7 @@ export default function Testimonials() {
   return (
     <section className="mt-24 sm:mt-32">
       <Reveal>
-        <h2 className="text-sm tracking-wide text-muted">— what peers say</h2>
+        <h2 className="text-sm tracking-wide text-muted">— What peers say</h2>
       </Reveal>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {testimonials.map((t, i) => (

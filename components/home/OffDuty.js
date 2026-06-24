@@ -5,7 +5,7 @@ export default function OffDuty() {
   return (
     <section className="mt-24 sm:mt-32">
       <Reveal>
-        <h2 className="text-sm tracking-wide text-muted">— off duty</h2>
+        <h2 className="text-sm tracking-wide text-muted">— Off duty</h2>
       </Reveal>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {offDutyTracks.map((t, i) => (
