@@ -80,8 +80,11 @@ function WorkCard({ entry, isFirst }) {
         className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
       />
 
-      {/* Progress-bar sweep across the divider above this card, in the card's accent color */}
-      <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
+      {/* Progress-bar sweep across the divider above this card, in the card's accent color.
+          Skipped on the first card since there's no divider line above it to align with. */}
+      {!isFirst && (
+        <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
+      )}
     </div>
   );
 }
