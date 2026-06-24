@@ -74,6 +74,12 @@ body {
   transform: scale(var(--hover-scale));
 }
 
+/* Work card: hovering anywhere in the row (not just the image) triggers
+   the visual's lift, since the whole card will be the clickable area. */
+.work-card:hover .hover-lift {
+  transform: scale(var(--hover-scale));
+}
+
 /* Scroll reveal: fade + rise. JS toggles .is-visible once an element enters view. */
 .reveal {
   opacity: 0;

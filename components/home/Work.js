@@ -27,7 +27,7 @@ function LockIcon() {
 function WorkCard({ entry, isFirst }) {
   return (
     <div
-      className={`grid grid-cols-1 gap-10 ${
+      className={`work-card grid cursor-pointer grid-cols-1 gap-10 ${
         isFirst
           ? "items-start pb-12 pt-0 sm:pb-16"
           : "min-h-[85vh] items-start py-12 sm:py-16"
