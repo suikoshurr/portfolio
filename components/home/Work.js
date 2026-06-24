@@ -71,7 +71,7 @@ function WorkCard({ entry, isFirst }) {
 
       {/* Right: visual placeholder */}
       <div
-        className={`hover-lift gradient-${entry.accent} h-[920px] w-full overflow-hidden rounded-xl`}
+        className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
       />
     </div>
   );
