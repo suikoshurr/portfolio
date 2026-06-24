@@ -26,9 +26,10 @@ export default function Hero() {
   return (
     <section className="flex min-h-[85vh] max-w-3xl flex-col justify-center">
       <Reveal>
-        <h1 className="font-serif text-3xl font-light leading-snug text-charcoal sm:text-4xl sm:leading-snug lg:text-5xl">
-          a designer caring <em className="font-semibold italic text-amber">a bit more</em>{" "}
-          about users —{" "}
+        <h1 className="font-serif text-3xl leading-snug text-charcoal sm:text-4xl sm:leading-snug lg:text-5xl">
+          <span className="font-semibold">
+            a designer caring a bit more about users —
+          </span>{" "}
           <span className="font-normal text-muted">
             right now, leading design across the project management vertical
             at sharefile

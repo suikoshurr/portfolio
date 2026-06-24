@@ -27,8 +27,10 @@ function LockIcon() {
 function WorkCard({ entry, isFirst }) {
   return (
     <div
-      className={`grid min-h-[85vh] grid-cols-1 items-center gap-10 ${
-        isFirst ? "pb-12 pt-4 sm:pb-16" : "py-12 sm:py-16"
+      className={`grid grid-cols-1 gap-10 ${
+        isFirst
+          ? "items-start pb-12 pt-0 sm:pb-16"
+          : "min-h-[85vh] items-center py-12 sm:py-16"
       } lg:grid-cols-2 lg:gap-16`}
     >
       {/* Left: company meta */}
@@ -69,13 +71,8 @@ function WorkCard({ entry, isFirst }) {
 
       {/* Right: visual placeholder */}
       <div
-        className={`hover-lift gradient-${entry.accent} relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-xl p-6`}
-      >
-        <p className="font-serif text-xl text-charcoal">{entry.visualLabel}</p>
-        <p className="mt-1 text-xs tracking-wide text-muted">
-          {entry.visualSubLabel}
-        </p>
-      </div>
+        className={`hover-lift gradient-${entry.accent} h-[320px] w-full overflow-hidden rounded-xl`}
+      />
     </div>
   );
 }
@@ -110,7 +107,7 @@ export default function Work() {
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— work</h2>
       </Reveal>
-      <div className="mt-3 divide-y divide-muted/20">
+      <div className="mt-1 divide-y divide-muted/20">
         {workEntries.map((entry, i) => (
           <Reveal key={entry.company} delay={i === 0 ? 0 : 60}>
             <WorkCard entry={entry} isFirst={i === 0} />
