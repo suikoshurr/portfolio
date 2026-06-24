@@ -35,11 +35,6 @@ function WorkCard({ entry, isFirst }) {
     >
       {/* Left: company meta */}
       <div className="ml-auto flex max-w-sm flex-col justify-start">
-        <p
-          className={`view-work-label accent-text-${entry.accent} mb-3 text-xs font-medium`}
-        >
-          View work →
-        </p>
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
@@ -72,6 +67,12 @@ function WorkCard({ entry, isFirst }) {
             <p className="mt-1 text-charcoal">{entry.status}</p>
           </div>
         </div>
+
+        <p
+          className={`view-work-label accent-text-${entry.accent} mt-6 text-xs font-medium`}
+        >
+          View work →
+        </p>
       </div>
 
       {/* Right: visual placeholder */}
@@ -79,8 +80,8 @@ function WorkCard({ entry, isFirst }) {
         className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
       />
 
-      {/* Progress-bar sweep across the divider below this card, in the card's accent color */}
-      <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 bottom-0 h-px`} />
+      {/* Progress-bar sweep across the divider above this card, in the card's accent color */}
+      <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
     </div>
   );
 }
