@@ -10,7 +10,7 @@ export default function About() {
       <Reveal delay={60}>
         <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start">
           <div className="h-40 w-40 shrink-0 rounded-xl bg-surface" />
-          <div className="flex flex-col gap-3 text-sm leading-relaxed text-charcoal">
+          <div className="flex max-w-2xl flex-col gap-3 text-sm leading-relaxed text-charcoal">
             {aboutParagraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}

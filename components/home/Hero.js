@@ -24,9 +24,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="mt-14">
+    <section className="flex min-h-[85vh] max-w-3xl flex-col justify-center">
       <Reveal>
-        <h1 className="font-serif text-3xl font-light leading-snug text-charcoal sm:text-4xl sm:leading-snug">
+        <h1 className="font-serif text-3xl font-light leading-snug text-charcoal sm:text-4xl sm:leading-snug lg:text-5xl">
           a designer caring <em className="font-semibold italic text-amber">a bit more</em>{" "}
           about users — right now, leading design across the project
           management vertical at{" "}
