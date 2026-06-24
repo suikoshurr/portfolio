@@ -9,8 +9,8 @@ export default function Hero() {
             I design software that holds together, for the people counting on it.
           </span>{" "}
           <span className="font-normal text-charcoal/60">
-            Where the details quietly decide everything. I lead small teams
-            that move fast and sweat the things that matter.
+            I lead small teams that move fast and sweat the things that
+            matter.
           </span>
         </h1>
       </Reveal>
