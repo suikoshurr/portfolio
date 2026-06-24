@@ -29,12 +29,12 @@ function WorkCard({ entry, isFirst }) {
     <div
       className={`grid grid-cols-1 gap-10 ${
         isFirst
-          ? "items-stretch pb-12 pt-0 sm:pb-16"
-          : "min-h-[85vh] items-stretch py-12 sm:py-16"
-      } lg:grid-cols-[5fr_7fr] lg:gap-16`}
+          ? "items-start pb-12 pt-0 sm:pb-16"
+          : "min-h-[85vh] items-start py-12 sm:py-16"
+      } lg:grid-cols-[1fr_min(920px,60%)] lg:gap-16`}
     >
       {/* Left: company meta */}
-      <div className="flex flex-col justify-center">
+      <div className="ml-auto flex max-w-sm flex-col justify-start">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
