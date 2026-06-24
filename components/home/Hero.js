@@ -6,11 +6,11 @@ export default function Hero() {
       <Reveal>
         <h1 className="font-serif text-3xl leading-snug sm:text-4xl sm:leading-snug lg:text-5xl">
           <span className="font-semibold text-charcoal">
-            Caring a bit more about users —
+            I design software that holds together, for the people counting on it.
           </span>{" "}
           <span className="font-normal text-charcoal/60">
-            right now, leading design in work management vertical at
-            Sharefile.
+            Where the details quietly decide everything. I lead small teams
+            that move fast and sweat the things that matter.
           </span>
         </h1>
       </Reveal>
