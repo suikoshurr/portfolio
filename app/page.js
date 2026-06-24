@@ -10,7 +10,7 @@ import Footer from "@/components/home/Footer";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1200px] px-10 py-8">
+    <main id="top" className="mx-auto w-full max-w-[1200px] px-10 py-8">
       <Header />
       <Hero />
       <IconMarquee />

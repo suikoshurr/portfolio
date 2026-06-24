@@ -27,9 +27,9 @@ function LockIcon() {
 function WorkCard({ entry, isFirst }) {
   return (
     <div
-      className={`work-card relative grid cursor-pointer grid-cols-1 gap-10 ${
+      className={`work-card relative grid cursor-pointer grid-cols-1 gap-10 border-t border-muted/20 ${
         isFirst
-          ? "items-start pb-12 pt-0 sm:pb-16"
+          ? "items-start pb-12 pt-12 sm:pb-16 sm:pt-16"
           : "min-h-[85vh] items-start py-12 sm:py-16"
       } lg:grid-cols-[1fr_min(920px,60%)] lg:gap-16`}
     >
@@ -80,11 +80,8 @@ function WorkCard({ entry, isFirst }) {
         className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
       />
 
-      {/* Progress-bar sweep across the divider above this card, in the card's accent color.
-          Skipped on the first card since there's no divider line above it to align with. */}
-      {!isFirst && (
-        <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
-      )}
+      {/* Progress-bar sweep across the divider above this card, in the card's accent color */}
+      <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
     </div>
   );
 }
@@ -119,7 +116,7 @@ export default function Work() {
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— Work</h2>
       </Reveal>
-      <div className="mt-8 divide-y divide-muted/20">
+      <div className="mt-8">
         {workEntries.map((entry, i) => (
           <Reveal key={entry.company} delay={i === 0 ? 0 : 60}>
             <WorkCard entry={entry} isFirst={i === 0} />
