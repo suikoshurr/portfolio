@@ -24,20 +24,31 @@ function LockIcon() {
   );
 }
 
-function WorkCard({ entry }) {
+function WorkCard({ entry, isFirst }) {
   return (
-    <div className="grid min-h-[85vh] grid-cols-1 items-center gap-10 py-12 sm:py-16 lg:grid-cols-2 lg:gap-16">
-      {/* Left: case study meta */}
+    <div
+      className={`grid min-h-[85vh] grid-cols-1 items-center gap-10 ${
+        isFirst ? "pb-12 pt-4 sm:pb-16" : "py-12 sm:py-16"
+      } lg:grid-cols-2 lg:gap-16`}
+    >
+      {/* Left: company meta */}
       <div>
-        <p className="flex items-center gap-2 text-xs tracking-wide text-muted">
-          <span className={`h-1.5 w-1.5 rounded-full bg-${entry.accent}`} />
-          CASE STUDY
-        </p>
-        <div className="mt-3 flex items-baseline gap-4">
-          <span className="font-serif text-3xl text-muted">{entry.number}</span>
-          <h3 className="font-serif text-2xl text-charcoal sm:text-3xl">
-            {entry.title}
-          </h3>
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
+              lg
+            </div>
+            <div>
+              <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
+                {entry.company}
+              </h3>
+              <p className="text-sm text-muted">{entry.role}</p>
+            </div>
+          </div>
+          <p className="flex items-center gap-1 whitespace-nowrap text-xs text-muted">
+            {entry.projectCount} project{entry.projectCount === 1 ? "" : "s"}
+            {entry.gated && <LockIcon />}
+          </p>
         </div>
 
         <p className="mt-5 max-w-md text-sm leading-relaxed text-charcoal/90">
@@ -51,10 +62,7 @@ function WorkCard({ entry }) {
           </div>
           <div>
             <p className="text-muted">Status</p>
-            <p className="mt-1 flex items-center gap-1 text-charcoal">
-              {entry.status}
-              {entry.gated && <LockIcon />}
-            </p>
+            <p className="mt-1 text-charcoal">{entry.status}</p>
           </div>
         </div>
       </div>
@@ -74,17 +82,24 @@ function WorkCard({ entry }) {
 
 function OriginCard() {
   return (
-    <div className="flex items-start gap-4 rounded-xl border border-dashed border-muted/50 p-5">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
-        lg
+    <div className="flex items-start justify-between gap-4 rounded-xl border border-dashed border-muted/50 p-5">
+      <div className="flex items-center gap-3">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
+          lg
+        </div>
+        <div>
+          <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
+            {originEntry.company}
+          </h3>
+          <p className="text-sm text-muted">{originEntry.role}</p>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-charcoal/90">
+            {originEntry.description}
+          </p>
+        </div>
       </div>
-      <div className="flex-1">
-        <p className="font-sans text-sm italic">
-          <span className="font-medium">{originEntry.role}</span>{" "}
-          <span className="text-muted">{originEntry.dates}</span>
-        </p>
-        <p className="mt-1 text-sm italic text-muted">{originEntry.reflection}</p>
-      </div>
+      <p className="whitespace-nowrap text-xs italic text-muted">
+        no case studies yet
+      </p>
     </div>
   );
 }
@@ -95,10 +110,10 @@ export default function Work() {
       <Reveal>
         <h2 className="text-sm tracking-wide text-muted">— work</h2>
       </Reveal>
-      <div className="mt-6 divide-y divide-muted/20">
+      <div className="mt-3 divide-y divide-muted/20">
         {workEntries.map((entry, i) => (
           <Reveal key={entry.company} delay={i === 0 ? 0 : 60}>
-            <WorkCard entry={entry} />
+            <WorkCard entry={entry} isFirst={i === 0} />
           </Reveal>
         ))}
       </div>
