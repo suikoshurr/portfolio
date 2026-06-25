@@ -3,14 +3,14 @@ import { workEntries, originEntry } from "@/lib/data";
 import Reveal from "./Reveal";
 
 // Shared logo tile treatment — same size, rounding and fallback across every card.
-function LogoTile({ logo, company }) {
+function LogoTile({ logo, company, size = 38 }) {
   return (
     <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-surface">
       <Image
         src={logo}
         alt={`${company} logo`}
-        width={38}
-        height={38}
+        width={size}
+        height={size}
         className="object-contain"
       />
     </div>
@@ -53,7 +53,11 @@ function WorkCard({ entry, delay }) {
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <LogoTile logo={entry.logo} company={entry.company} />
+            <LogoTile
+              logo={entry.logo}
+              company={entry.company}
+              size={entry.logoSize}
+            />
             <div>
               <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
                 {entry.company}
