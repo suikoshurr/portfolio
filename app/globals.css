@@ -178,7 +178,9 @@ body {
 .marquee-pause-on-hover:hover .marquee-icon {
   opacity: 0.45;
 }
-.marquee-icon:hover {
+/* Needs to out-specificity the rule above (3 class-selectors vs 2) so the
+   hovered icon itself doesn't get caught by the sibling-dimming. */
+.marquee-pause-on-hover:hover .marquee-icon:hover {
   padding: 0 2.4rem;
   opacity: 1;
   transform: scale(1.7);
