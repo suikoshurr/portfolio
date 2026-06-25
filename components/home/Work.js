@@ -91,12 +91,6 @@ function WorkCard({ entry, delay }) {
             <p className="mt-1 text-charcoal">{entry.status}</p>
           </div>
         </div>
-
-        <p
-          className={`view-work-label accent-text-${entry.accent} mt-6 text-xs font-medium`}
-        >
-          View work →
-        </p>
       </Reveal>
 
       {/* Right: visual placeholder — slides in from the right, in sync with the left column */}
@@ -108,6 +102,14 @@ function WorkCard({ entry, delay }) {
 
       {/* Progress-bar sweep across the divider above this card, in the card's accent color */}
       <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
+
+      {/* "View work" sits right under the top divider, anchored to the right — close to the
+          line it belongs to, instead of buried at the bottom of the left column. */}
+      <p
+        className={`view-work-label accent-text-${entry.accent} absolute right-0 top-4 text-xs font-medium uppercase tracking-wide`}
+      >
+        View work →
+      </p>
     </div>
   );
 }
