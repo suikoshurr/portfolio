@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 // Shared logo tile treatment — same size, rounding and fallback across every card.
 function LogoTile({ logo, company }) {
   return (
-    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface p-2">
+    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface p-3">
       <Image
         src={logo}
         alt={`${company} logo`}
