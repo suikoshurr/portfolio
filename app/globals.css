@@ -194,6 +194,76 @@ body {
   }
 }
 
+/* ----------------------------------------------------------------------------
+   Off-duty "genie" photo ribbon. Cards ride a horizontal track; each one's 3D
+   fold is driven from JS (PhotoCarousel.js) by its live horizontal position —
+   frontal at the stage edges, edge-on and receding through the center. The CSS
+   here owns the perspective stage, the per-breakpoint geometry (read back by the
+   component as custom properties), and the card chrome. Only transform/opacity
+   are animated, so it stays on the GPU compositor. Masked to fade at the edges.
+---------------------------------------------------------------------------- */
+.photo-ring-stage {
+  /* Geometry the component reads: spacing between cards along the track, and
+     how far the center of the fold recedes. */
+  --card-w: 132px;
+  --card-h: 176px;
+  --ring-gap: 86px;
+  --ring-depth: 190px;
+  --ring-h: 300px;
+  position: relative;
+  height: var(--ring-h);
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+@media (min-width: 640px) {
+  .photo-ring-stage {
+    --card-w: 200px;
+    --card-h: 267px;
+    --ring-gap: 132px;
+    --ring-depth: 280px;
+    --ring-h: 380px;
+    perspective: 1150px;
+  }
+}
+
+.photo-ring-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--card-w);
+  height: var(--card-h);
+  margin-left: calc(var(--card-w) / -2);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: 0 22px 45px -20px rgba(42, 42, 40, 0.5);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+.photo-ring-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Work card gradient tints — 135deg, light tint fading to base, per accent */
 .gradient-amber {
   background: linear-gradient(135deg, var(--gradient-amber-from), var(--color-base));

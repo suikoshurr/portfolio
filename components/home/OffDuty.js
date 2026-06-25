@@ -1,5 +1,6 @@
 import { offDutyTracks } from "@/lib/data";
 import Reveal from "./Reveal";
+import PhotoCarousel from "./PhotoCarousel";
 
 // "Off duty" — a few curated tracks, each shown as an embedded Spotify player
 // with a 30-second preview (the same embed Spotify and Framer use). Tracks are
@@ -28,6 +29,10 @@ export default function OffDuty() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={offDutyTracks.length * 60}>
+        <PhotoCarousel />
+      </Reveal>
     </section>
   );
 }
