@@ -20,7 +20,7 @@ function TimelineCard({ entry }) {
       >
         {entry.dates}
       </p>
-      <p className="mt-1 whitespace-nowrap font-serif text-base text-charcoal">{entry.company}</p>
+      <p className="mt-1 whitespace-nowrap font-serif text-lg text-charcoal">{entry.company}</p>
       <p className="mt-0.5 text-charcoal/80">{entry.role}</p>
       <p
         className={`mt-2 text-[10px] uppercase tracking-wide ${
@@ -70,7 +70,7 @@ export default function CareerTimeline() {
 
             <div className="flex items-start gap-10">
               {careerTimeline.map((entry, i) => {
-                const top = i % 2 === 0;
+                const top = i % 2 !== 0;
                 return (
                   <div key={entry.company} className="flex w-52 shrink-0 flex-col items-center">
                     <div
