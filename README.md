@@ -20,6 +20,37 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Off duty / Spotify
+
+The "Off duty" section pulls live tracks from Spotify (currently playing, top
+of the week, recently played) via a server-side refresh-token flow. Without
+credentials it falls back to the static list in `lib/data.js`, so the site
+works either way.
+
+To wire up the live data, set three environment variables (in `.env.local` for
+local dev, and in your host's environment for production):
+
+```bash
+SPOTIFY_CLIENT_ID=...       # from your Spotify app (developer.spotify.com/dashboard)
+SPOTIFY_CLIENT_SECRET=...   # from the same app
+SPOTIFY_REFRESH_TOKEN=...   # minted once, see below
+```
+
+One-time setup:
+
+1. Create an app at <https://developer.spotify.com/dashboard>. Copy the
+   **Client ID** and **Client Secret**. Add a Redirect URI (e.g.
+   `http://127.0.0.1:3000/callback`).
+2. Authorize your own account once with these scopes to get a `code`:
+   `user-read-currently-playing user-read-recently-played user-top-read`.
+3. Exchange the `code` for tokens at `https://accounts.spotify.com/api/token`
+   (`grant_type=authorization_code`). Save the returned **refresh_token** as
+   `SPOTIFY_REFRESH_TOKEN` — it's long-lived and is what the app uses to mint
+   short-lived access tokens on each request.
+
+Data refreshes about once a minute (cached server-side via `unstable_cache`).
+The wiring lives in `lib/spotify.js` and `components/home/OffDuty.js`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
