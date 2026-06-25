@@ -1,5 +1,21 @@
+import Image from "next/image";
 import { workEntries, originEntry } from "@/lib/data";
 import Reveal from "./Reveal";
+
+// Shared logo tile treatment — same size, rounding and fallback across every card.
+function LogoTile({ logo, company }) {
+  return (
+    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface">
+      <Image
+        src={logo}
+        alt={`${company} logo`}
+        fill
+        className="object-cover"
+        sizes="44px"
+      />
+    </div>
+  );
+}
 
 // Small rounded lock mark for gated companies — matches the site's rounded language.
 function LockIcon() {
@@ -37,9 +53,7 @@ function WorkCard({ entry, delay }) {
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
-              lg
-            </div>
+            <LogoTile logo={entry.logo} company={entry.company} />
             <div>
               <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
                 {entry.company}
@@ -92,9 +106,7 @@ function OriginCard() {
   return (
     <div className="flex items-start justify-between gap-4 rounded-xl border border-dashed border-muted/50 p-5">
       <div className="flex items-center gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
-          lg
-        </div>
+        <LogoTile logo={originEntry.logo} company={originEntry.company} />
         <div>
           <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
             {originEntry.company}
