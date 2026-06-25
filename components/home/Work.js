@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { workEntries, originEntry } from "@/lib/data";
+import { workEntries } from "@/lib/data";
 import Reveal from "./Reveal";
 
 // Shared logo tile treatment — same size, rounding and fallback across every card.
@@ -114,25 +114,6 @@ function WorkCard({ entry, delay }) {
   );
 }
 
-function OriginCard() {
-  return (
-    <div className="flex items-start gap-4 rounded-xl border border-dashed border-muted/50 p-5">
-      <div className="flex items-center gap-3">
-        <LogoTile logo={originEntry.logo} company={originEntry.company} />
-        <div>
-          <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
-            {originEntry.company}
-          </h3>
-          <p className="text-sm text-muted">{originEntry.role}</p>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-charcoal/90">
-            {originEntry.description}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Work() {
   return (
     <section id="work" className="anchor-target mt-24 sm:mt-32">
@@ -144,9 +125,6 @@ export default function Work() {
           <WorkCard key={entry.company} entry={entry} delay={i * 60} />
         ))}
       </div>
-      <Reveal className="mt-4 block" delay={0}>
-        <OriginCard />
-      </Reveal>
     </section>
   );
 }
