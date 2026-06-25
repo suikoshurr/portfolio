@@ -6,7 +6,7 @@ import About from "@/components/home/About";
 import CareerTimeline from "@/components/home/CareerTimeline";
 import Testimonials from "@/components/home/Testimonials";
 import OffDuty from "@/components/home/OffDuty";
-import Tools from "@/components/home/Tools";
+import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       <CareerTimeline />
       <Testimonials />
       <OffDuty />
-      <Tools />
+      <Contact />
       <Footer />
     </main>
   );
