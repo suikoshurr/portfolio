@@ -3,7 +3,7 @@ import { workEntries, originEntry } from "@/lib/data";
 import Reveal from "./Reveal";
 
 // Shared logo tile treatment — same size, rounding and fallback across every card.
-function LogoTile({ logo, company, size = 48 }) {
+function LogoTile({ logo, company, size = 48, offsetX = 0 }) {
   const tile = Math.max(size, 44);
   return (
     <div
@@ -16,6 +16,7 @@ function LogoTile({ logo, company, size = 48 }) {
         width={size}
         height={size}
         className="object-contain"
+        style={{ transform: offsetX ? `translateX(${offsetX}px)` : undefined }}
       />
     </div>
   );
@@ -61,6 +62,7 @@ function WorkCard({ entry, delay }) {
               logo={entry.logo}
               company={entry.company}
               size={entry.logoSize}
+              offsetX={entry.logoOffsetX}
             />
             <div>
               <h3 className="font-serif text-xl text-charcoal sm:text-2xl">
