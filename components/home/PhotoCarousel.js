@@ -4,24 +4,20 @@ import { useEffect, useRef } from "react";
 import { offDutyPhotos } from "@/lib/data";
 
 /*
-  PhotoCarousel: the "genie" photo ribbon from the Off-duty section. Cards ride a
-  horizontal track that scrolls continuously and loops. Each card's 3D rotation
-  is driven by its *live* horizontal position, not a fixed slot: cards near the
-  left/right of the stage face you head-on, and as they travel toward the center
-  they fold edge-on and recede — meeting at a thin vanishing seam in the middle.
-  That position-dependent fold is the effect from the reference, and it can't
-  come from a plain spinning cylinder (which would do the opposite), so a single
-  requestAnimationFrame loop nudges the scroll offset and writes each card's
-  transform directly to the DOM. Only transforms/opacity change, so the browser
-  composites it on the GPU with no layout work — smooth on a long strip.
-
-  Honors prefers-reduced-motion (holds a static, readable arrangement) and pauses
-  on hover/touch so a photo can be looked at.
+  PhotoCarousel: a continuously rolling 3D "coverflow" — cards ride a horizontal
+  track; whichever one is nearest the stage center sits largest and frontal,
+  and neighbors shrink, tilt, and recede the further they are from center. A
+  single requestAnimationFrame loop nudges the scroll offset and writes each
+  card's transform/opacity straight to the DOM (no layout, GPU-composited), so
+  it stays smooth across the full strip. Honors prefers-reduced-motion and
+  pauses on hover/touch.
 */
 
 // Tuned constants. SPEED is px/second of track travel.
-const SPEED = 26;
-const MAX_ANGLE = 82; // degrees of fold at dead center (near edge-on)
+const SPEED = 24;
+const MAX_ANGLE = 30; // degrees of tilt at the stage edge
+const SCALE_MAX = 1.12; // center card
+const SCALE_MIN = 0.82; // edge cards
 
 export default function PhotoCarousel() {
   const stageRef = useRef(null);
@@ -44,9 +40,10 @@ export default function PhotoCarousel() {
     // stays in one place (globals.css) and tracks the breakpoint.
     function readGeom() {
       const cs = getComputedStyle(stage);
-      const spacing = parseFloat(cs.getPropertyValue("--ring-gap")) || 120;
-      const depth = parseFloat(cs.getPropertyValue("--ring-depth")) || 240;
-      return { spacing, depth, width: stage.clientWidth };
+      const spacing = parseFloat(cs.getPropertyValue("--ring-gap")) || 110;
+      const forward = parseFloat(cs.getPropertyValue("--ring-forward")) || 40;
+      const back = parseFloat(cs.getPropertyValue("--ring-back")) || 90;
+      return { spacing, forward, back, width: stage.clientWidth };
     }
 
     let geom = readGeom();
@@ -62,22 +59,24 @@ export default function PhotoCarousel() {
         if (pos < 0) pos += total;
         const relX = pos - total / 2; // -total/2 .. +total/2, 0 = dead center
 
-        // p: how far from center, normalized to the stage half-width.
+        // p: signed distance from center, normalized to the stage half-width.
         const p = relX / half;
         const ap = Math.min(Math.abs(p), 1);
 
-        // Fold: frontal (0deg) at the edges, edge-on at the center, with the
-        // two halves facing opposite ways so they meet at a seam.
-        const angle = -Math.sign(p || 1) * (1 - ap) * MAX_ANGLE;
-        // Center recedes, so the fold vanishes into the distance.
-        const z = -(1 - ap) * geom.depth;
-        // Fade cards out as they reach / pass the stage edges.
-        const edge = Math.abs(relX) / (half * 1.05);
-        const opacity = edge > 1 ? 0 : 1 - Math.max(0, edge - 0.7) / 0.3;
+        // Coverflow: frontal + largest at center, tilting and shrinking toward
+        // the edges, leaning away from the centerline (mirrored left/right).
+        const angle = Math.sign(p) * ap * MAX_ANGLE;
+        const z = geom.forward * (1 - ap) - geom.back * ap;
+        const scale = SCALE_MAX - (SCALE_MAX - SCALE_MIN) * ap;
+        // Fade out before reaching the stage edge so overflow:hidden never
+        // clips a still-visible card.
+        const edge = Math.abs(relX) / half;
+        const opacity = edge > 0.82 ? Math.max(0, 1 - (edge - 0.82) / 0.16) : 1;
 
         const el = cards[i];
-        el.style.transform = `translate3d(${relX}px, -50%, ${z}px) rotateY(${angle}deg)`;
+        el.style.transform = `translate3d(${relX}px, -50%, ${z}px) rotateY(${angle}deg) scale(${scale})`;
         el.style.opacity = opacity.toFixed(3);
+        el.style.zIndex = String(1000 - Math.round(ap * 1000));
         // Drop fully-hidden cards out of the compositor's work.
         el.style.visibility = opacity <= 0.01 ? "hidden" : "visible";
       }

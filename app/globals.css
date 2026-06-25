@@ -195,47 +195,52 @@ body {
 }
 
 /* ----------------------------------------------------------------------------
-   Off-duty "genie" photo ribbon. Cards ride a horizontal track; each one's 3D
-   fold is driven from JS (PhotoCarousel.js) by its live horizontal position —
-   frontal at the stage edges, edge-on and receding through the center. The CSS
-   here owns the perspective stage, the per-breakpoint geometry (read back by the
-   component as custom properties), and the card chrome. Only transform/opacity
-   are animated, so it stays on the GPU compositor. Masked to fade at the edges.
----------------------------------------------------------------------------- */
+   Off-duty 3D "coverflow" photo strip. Cards ride a horizontal track; each
+   one's scale/tilt/depth is driven from JS (PhotoCarousel.js) by its live
+   distance from the stage center — largest and frontal at the center,
+   shrinking and tilting away toward the edges. The CSS here owns the
+   perspective stage, the per-breakpoint geometry (read back by the component
+   as custom properties), and the card chrome. Only transform/opacity are
+   animated, so it stays on the GPU compositor. `overflow: hidden` is load-
+   bearing: cards are positioned via transform and can extend past the stage's
+   box, which (without a clip) inflates the whole page's scrollable width. */
 .photo-ring-stage {
   /* Geometry the component reads: spacing between cards along the track, and
-     how far the center of the fold recedes. */
-  --card-w: 132px;
-  --card-h: 176px;
-  --ring-gap: 86px;
-  --ring-depth: 190px;
-  --ring-h: 300px;
+     how far center/edge cards sit forward of / behind the center card. */
+  --card-w: 124px;
+  --card-h: 165px;
+  --ring-gap: 78px;
+  --ring-forward: 26px;
+  --ring-back: 60px;
+  --ring-h: 260px;
   position: relative;
   height: var(--ring-h);
+  overflow: hidden;
   perspective: 900px;
   perspective-origin: 50% 50%;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    #000 12%,
-    #000 88%,
+    #000 8%,
+    #000 92%,
     transparent
   );
   mask-image: linear-gradient(
     to right,
     transparent,
-    #000 12%,
-    #000 88%,
+    #000 8%,
+    #000 92%,
     transparent
   );
 }
 @media (min-width: 640px) {
   .photo-ring-stage {
-    --card-w: 200px;
-    --card-h: 267px;
-    --ring-gap: 132px;
-    --ring-depth: 280px;
-    --ring-h: 380px;
+    --card-w: 190px;
+    --card-h: 253px;
+    --ring-gap: 118px;
+    --ring-forward: 40px;
+    --ring-back: 90px;
+    --ring-h: 340px;
     perspective: 1150px;
   }
 }
