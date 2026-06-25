@@ -3,7 +3,7 @@ import { workEntries, originEntry } from "@/lib/data";
 import Reveal from "./Reveal";
 
 // Shared logo tile treatment — same size, rounding and fallback across every card.
-function LogoTile({ logo, company, size = 38 }) {
+function LogoTile({ logo, company, size = 40 }) {
   return (
     <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-surface">
       <Image
