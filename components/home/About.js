@@ -5,6 +5,9 @@ export default function About() {
   return (
     <section id="about" className="anchor-target mt-24 sm:mt-32">
       <Reveal>
+        <div className="border-t border-muted/20" />
+      </Reveal>
+      <Reveal delay={30} className="mt-10 block sm:mt-12">
         <h2 className="text-sm tracking-wide text-muted">— About</h2>
       </Reveal>
       <Reveal delay={60}>

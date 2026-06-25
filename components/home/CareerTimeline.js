@@ -9,8 +9,8 @@ function TimelineCard({ entry }) {
   const current = entry.current;
   return (
     <div
-      className={`w-44 rounded-lg border p-4 text-xs ${
-        current ? `accent-border-${entry.accent} bg-surface` : "border-muted/20 bg-surface"
+      className={`w-44 rounded-lg border bg-base p-4 text-xs ${
+        current ? `accent-border-${entry.accent}` : "border-muted/20"
       }`}
     >
       <p
@@ -20,7 +20,7 @@ function TimelineCard({ entry }) {
       >
         {entry.dates}
       </p>
-      <p className="mt-1 font-serif text-lg text-charcoal">{entry.company}</p>
+      <p className="mt-1 font-serif text-base text-charcoal">{entry.company}</p>
       <p className="mt-0.5 text-charcoal/80">{entry.role}</p>
       <p
         className={`mt-2 text-[10px] uppercase tracking-wide ${
