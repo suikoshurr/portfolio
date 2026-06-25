@@ -24,14 +24,10 @@ function LockIcon() {
   );
 }
 
-function WorkCard({ entry, isFirst, delay }) {
+function WorkCard({ entry, delay }) {
   return (
     <div
-      className={`work-card relative grid cursor-pointer grid-cols-1 gap-10 border-t border-muted/20 ${
-        isFirst
-          ? "items-start pb-12 pt-12 sm:pb-16 sm:pt-16"
-          : "min-h-[85vh] items-start py-12 sm:py-16"
-      } lg:grid-cols-[1fr_min(920px,60%)] lg:gap-16`}
+      className={`work-card relative grid cursor-pointer grid-cols-1 items-start gap-10 border-t border-muted/20 pb-12 pt-12 sm:pb-16 sm:pt-16 lg:grid-cols-[1fr_min(920px,60%)] lg:gap-16`}
     >
       {/* Left: company meta — slides in from the left, in sync with the visual */}
       <Reveal
@@ -124,12 +120,7 @@ export default function Work() {
       </Reveal>
       <div className="mt-8">
         {workEntries.map((entry, i) => (
-          <WorkCard
-            key={entry.company}
-            entry={entry}
-            isFirst={i === 0}
-            delay={i * 60}
-          />
+          <WorkCard key={entry.company} entry={entry} delay={i * 60} />
         ))}
       </div>
       <Reveal className="mt-4 block" delay={0}>
