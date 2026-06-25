@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { aboutParagraphs } from "@/lib/data";
 import Reveal from "./Reveal";
 
@@ -13,9 +14,16 @@ export default function About() {
       <Reveal delay={60}>
         <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-20">
           <div
-            className="shrink-0 self-start rounded-xl bg-surface"
+            className="relative shrink-0 self-start overflow-hidden rounded-xl bg-surface"
             style={{ width: 312, height: 420 }}
-          />
+          >
+            <Image
+              src="/photos/about.webp"
+              alt="Sabeel Dhar"
+              fill
+              className="object-cover"
+            />
+          </div>
           <div
             className="flex max-w-2xl flex-col justify-center gap-4 font-serif text-xl leading-relaxed text-charcoal sm:text-2xl"
             style={{ fontWeight: 300 }}
