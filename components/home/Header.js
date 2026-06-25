@@ -1,13 +1,11 @@
-import { MirroredArcs } from "./icons";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="sticky top-4 z-10 flex items-center justify-between rounded-full bg-surface px-5 py-3 shadow-[inset_0_0_0_1px_rgba(186,117,23,0.25)] sm:px-6">
       <a href="#top" className="flex items-center gap-2.5 leading-tight">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-base">
-          <span className="scale-75">
-            <MirroredArcs />
-          </span>
+          <Image src="/logos/brand-mark.png" alt="Logo" width={22} height={22} />
         </span>
         <span>
           <p className="font-serif text-lg">Sabeel Dhar</p>
