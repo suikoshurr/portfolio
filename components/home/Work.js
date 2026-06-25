@@ -24,7 +24,7 @@ function LockIcon() {
   );
 }
 
-function WorkCard({ entry, isFirst }) {
+function WorkCard({ entry, isFirst, delay }) {
   return (
     <div
       className={`work-card relative grid cursor-pointer grid-cols-1 gap-10 border-t border-muted/20 ${
@@ -33,8 +33,12 @@ function WorkCard({ entry, isFirst }) {
           : "min-h-[85vh] items-start py-12 sm:py-16"
       } lg:grid-cols-[1fr_min(920px,60%)] lg:gap-16`}
     >
-      {/* Left: company meta */}
-      <div className="ml-auto flex max-w-sm flex-col justify-start">
+      {/* Left: company meta — slides in from the left, in sync with the visual */}
+      <Reveal
+        direction="left"
+        delay={delay}
+        className="ml-auto flex max-w-sm flex-col justify-start"
+      >
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface text-xs text-muted">
@@ -73,12 +77,14 @@ function WorkCard({ entry, isFirst }) {
         >
           View work →
         </p>
-      </div>
+      </Reveal>
 
-      {/* Right: visual placeholder */}
-      <div
-        className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
-      />
+      {/* Right: visual placeholder — slides in from the right, in sync with the left column */}
+      <Reveal direction="right" delay={delay}>
+        <div
+          className={`hover-lift gradient-${entry.accent} h-[560px] w-full max-w-[920px] overflow-hidden rounded-xl`}
+        />
+      </Reveal>
 
       {/* Progress-bar sweep across the divider above this card, in the card's accent color */}
       <div className={`accent-bar accent-bg-${entry.accent} absolute inset-x-0 top-0 h-px`} />
@@ -118,9 +124,12 @@ export default function Work() {
       </Reveal>
       <div className="mt-8">
         {workEntries.map((entry, i) => (
-          <Reveal key={entry.company} delay={i === 0 ? 0 : 60}>
-            <WorkCard entry={entry} isFirst={i === 0} />
-          </Reveal>
+          <WorkCard
+            key={entry.company}
+            entry={entry}
+            isFirst={i === 0}
+            delay={i * 60}
+          />
         ))}
       </div>
       <Reveal className="mt-4 block" delay={0}>

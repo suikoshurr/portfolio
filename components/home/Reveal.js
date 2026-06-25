@@ -2,9 +2,16 @@
 
 import { useEffect, useRef } from "react";
 
-// Wrap any element to fade + rise it in once it scrolls into view.
+// Wrap any element to fade it in once it scrolls into view. `direction`
+// controls the starting offset: "up" (default, rise from below), "left"
+// (slide in from the left), or "right" (slide in from the right).
 // `delay` (ms) lets siblings stagger — pass index * 60 for a list.
-export default function Reveal({ children, delay = 0, className = "" }) {
+export default function Reveal({
+  children,
+  delay = 0,
+  className = "",
+  direction = "up",
+}) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -26,7 +33,7 @@ export default function Reveal({ children, delay = 0, className = "" }) {
   return (
     <div
       ref={ref}
-      className={`reveal ${className}`}
+      className={`reveal reveal-${direction} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
