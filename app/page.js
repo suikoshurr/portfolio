@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import IconMarquee from "@/components/home/IconMarquee";
 import Work from "@/components/home/Work";
 import About from "@/components/home/About";
+import CareerTimeline from "@/components/home/CareerTimeline";
 import Testimonials from "@/components/home/Testimonials";
 import OffDuty from "@/components/home/OffDuty";
 import Tools from "@/components/home/Tools";
@@ -16,6 +17,7 @@ export default function Home() {
       <IconMarquee />
       <Work />
       <About />
+      <CareerTimeline />
       <Testimonials />
       <OffDuty />
       <Tools />

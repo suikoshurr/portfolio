@@ -121,6 +121,15 @@ body {
 .accent-bg-terracotta {
   background-color: var(--color-terracotta);
 }
+.accent-border-amber {
+  border-color: var(--color-amber);
+}
+.accent-border-olive {
+  border-color: var(--color-olive);
+}
+.accent-border-terracotta {
+  border-color: var(--color-terracotta);
+}
 
 /* Scroll reveal: fade + rise/slide. JS toggles .is-visible once an element
    enters view. Direction variants share the same fade + ease-out timing. */
