@@ -116,7 +116,7 @@ function WorkCard({ entry, delay }) {
 
 function OriginCard() {
   return (
-    <div className="flex items-start justify-between gap-4 rounded-xl border border-dashed border-muted/50 p-5">
+    <div className="flex items-start gap-4 rounded-xl border border-dashed border-muted/50 p-5">
       <div className="flex items-center gap-3">
         <LogoTile logo={originEntry.logo} company={originEntry.company} />
         <div>
@@ -129,9 +129,6 @@ function OriginCard() {
           </p>
         </div>
       </div>
-      <p className="whitespace-nowrap text-xs italic text-muted">
-        No case studies yet
-      </p>
     </div>
   );
 }
