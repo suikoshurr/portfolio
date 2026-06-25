@@ -11,9 +11,12 @@ export default function About() {
         <h2 className="text-sm tracking-wide text-muted">— About</h2>
       </Reveal>
       <Reveal delay={60}>
-        <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-stretch">
-          <div className="h-48 w-48 shrink-0 self-stretch rounded-xl bg-surface sm:h-auto" />
-          <div className="flex max-w-2xl flex-col justify-center gap-4 font-serif text-lg leading-relaxed text-charcoal sm:text-xl">
+        <div className="mt-4 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-20">
+          <div
+            className="shrink-0 self-start rounded-xl bg-surface"
+            style={{ width: 312, height: 420 }}
+          />
+          <div className="flex max-w-2xl flex-col justify-center gap-4 font-serif text-xl font-normal leading-relaxed text-charcoal sm:text-2xl">
             {aboutParagraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
