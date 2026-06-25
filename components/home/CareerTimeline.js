@@ -1,9 +1,9 @@
 import { careerTimeline } from "@/lib/data";
 import Reveal from "./Reveal";
 
-const TOP_H = 132;
+const TOP_H = 188;
 const NODE_H = 24;
-const BOTTOM_H = 132;
+const BOTTOM_H = 188;
 
 function TimelineCard({ entry }) {
   const current = entry.current;
@@ -37,7 +37,7 @@ function TimelineNode({ entry }) {
   if (entry.current) {
     return (
       <span className="relative flex h-3 w-3 items-center justify-center">
-        <span className={`accent-border-${entry.accent} absolute h-5 w-5 rounded-full border opacity-30`} />
+        <span className={`accent-bg-${entry.accent} absolute inline-flex h-full w-full animate-ping rounded-full opacity-75`} />
         <span className={`accent-bg-${entry.accent} relative h-3 w-3 rounded-full`} />
       </span>
     );
@@ -52,7 +52,7 @@ export default function CareerTimeline() {
         <h2 className="text-sm tracking-wide text-muted">— Career timeline</h2>
       </Reveal>
       <Reveal delay={60}>
-        <div className="mt-8 overflow-x-auto pb-2">
+        <div className="mt-8 overflow-x-auto px-1 py-4">
           <div className="relative w-max px-6">
             {/* Base line, running through the center of every node */}
             <div
