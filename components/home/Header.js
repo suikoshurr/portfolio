@@ -9,7 +9,7 @@ export default function Header() {
         </span>
         <span>
           <p className="font-serif text-lg">Sabeel Dhar</p>
-          <p className="text-xs text-muted">Lead product designer</p>
+          <p className="text-xs text-muted">Lead Product Designer</p>
         </span>
       </a>
 
