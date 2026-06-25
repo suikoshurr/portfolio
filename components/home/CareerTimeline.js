@@ -9,7 +9,7 @@ function TimelineCard({ entry }) {
   const current = entry.current;
   return (
     <div
-      className={`w-44 rounded-lg border bg-base p-4 text-xs ${
+      className={`w-52 rounded-lg border bg-base p-4 text-xs ${
         current ? `accent-border-${entry.accent}` : "border-muted/20"
       }`}
     >
@@ -20,7 +20,7 @@ function TimelineCard({ entry }) {
       >
         {entry.dates}
       </p>
-      <p className="mt-1 font-serif text-base text-charcoal">{entry.company}</p>
+      <p className="mt-1 whitespace-nowrap font-serif text-base text-charcoal">{entry.company}</p>
       <p className="mt-0.5 text-charcoal/80">{entry.role}</p>
       <p
         className={`mt-2 text-[10px] uppercase tracking-wide ${
@@ -72,7 +72,7 @@ export default function CareerTimeline() {
               {careerTimeline.map((entry, i) => {
                 const top = i % 2 === 0;
                 return (
-                  <div key={entry.company} className="flex w-44 shrink-0 flex-col items-center">
+                  <div key={entry.company} className="flex w-52 shrink-0 flex-col items-center">
                     <div
                       style={{ height: TOP_H }}
                       className="flex w-full flex-col items-center justify-end"
