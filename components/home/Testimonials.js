@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { testimonials } from "@/lib/data";
+import { testimonials, testimonialsLinkedInUrl } from "@/lib/data";
 import Reveal from "./Reveal";
 
 // Avatar: shows a real photo when one's set, otherwise falls back to a
@@ -40,23 +40,34 @@ export default function Testimonials() {
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         {testimonials.map((t, i) => (
           <Reveal key={i} delay={i * 60} className="h-full">
-            <div className="hover-lift flex h-full flex-col rounded-xl bg-surface p-6">
-              <p className="text-sm italic leading-relaxed text-charcoal/90 sm:text-base">
+            <div
+              className={`hover-lift gradient-${t.accent} flex h-full flex-col rounded-xl p-6`}
+            >
+              <p className="text-sm leading-relaxed text-charcoal sm:text-[1rem]">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-muted/20 pt-4">
                 <Avatar photo={t.photo} name={t.name} accent={t.accent} />
                 <div>
                   <p className="text-sm font-medium text-charcoal">{t.name}</p>
-                  <p className="text-xs text-muted">
-                    {t.role} · {t.company}
-                  </p>
+                  <p className="text-xs text-muted">{t.role}</p>
                 </div>
               </div>
             </div>
           </Reveal>
         ))}
       </div>
+      <Reveal delay={testimonials.length * 60}>
+        <a
+          href={testimonialsLinkedInUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-6 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-charcoal"
+        >
+          See more on LinkedIn
+          <span className="transition-transform group-hover:translate-x-0.5">→</span>
+        </a>
+      </Reveal>
     </section>
   );
 }
