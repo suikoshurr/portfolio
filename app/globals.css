@@ -218,6 +218,8 @@ body {
   overflow: hidden;
   perspective: 900px;
   perspective-origin: 50% 50%;
+  cursor: grab;
+  touch-action: pan-y;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
@@ -232,6 +234,9 @@ body {
     #000 92%,
     transparent
   );
+}
+.photo-ring-stage:active {
+  cursor: grabbing;
 }
 @media (min-width: 640px) {
   .photo-ring-stage {
