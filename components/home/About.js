@@ -16,7 +16,10 @@ export default function About() {
             className="shrink-0 self-start rounded-xl bg-surface"
             style={{ width: 312, height: 420 }}
           />
-          <div className="flex max-w-2xl flex-col justify-center gap-4 font-serif text-xl font-normal leading-relaxed text-charcoal sm:text-2xl">
+          <div
+            className="flex max-w-2xl flex-col justify-center gap-4 font-serif text-xl leading-relaxed text-charcoal sm:text-2xl"
+            style={{ fontWeight: 300 }}
+          >
             {aboutParagraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
