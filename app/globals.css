@@ -163,6 +163,26 @@ body {
 .marquee-pause-on-hover:hover .marquee-track {
   animation-play-state: paused;
 }
+
+/* Dock-style "genie" hover: the icon under the cursor zooms up from its base
+   while its horizontal padding grows, so neighbors slide aside to make room
+   (transform alone wouldn't reflow them). Origin at the bottom gives the
+   rising-from-the-dock feel. Siblings dim slightly to spotlight the hovered one. */
+.marquee-icon {
+  padding: 0 1.5rem;
+  transform-origin: center bottom;
+  transition: transform var(--hover-duration) ease-out,
+    padding var(--hover-duration) ease-out,
+    opacity var(--hover-duration) ease-out;
+}
+.marquee-pause-on-hover:hover .marquee-icon {
+  opacity: 0.45;
+}
+.marquee-icon:hover {
+  padding: 0 2.4rem;
+  opacity: 1;
+  transform: scale(1.7);
+}
 @keyframes marquee-scroll {
   from {
     transform: translateX(0);
