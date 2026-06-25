@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[85vh] flex-col justify-center">
+    <section className="mx-auto flex min-h-[85vh] w-[85%] flex-col justify-center">
       <Reveal>
         <h1 className="font-serif text-3xl leading-snug sm:text-4xl sm:leading-snug lg:text-5xl">
           <span className="font-semibold text-charcoal">
