@@ -34,15 +34,18 @@ function TimelineCard({ entry }) {
 }
 
 function TimelineNode({ entry }) {
-  if (entry.current) {
-    return (
-      <span className="relative flex h-3 w-3 items-center justify-center">
-        <span className={`accent-bg-${entry.accent} absolute inline-flex h-full w-full animate-ping rounded-full opacity-75`} />
-        <span className={`accent-bg-${entry.accent} relative h-3 w-3 rounded-full`} />
-      </span>
-    );
-  }
-  return <span className="h-3 w-3 rounded-full border-2 border-charcoal/60 bg-base" />;
+  return (
+    <span className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-base">
+      {entry.current ? (
+        <span className="relative flex h-3 w-3 items-center justify-center">
+          <span className={`accent-bg-${entry.accent} absolute inline-flex h-full w-full animate-ping rounded-full opacity-75`} />
+          <span className={`accent-bg-${entry.accent} relative h-3 w-3 rounded-full`} />
+        </span>
+      ) : (
+        <span className="h-3 w-3 rounded-full border-2 border-charcoal/60 bg-base" />
+      )}
+    </span>
+  );
 }
 
 export default function CareerTimeline() {
