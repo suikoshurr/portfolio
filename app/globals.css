@@ -276,10 +276,11 @@ body {
 
 /* Off-duty video row: three self-hosted clips under the photo carousel.
    Same box-shadow language as .photo-ring-card; aspect-ratio matches the
-   source footage (5:4) so cards hold their size before the video loads. */
+   source footage (760:600 = 19:15) so cards hold their size before the
+   video loads and nothing gets cropped. */
 .video-card {
   position: relative;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 19 / 15;
   box-shadow: 0 22px 45px -20px rgba(42, 42, 40, 0.5);
 }
 .video-card video {
