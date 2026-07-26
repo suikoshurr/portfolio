@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf6ec;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:80px 44px"]{padding:56px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"],[data-shell] div[style*="padding:52px 44px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:5fr 4fr"],[data-shell] div[style*="grid-template-columns:4fr 5fr"],[data-shell] div[style*="grid-template-columns:1fr 56px 1fr"],[data-shell] div[style*="grid-template-columns:380px 1fr"],[data-shell] div[style*="grid-template-columns:320px 1fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-shell] div[style*="backdrop-filter"]>a{padding:14px 16px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="justify-content:space-between"][style*="align-items:baseline"][style*="flex-wrap:wrap"]{flex-direction:column-reverse !important;align-items:flex-start !important;gap:8px !important}
+[data-shell] div[style*="grid-template-columns:5fr 4fr"]{display:flex !important;flex-direction:column-reverse;gap:24px !important}
+[data-shell] div[style*="22px/1.5"]{font-size:18px !important}
+[data-shell] div[style*="font:700 52px"],[data-shell] div[style*="font:700 56px"]{font-size:38px !important}
+[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="flex:1 1 280px"]{flex-direction:row !important;max-width:100% !important;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+[data-shell] div[style*="flex:1 1 280px"]::-webkit-scrollbar{display:none}
+[data-shell] div[style*="flex:1 1 280px"] div[style*="border-left"]{min-width:225px;flex-shrink:0;box-sizing:border-box}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] div[style*="grid-template-columns"]:not([data-proto-scale] div){grid-template-columns:1fr !important}
+[data-shell] a[style*="grid-template-columns"]{display:flex !important;flex-wrap:wrap;gap:10px 14px !important}
+[data-shell] div[style*="padding:96px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:100px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:80px 64px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="border-right:1px solid #ddd2b0"]{border-right:none !important}
+[data-shell] div[style*="padding:44px"]{padding:24px 20px !important}
+[data-shell] div[style*="font:600 30px"]{font-size:22px !important}
+[data-shell] p[style*="font:400 19px"]{font-size:16px !important}
+[data-shell] div[style*="aspect-ratio:4/5"]{margin-bottom:28px}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="The Organic World case study">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.html" title="Home" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 40px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">THE ORGANIC WORLD</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#e0b45f;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">CASE FILE 01/03</span>
+        <span style="width:7px;height:7px;background:#e0b45f;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #ddd2b0;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #ddd2b0;background:rgba(250,246,236,.9);backdrop-filter:blur(12px)">
+      <a href="Lollypop Studio.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #ddd2b0;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#f0e7cd">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;gap:10px;padding:20px 28px;border-right:1px solid #ddd2b0;background:#faf6ec">
+        <span style="width:8px;height:8px;background:#e0b45f;display:inline-block"></span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CASE FILE CF-01 / THE ORGANIC WORLD · LOLLYPOP STUDIO · 2020 — 2021</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:32px;padding-right:32px">
+        <a href="#brief" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#workshop" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">WORKSHOP</a>
+        <a href="#research" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RESEARCH</a>
+        <a href="#features" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">SOLUTIONS</a>
+        <a href="#debrief" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DEBRIEF</a>
+      </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div id="brief" style="background:#faf6ec;background-image:radial-gradient(#d8caa0 1.1px, transparent 1.1px);background-size:22px 22px" data-screen-label="Brief">
+      <div data-reveal="" style="display:flex;align-items:stretch;justify-content:space-between;gap:24px;border-bottom:1px solid #e5d9b8;padding:0 44px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:16px 0">
+          <span style="font:700 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">CASE FILE Nº 01/03</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CLIENT — LOLLYPOP STUDIO</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">PERIOD — 2020 → 2021</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">STATUS — LIVE</span>
+        </div>
+      </div>
+      <div style="padding:76px 44px 56px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.14em;margin-bottom:36px;flex-wrap:wrap">
+          <a href="Portfolio - Control Tower.html" style="color:#6b6552" style-hover="color:#10151a">HOME</a>
+          <span style="color:#e5d9b8">/</span>
+          <a href="Lollypop Studio.html" style="color:#6b6552" style-hover="color:#10151a">WORK LOG 03 — LOLLYPOP STUDIO</a>
+          <span style="color:#e5d9b8">/</span>
+          <span style="color:#b0812c">CASE FILE CF-01 — THE ORGANIC WORLD</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(48px,5.2vw,80px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#10151a">
+          <span data-rise="" style="display:block;color:#9a9074">Bringing health</span>
+          <span data-rise="" style="display:block">to people's <em style="font:italic 400 1.02em 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#b0812c">tables</em>.</span>
+        </h1>
+        <p data-reveal="" style="margin:36px 0 0;font:400 17px/1.65 'Space Grotesk',sans-serif;color:#6b6552;max-width:600px">Enabling grocery shopping through digital transformation. The modern day is filled with a variety of food types — judging what's actually good for health remains a mystery. We solved for bringing health to people's tables.</p>
+        
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:36px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">CLIENT — THE ORGANIC WORLD · BANGALORE</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">ROLE — UX DESIGNER</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SCOPE — WEBSITE + APP</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SHIPPED — JAN 2021</span>
+        </div>
+      </div>
+      <div data-reveal="" style="padding:0 44px 44px">
+        <img src="media/organic-world/hero.png" alt="The Organic World — hero visual" style="width:100%;display:block;border:1px solid #d3c69e;background:#fff">
+      </div>
+    </div>
+
+    <!-- ============ INTRODUCTION ============ -->
+    <div style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0" data-screen-label="Introduction">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">brief.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / INTRODUCTION</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+        <div>
+          <div data-reveal="">
+            <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:14px">ABOUT THE PRODUCT</div>
+            <p style="margin:0;font:400 17px/1.7 'Space Grotesk',sans-serif;color:#4c565c"><a href="https://theorganicworld.com/" target="_blank" rel="noopener" style="border-bottom:1px solid #10151a"><strong>The Organic World</strong></a> is a dedicated all-natural grocery store. They sell everything from food and grain to apparel and body care — stocking a wide variety of organic vegetables and fruits produced at their own farms.</p>
+          </div>
+          <div data-reveal="" style="margin-top:36px">
+            <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:14px">KEY OBJECTIVES — FOUR TARGETS</div>
+            <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+              <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:16px 20px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">T-1</span><p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Design a website and app that helps the business <strong style="color:#10151a">grow and scale</strong> in the pandemic.</p></div>
+              <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:16px 20px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">T-2</span><p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Make the product experience feel like their physical store, ensuring <strong style="color:#10151a">user adoption</strong>.</p></div>
+              <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:16px 20px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">T-3</span><p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Keep the app intuitive by <strong style="color:#10151a">designing inclusively</strong> — for the elderly.</p></div>
+              <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:16px 20px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">T-4</span><p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Overhaul the current website to match actual brand values &amp; beliefs through the digital presence.</p></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div data-reveal="">
+            <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:14px">TIMELINES — 2020-21 ROADMAP</div>
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:24px 24px 20px">
+              <div style="display:grid;grid-template-columns:repeat(12,1fr);margin-bottom:10px">
+                <span style="grid-column:1/span 3;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.12em">NOV</span>
+                <span style="grid-column:4/span 3;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.12em">DEC</span>
+                <span style="grid-column:7/span 3;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.12em">JAN</span>
+                <span style="grid-column:10/span 3;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.12em">FEB</span>
+              </div>
+              <div style="position:relative">
+                <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(12,1fr)">
+                  <span style="border-left:1px solid #ece2c6"></span><span style="border-left:1px dashed #e9edef"></span><span style="border-left:1px dashed #e9edef"></span>
+                  <span style="border-left:1px solid #ece2c6"></span><span style="border-left:1px dashed #e9edef"></span><span style="border-left:1px dashed #e9edef"></span>
+                  <span style="border-left:1px solid #ece2c6"></span><span style="border-left:1px dashed #e9edef"></span><span style="border-left:1px dashed #e9edef"></span>
+                  <span style="border-left:1px solid #ece2c6"></span><span style="border-left:1px dashed #e9edef"></span><span style="border-left:1px dashed #e9edef"></span>
+                </div>
+                <div style="position:relative;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:44px;row-gap:8px;align-items:center">
+                  <div style="grid-column:2/span 2;grid-row:1;background:#10151a;color:#fff;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:8px 10px;white-space:nowrap;overflow:hidden">WORKSHOP</div>
+                  <div style="grid-column:3/span 3;grid-row:2;background:#10151a;color:#fff;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:8px 10px;white-space:nowrap;overflow:hidden">USER RESEARCH</div>
+                  <div style="grid-column:5/span 4;grid-row:3;background:#e0b45f;color:#10151a;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:8px 10px;white-space:nowrap;overflow:hidden">DESIGN</div>
+                  <div style="grid-column:8/span 3;grid-row:4;background:#10151a;color:#fff;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:8px 10px;white-space:nowrap;overflow:hidden">TESTING &amp; ITERATION</div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid #ece2c6">
+                <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 01-A · FOUR PHASES · NOV 2020 → FEB 2021</span>
+                <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">SHIPPED JAN 2021</span>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-top:36px">
+            <div style="background:#fff;padding:22px 24px">
+              <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">TEAM — 7 OPERATORS</div>
+              <div style="margin-top:12px;font:400 13.5px/1.9 'Space Grotesk',sans-serif;color:#4c565c">1 UX Lead<br>2 UX Designers<br>3 UI Designers<br>1 Project Manager</div>
+            </div>
+            <div style="background:#fff;padding:22px 24px">
+              <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">ACTIVITIES</div>
+              <div style="margin-top:12px;font:400 13.5px/1.9 'Space Grotesk',sans-serif;color:#4c565c">Design Workshop<br>UX Research / Design<br>Prototyping<br>User Testing</div>
+            </div>
+          </div>
+          <div data-reveal="" style="border:1px solid #ddd2b0;border-top:none;background:#fff;padding:18px 24px">
+            <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:12px">TOOLS USED</div>
+            <img src="media/organic-world/tools-used.png" alt="Tools used" style="width:100%;max-width:420px;display:block">
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="margin-top:44px">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:14px">MY ROLES &amp; RESPONSIBILITIES</div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="background:#fff;padding:20px 22px"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em;background:#10151a;padding:3px 8px">R-1</span><p style="margin:14px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Facilitate design workshops with stakeholders and board members.</p></div>
+          <div style="background:#fff;padding:20px 22px"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em;background:#10151a;padding:3px 8px">R-2</span><p style="margin:14px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Deeply involved in all stages — design thinking, ideation, wireframing and working prototypes.</p></div>
+          <div style="background:#fff;padding:20px 22px"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em;background:#10151a;padding:3px 8px">R-3</span><p style="margin:14px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Conduct user interviews &amp; derive analysed insights with the team.</p></div>
+          <div style="background:#fff;padding:20px 22px"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em;background:#10151a;padding:3px 8px">R-4</span><p style="margin:14px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Testing prototypes.</p></div>
+          <div style="background:#fff;padding:20px 22px"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em;background:#10151a;padding:3px 8px">R-5</span><p style="margin:14px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Knowledge transfer and hand-off to UI designers.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WORKSHOP ============ -->
+    <div id="workshop" style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Design workshop">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The design <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">workshop.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / THREE EXERCISES WITH STAKEHOLDERS</span>
+      </div>
+
+      <!-- exercise 1 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start;margin-bottom:22px">
+        <div style="background:#10151a;padding:24px 26px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">EX-1</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Understanding the business</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">HOW WERE THEY DIFFERENT?</div>
+        </div>
+        <div>
+          <p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Were they selling anything distinctive from the contenders? — <strong style="color:#10151a">the answer was yes.</strong> They sourced locally to keep products fresh, without added chemicals or preservatives. They ran campaigns raising awareness about sustainable living — helping people learn how, and why, to live sustainably. But all of it was happening offline, bound to in-store proximity and a few hundred Instagram followers.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-bottom:44px">
+        <img src="media/organic-world/workshop-business.jpg" alt="Workshop board — understanding the business" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-A · WORKSHOP BOARD — BRAND DIFFERENTIATION</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MIRO · 2020</span></div>
+      </div>
+
+      <!-- exercise 2 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start;margin-bottom:22px">
+        <div style="background:#10151a;padding:24px 26px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">EX-2</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Current problems</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">WHAT'S GOING ON AT THE MOMENT?</div>
+        </div>
+        <div>
+          <p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">We asked about the complaints customers bring up regarding the current website:</p>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">CONFUSING CHECKOUTS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">ABSENT QUANTITY SELECTORS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">TROUBLE FINDING PRODUCTS</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-bottom:44px">
+        <img src="media/organic-world/workshop-problems.jpg" alt="Workshop board — current problems" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-B · WORKSHOP BOARD — PROBLEM INVENTORY</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MIRO · 2020</span></div>
+      </div>
+
+      <!-- exercise 3 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start;margin-bottom:22px">
+        <div style="background:#10151a;padding:24px 26px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">EX-3</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Potential solutions</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">HOW CAN WE KEEP USERS HOOKED?</div>
+        </div>
+        <div>
+          <p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">We brainstormed the factors that would bring customers to the new website and application — and keep them hooked and updated:</p>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">PREMIUM-LOOKING WEBSITE</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">SUBSCRIPTION MODELS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">GOAL-BASED PRODUCT RESULTS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">COMMUNITY SECTIONS</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">COMMUNICATING THEIR MISSION</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">HEALTH &amp; NUTRITION EMPHASIS</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px">
+        <img src="media/organic-world/workshop-solutions.jpg" alt="Workshop board — potential solutions" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-C · WORKSHOP BOARD — SOLUTION SPACE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MIRO · 2020</span></div>
+      </div>
+    </div>
+
+    <!-- ============ RESEARCH ============ -->
+    <div id="research" style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#10151a" data-screen-label="Research">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">Voices from the <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">aisles.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 03 / THE RESEARCH — STORE-FLOOR INTERVIEWS</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 40px;font:400 16px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:560px">We spoke to consumers at TOW stores. How does an organic product consumer make buying decisions?</p>
+
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.14em;margin-bottom:14px">SIGNAL A — BUYING BEHAVIOURS</div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a333b;border:1px solid #2a333b;margin-bottom:40px">
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">SOCIAL PROOF</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"I buy products that my friends use — if it's good for them it's good for me."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— TAMARA, 35</div></div>
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">MARKERS OF TRUST</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"I read the nutritional information in the product labels."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— SANTOSH, 49</div></div>
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">DISCOUNTS</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"I look for aisles on discount to find my favourite products for sale."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— TAMARA, 35</div></div>
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">REPEATS</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"I buy every alternate day — sometimes TOW gets it delivered if I don't make it."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— ARUNA, 62</div></div>
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">BRAND STORY</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"TOW's story is fascinating enough for me to buy from here — I know all the food is locally sourced and sustainable."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— TAMARA, 35</div></div>
+        <div style="background:#10151a;padding:24px 26px"><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">CURATION + MISSION</div><p style="margin:12px 0 0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">"I love the way TOW stacks recipe-based products." · "I go on volunteering drives by TOW and I'm a regular customer."</p><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:12px;letter-spacing:.08em">— AYESHA, 27</div></div>
+      </div>
+
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.14em;margin-bottom:14px">SIGNAL B — WHY THEY AVOID THE CURRENT WEBSITE</div>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#2a333b;border:1px solid #2a333b">
+        <div style="display:grid;grid-template-columns:220px 1fr 140px;gap:16px;background:#10151a;padding:15px 22px;align-items:center"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em">NAVIGATION ISSUES</span><span style="font:400 14px 'Space Grotesk',sans-serif;color:#8fa0aa">"I'm not able to find the correct products on the current website."</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;text-align:right">TAMARA, 35</span></div>
+        <div style="display:grid;grid-template-columns:220px 1fr 140px;gap:16px;background:#10151a;padding:15px 22px;align-items:center"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em">TECH DISABILITY</span><span style="font:400 14px 'Space Grotesk',sans-serif;color:#8fa0aa">"I don't know how to use websites — doing payment is a hard nut to crack for me."</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;text-align:right">ARUNA, 62</span></div>
+        <div style="display:grid;grid-template-columns:220px 1fr 140px;gap:16px;background:#10151a;padding:15px 22px;align-items:center"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em">MISTRUST</span><span style="font:400 14px 'Space Grotesk',sans-serif;color:#8fa0aa">"I'm not able to find offers there at all!"</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;text-align:right">AYESHA, 27</span></div>
+        <div style="display:grid;grid-template-columns:220px 1fr 140px;gap:16px;background:#10151a;padding:15px 22px;align-items:center"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em">ABSENCE OF APP</span><span style="font:400 14px 'Space Grotesk',sans-serif;color:#8fa0aa">"Websites are hard to use — an app would be great."</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;text-align:right">AYESHA, 27</span></div>
+        <div style="display:grid;grid-template-columns:220px 1fr 140px;gap:16px;background:#10151a;padding:15px 22px;align-items:center"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.08em">NON-EFFICIENT SEARCH</span><span style="font:400 14px 'Space Grotesk',sans-serif;color:#8fa0aa">"Searching on the current app does not work."</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;text-align:right">TAMARA, 35</span></div>
+      </div>
+    </div>
+
+    <!-- ============ IDEATION + OUTCOME ============ -->
+    <div style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0" data-screen-label="Ideation and outcome">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Directions → <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">19 modules.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 04 / IDEATION &amp; FINAL OUTCOME</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 22px;font:400 16px/1.65 'Space Grotesk',sans-serif;color:#4c565c;max-width:620px">We collated everything and came up with a consolidated set of design directions for all our teams.</p>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-bottom:44px">
+        <img src="media/organic-world/design-directions.jpg" alt="Consolidated design directions" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-A · CONSOLIDATED DESIGN DIRECTIONS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MIRO · 2020</span></div>
+      </div>
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">FINAL OUTCOME — COMMAND SET · <span style="color:#10151a;font-weight:500">19 MODULES SHIPPED TO DESIGN</span></span>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.04em">
+        <div style="background:#fff;padding:12px 16px">01 &nbsp;HOMEPAGE</div><div style="background:#fff;padding:12px 16px">02 &nbsp;CATEGORY LISTING</div><div style="background:#fff;padding:12px 16px">03 &nbsp;PRODUCT DETAILS</div><div style="background:#fff;padding:12px 16px">04 &nbsp;SEARCH EXPERIENCE</div>
+        <div style="background:#fff;padding:12px 16px">05 &nbsp;EVENTS</div><div style="background:#fff;padding:12px 16px">06 &nbsp;PRESS RELEASES</div><div style="background:#fff;padding:12px 16px">07 &nbsp;CHECKOUT EXPERIENCE</div><div style="background:#fff;padding:12px 16px">08 &nbsp;DEALS</div>
+        <div style="background:#10151a;padding:12px 16px;color:#e0b45f">09 &nbsp;CATEGORY NAVIGATION ★</div><div style="background:#fff;padding:12px 16px">10 &nbsp;PROFILE</div><div style="background:#fff;padding:12px 16px">11 &nbsp;RECIPES</div><div style="background:#fff;padding:12px 16px">12 &nbsp;WEBINARS</div>
+        <div style="background:#fff;padding:12px 16px">13 &nbsp;LISTED APARTMENTS</div><div style="background:#fff;padding:12px 16px">14 &nbsp;HEALTHY HOME REWARDS</div><div style="background:#10151a;padding:12px 16px;color:#e0b45f">15 &nbsp;EXPRESS SHOPPING ★</div><div style="background:#10151a;padding:12px 16px;color:#e0b45f">16 &nbsp;I-CHOOSE ★</div>
+        <div style="background:#fff;padding:12px 16px">17 &nbsp;ARTICLES &amp; BLOGS</div><div style="background:#fff;padding:12px 16px">18 &nbsp;ABOUT TOW</div><div style="background:#fff;padding:12px 16px">19 &nbsp;VENDOR PAGES</div><div style="background:#fff;padding:12px 16px;color:#7c878d">★ SHOWCASED BELOW</div>
+      </div>
+    </div>
+
+    <!-- ============ FEATURE 1 ============ -->
+    <div id="features" style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Feature 1 — Designing for elderly">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">1 — Designing for the <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">elderly.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 05 / SHOWCASE — EXPRESS SHOPPING</span>
+      </div>
+      <div data-reveal="" style="display:inline-flex;align-items:center;gap:12px;border:1px solid #10151a;background:#fff;padding:14px 20px;margin-bottom:36px">
+        <span style="font:400 14px 'IBM Plex Mono',monospace">⚠</span>
+        <span style="font:500 13px 'Space Grotesk',sans-serif">The study revealed elderly consumers would drop off because of non-familiarity with a digital interface.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:start">
+        <div data-reveal="">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:8px">
+            <img src="./indian-senior-woman-21596340-mrhu6hg8.webp" alt="Persona — Rama Krishnan" style="width:100%;display:block">
+          </div>
+          <div style="display:flex;justify-content:space-between;padding-top:10px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-A · THE PERSONA</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">P-EX-01</span></div>
+        </div>
+        <div>
+          <h3 data-reveal="" style="margin:0;font:600 26px/1.4 'Space Grotesk',sans-serif;letter-spacing:-.02em">Say hello to <em style="font:italic 400 1.05em 'Instrument Serif',serif;color:#10151a">Rama Krishnan</em>, a retired school principal who shops grocery every morning after her walk — carrying a grocery list she checks off by pushing each item into the cart.</h3>
+          <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-top:28px">
+            <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em;padding-top:3px">USER STORY 1</span><p style="margin:0;font:italic 400 16px/1.6 'Instrument Serif',serif;color:#10151a">"I want to feed in my daily grocery list on the store website so that it's easier for me to shop for what I need — else I get lost in different pages of the website."</p></div>
+            <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em;padding-top:3px">USER STORY 2</span><p style="margin:0;font:italic 400 16px/1.6 'Instrument Serif',serif;color:#10151a">"I want my son to do the payment on my behalf — this will reduce my problems with online shopping."</p></div>
+          </div>
+          <div data-reveal="" style="margin-top:28px">
+            <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:12px">THE APPROACH</div>
+            <p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Recreate the old paper-and-pen experience of buying groceries. Users type in their grocery list, pick the right products from dropdowns, and proceed straight to checkout. At checkout, payment links can be shared — so someone else can pay on their behalf. A system with <strong style="color:#10151a">swift and easy shopping modes</strong>, and a faceted navigation approach to jot down products and push them to checkout seamlessly.</p>
+            <a href="https://www.figma.com/proto/s591sOhRKwY2x1QnSjPs0p/TOW?node-id=1%3A151849&amp;scaling=min-zoom&amp;page-id=1%3A150475" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;background:#10151a;color:#fff;padding:13px 22px" style-hover="background:#2a333b;color:#fff">VIEW PROTOTYPE — FIGMA ↗</a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-top:44px">
+        <img src="media/organic-world/express-shopping.png" alt="Express shopping flow" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-B · EXPRESS SHOPPING — LIST-FIRST FLOW</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · FIGMA</span></div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-top:22px">
+        <img src="media/organic-world/payment-modes.jpg" alt="Payment modes — pay on my behalf" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-C · PAYMENT MODES — SHAREABLE PAYMENT LINKS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · FIGMA</span></div>
+      </div>
+    </div>
+
+    <!-- ============ FEATURE 2 ============ -->
+    <div style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0" data-screen-label="Feature 2 — Category navigation">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">2 — Re-imagining category <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">navigation.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 06 / SHOWCASE — A 3-LEVEL SYSTEM</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start">
+        <div data-reveal="">
+          <p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">We designed a 3-level system to drill down to a particular SKU.</p>
+          <div style="display:flex;flex-direction:column;margin-top:24px">
+            <div style="display:flex;align-items:start;gap:18px;padding:18px 22px;background:#10151a;color:#fff">
+              <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;min-width:56px;padding-top:3px">LVL 1</span>
+              <div><div style="font:600 16px 'Space Grotesk',sans-serif">Intent-based segregation</div><div style="font:400 13px/1.6 'Space Grotesk',sans-serif;color:#8fa0aa;margin-top:6px"><strong style="color:#fff">Eat Healthy</strong> — anything consumable · <strong style="color:#fff">Live Healthy</strong> — better living (sustainable furnishing) · <strong style="color:#fff">Look Healthy</strong> — wearables (makeup, clothing) · <strong style="color:#fff">Raise Healthy</strong> — baby care</div></div>
+            </div>
+            <div style="width:1px;height:16px;background:#ddd2b0;margin-left:48px"></div>
+            <div style="display:flex;align-items:center;gap:18px;padding:18px 22px;border:1px solid #ddd2b0;background:#fff">
+              <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;min-width:56px">LVL 2</span>
+              <div style="font:600 16px 'Space Grotesk',sans-serif">Main categories</div>
+            </div>
+            <div style="width:1px;height:16px;background:#ddd2b0;margin-left:48px"></div>
+            <div style="display:flex;align-items:center;gap:18px;padding:18px 22px;border:1px solid #ddd2b0;background:#fff">
+              <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;min-width:56px">LVL 3</span>
+              <div style="font:600 16px 'Space Grotesk',sans-serif">Sub-categories → SKU</div>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="">
+          
+          
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:8px;margin-top:44px">
+        <img src="media/organic-world/category-levels.jpg" alt="Category navigation — 3 levels" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:10px 12px 4px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-B · THE 3-LEVEL CATEGORY MODEL</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · FIGMA</span></div>
+      </div>
+    </div>
+
+    <!-- ============ FEATURE 3 ============ -->
+    <div style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0;background:#10151a" data-screen-label="Feature 3 — Designing for impact">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">3 — Designing for an <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">impact.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 07 / SHOWCASE — I-CHOOSE QUIZ</span>
+      </div>
+      <div style="display:grid;grid-template-columns:420px 1fr;gap:44px;align-items:start">
+        <p data-reveal="" style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa">The brand aspired to educate people about their surroundings and their contribution — and make them think. Learning is easier when taught in a fun way, so this time we did it with a quiz. It throws questions about sustainable habits at visitors, subconsciously making users understand how small habits can impact the world we live in.</p>
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #2a333b;border-bottom:none;padding:12px 16px">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">REEL 07-A · QUIZ WALKTHROUGH</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f">SRC: YOUTUBE</span>
+          </div>
+          <iframe src="https://www.youtube-nocookie.com/embed/zsZMhuZ72oQ?rel=0" referrerPolicy="strict-origin-when-cross-origin" title="I-Choose quiz walkthrough" style="width:100%;aspect-ratio:16/9;border:1px solid #2a333b;display:block;background:#000" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="{{ true }}"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ GLIMPSES ============ -->
+    <div style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0" data-screen-label="Glimpses">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase"><em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">Glimpses.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 08 / FINAL SCREENS IN MOTION</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:22px;align-items:start">
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #ddd2b0;border-bottom:none;background:#fff;padding:12px 16px">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">GL-01 · SPLASH &amp; ONBOARDING</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f">● LOOPS</span>
+          </div>
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:8px">
+            <img src="media/organic-world/onboarding-prototype.gif" alt="Splash and onboarding prototype" style="width:100%;display:block">
+          </div>
+        </div>
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #ddd2b0;border-bottom:none;background:#fff;padding:12px 16px">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">GL-02 · HOME PAGE</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f">SRC: YOUTUBE</span>
+          </div>
+          <iframe src="https://www.youtube-nocookie.com/embed/ld54kbNKwvU?rel=0" referrerPolicy="strict-origin-when-cross-origin" title="Home page walkthrough" style="width:100%;aspect-ratio:16/9;border:1px solid #ddd2b0;display:block;background:#000" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="{{ true }}"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ DEBRIEF ============ -->
+    <div id="debrief" style="padding:80px 44px 72px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Debrief">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">debrief.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 09 / LEARNINGS · CHALLENGES · SIGN-OFF</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 20px/1.6 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">The project ended in <strong style="color:#10151a">January 2021</strong> and is under development at the moment. I hope you had as much fun reading this as I did working on it.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:32px 34px">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">MY LEARNINGS</div>
+          <div style="display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">L-1</span><span>To <strong style="color:#10151a">design an e-commerce</strong> takes a lot beyond just a seamless checkout flow.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">L-2</span><span>Know the <strong style="color:#10151a">USP</strong> of the product — it's essential to present core value via design.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">L-3</span><span><strong style="color:#10151a">Intuitive navigation</strong> levels up the game — it can benefit sales directly.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">L-4</span><span><strong style="color:#10151a">Let the stakeholder speak</strong> in a workshop — relevant or irrelevant, they know their customer better than you.</span></div>
+          </div>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:20px">CHALLENGES FACED</div>
+          <div style="display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#8fa0aa">
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">C-1</span><span>The biggest challenge in workshops: participants deviating from the original goal.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">C-2</span><span>Evoking confidence in the process and the activities performed.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">C-3</span><span>Collaborating with other vendors and articulating concepts.</span></div>
+            <div style="display:grid;grid-template-columns:32px 1fr;gap:10px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">C-4</span><span>Tight deadlines — we were fighting against time on this project.</span></div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="margin-top:44px">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:14px">HERE'S WHAT THE CLIENT THINKS ABOUT ME</div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:8px;max-width:860px">
+          <img src="media/organic-world/client-testimonial.png" alt="Client testimonial" style="width:100%;display:block">
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ NEXT / FOOTER ============ -->
+    <div style="background:#10151a;padding:72px 44px 44px" data-screen-label="Next case study">
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:24px">END OF CASE FILE CF-01 — WHERE TO NEXT?</div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333b;border:1px solid #2a333b;max-width:920px">
+        <div style="background:#10151a;padding:28px 30px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">NEXT CASE FILE — CF-02</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#5a6b74;margin-top:12px">MyGIIS</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:8px;letter-spacing:.06em">COMING SOON — EDUERP · SINGAPORE</div>
+        </div>
+        <a href="Lollypop Studio.html#cases" style="background:#10151a;padding:28px 30px;display:block" style-hover="background:#1a222b">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">OR RETURN TO</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">All Lollypop case studies ↗</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.06em">WORK LOG 03 — LOLLYPOP DESIGN STUDIO</div>
+        </a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:64px;padding-top:24px;border-top:1px solid #2a333b;flex-wrap:wrap;gap:16px">
+        <a href="Lollypop Studio.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK TO LOLLYPOP STUDIO</a>
+        <a href="Portfolio - Control Tower.html" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em" style-hover="color:#fff">CONTROL TOWER — HOME ↗</a>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._cleanup = [];
+    this._t = setTimeout(() => this.setupMotion(), 80);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._t);
+    (this._cleanup || []).forEach(fn => fn());
+  }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }));
+    });
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+  }
+
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

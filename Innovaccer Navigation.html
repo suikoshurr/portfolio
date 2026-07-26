@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf6ec;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+img{cursor:zoom-in}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:80px 44px"]{padding:56px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"],[data-shell] div[style*="padding:52px 44px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:5fr 4fr"],[data-shell] div[style*="grid-template-columns:4fr 5fr"],[data-shell] div[style*="grid-template-columns:1fr 56px 1fr"],[data-shell] div[style*="grid-template-columns:380px 1fr"],[data-shell] div[style*="grid-template-columns:320px 1fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-shell] div[style*="backdrop-filter"]>a{padding:14px 16px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="justify-content:space-between"][style*="align-items:baseline"][style*="flex-wrap:wrap"]{flex-direction:column-reverse !important;align-items:flex-start !important;gap:8px !important}
+[data-shell] div[style*="grid-template-columns:5fr 4fr"]{display:flex !important;flex-direction:column-reverse;gap:24px !important}
+[data-shell] div[style*="22px/1.5"]{font-size:18px !important}
+[data-shell] div[style*="font:700 52px"],[data-shell] div[style*="font:700 56px"]{font-size:38px !important}
+[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="flex:1 1 280px"]{flex-direction:row !important;max-width:100% !important;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+[data-shell] div[style*="flex:1 1 280px"]::-webkit-scrollbar{display:none}
+[data-shell] div[style*="flex:1 1 280px"] div[style*="border-left"]{min-width:225px;flex-shrink:0;box-sizing:border-box}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] div[style*="grid-template-columns"]:not([data-proto-scale] div){grid-template-columns:1fr !important}
+[data-shell] a[style*="grid-template-columns"]{display:flex !important;flex-wrap:wrap;gap:10px 14px !important}
+[data-shell] div[style*="padding:96px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:100px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:80px 64px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="border-right:1px solid #ddd2b0"]{border-right:none !important}
+[data-shell] div[style*="padding:44px"]{padding:24px 20px !important}
+[data-shell] div[style*="font:600 30px"]{font-size:22px !important}
+[data-shell] p[style*="font:400 19px"]{font-size:16px !important}
+[data-shell] div[style*="aspect-ratio:4/5"]{margin-bottom:28px}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="Innovaccer navigation case study">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.html" title="Home" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 38px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">LANDING &amp; NAVIGATION</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#e0b45f;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">CASE FILE 01/02</span>
+        <span style="width:7px;height:7px;background:#e0b45f;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #ddd2b0;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #ddd2b0;background:rgba(250,246,236,.9);backdrop-filter:blur(12px)">
+      <a href="Innovaccer.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #ddd2b0;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#f0e7cd">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;gap:10px;padding:20px 28px;border-right:1px solid #ddd2b0;background:#faf6ec">
+        <span style="width:8px;height:8px;background:#e0b45f;display:inline-block"></span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CASE FILE / LANDING &amp; NAVIGATION · INNOVACCER · JAN — APR 2023</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding-right:32px">
+        <a href="#brief" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#problem" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROBLEM</a>
+        <a href="#research" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RESEARCH</a>
+        <a href="#insights" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">INSIGHTS</a>
+        <a href="#design" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN</a>
+        <a href="#impact" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">IMPACT</a>
+      </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div id="brief" style="background:#faf6ec;background-image:radial-gradient(#d8caa0 1.1px, transparent 1.1px);background-size:22px 22px" data-screen-label="Brief">
+      <div data-reveal="" style="display:flex;align-items:stretch;justify-content:space-between;gap:24px;border-bottom:1px solid #e5d9b8;padding:0 64px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:16px 0">
+          <span style="font:700 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">CASE FILE Nº 01/02</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CLIENT — INNOVACCER</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">PERIOD — JAN → APR 2023</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">STATUS — LIVE</span>
+        </div>
+      </div>
+      <div style="padding:100px 64px 72px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.14em;margin-bottom:44px;flex-wrap:wrap">
+          <a href="Portfolio - Control Tower.html" style="color:#6b6552" style-hover="color:#10151a">HOME</a>
+          <span style="color:#e5d9b8">/</span>
+          <a href="Innovaccer.html" style="color:#6b6552" style-hover="color:#10151a">WORK LOG 02 — INNOVACCER</a>
+          <span style="color:#e5d9b8">/</span>
+          <span style="color:#b0812c">CASE FILE — LANDING &amp; NAVIGATION RE-DESIGN</span>
+          <span style="color:#e5d9b8">/</span>
+          <span>RESEARCH &amp; RE-DESIGN · JAN — APR 2023</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(48px,5.2vw,80px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#10151a">
+          <span data-rise="" style="display:block;color:#9a9074">Navigation that knows</span>
+          <span data-rise="" style="display:block">who you <em style="font:italic 400 1.02em 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#b0812c">are</em>.</span>
+        </h1>
+        <p data-reveal="" style="margin:44px 0 0;font:400 17px/1.7 'Space Grotesk',sans-serif;color:#6b6552;max-width:620px">I led the landing and navigation experience of Innovaccer's application suite — the front door for every login, every persona, every workflow on the platform.</p>
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:44px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">ROLE — PRODUCT DESIGNER II · PLATFORM</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">TEAM — 1 PM · 2 FRONTEND · BACKEND ENGINEERS</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SHIPPED — APRIL 2023</span>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #e5d9b8">
+        <div style="padding:32px 64px;border-right:1px solid #e5d9b8;display:flex;align-items:baseline;gap:18px">
+          <span style="font:700 44px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#b0812c">~<span data-count="" data-target="150" style="color:#b0812c">0</span>K</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.1em">CLINICAL USERS IMPACTED</span>
+        </div>
+        <div style="padding:32px 64px;display:flex;align-items:baseline;gap:18px">
+          <span style="font:700 44px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a">~<span data-count="" data-target="24">0</span>M</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.1em">POPULATION HANDLED, ACROSS THE USA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEM ============ -->
+    <div id="problem" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Problem — platform header">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Problem #1 — the platform <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">header.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / WHERE IT STARTED</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:56px">
+        <p data-reveal="" style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">As Innovaccer expanded into new verticals with its platform and applications, the navigation system that had carried it this far started to crack. It was built for one product; the platform had become many.</p>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:center"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">×</span><span style="font:500 15px 'Space Grotesk',sans-serif">Not scalable anymore</span></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:center"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">×</span><span style="font:500 15px 'Space Grotesk',sans-serif">Non-adaptive to personas</span></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:center"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">×</span><span style="font:500 15px 'Space Grotesk',sans-serif">Disjointed switching between modules</span></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#10151a;padding:18px 22px;align-items:center"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#e0b45f">+</span><span style="font:500 15px 'Space Grotesk',sans-serif;color:#8fa0aa">…and much more, in the research up next</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="./group-10-mri6xpx7.png" alt="Old platform header anatomy" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 01-A · THE OLD HEADER, DISSECTED — LOGO · APP NAV · CENTRAL SERVICES · ACCOUNT</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">AS-IS · 2022</span></div>
+      </div>
+      <div data-reveal="" style="border: 1px solid #ddd2b0; background: #fff; padding: 10px; margin-top: 32px; max-width: 760px; width: 436px; height: 337px">
+        <img src="media/innovaccer/nav/hero.gif" alt="Old navigation in action — dropdown hunting" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 01-B · THE OLD NAV IN ACTION — EVERYTHING LIVES BEHIND DROPDOWNS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">● LOOPS</span></div>
+      </div>
+    </div>
+
+    <!-- ============ RESEARCH ============ -->
+    <div id="research" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Research">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Two lenses on the <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">problem.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / QUANTITATIVE + QUALITATIVE RESEARCH</span>
+      </div>
+
+      <!-- quant -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">LENS-1</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Quantitative</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">PERMISSIONS DATA, PER PERSONA</div>
+        </div>
+        <div>
+          <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">A deep-dive into permissions across personas — analysing data from <strong style="color:#10151a">8+ customers</strong>, segregated across <strong style="color:#10151a">12+ personas</strong>. The numbers were blunt:</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-top:28px;max-width:640px">
+            <div style="background:#fff;padding:26px 28px"><div style="font:700 48px 'Space Grotesk',sans-serif;letter-spacing:-.04em"><span data-count="" data-target="85">0</span>%</div><div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:10px;letter-spacing:.08em;line-height:1.6">OF HEALTHCARE USERS ACCESS FEWER THAN 3 APPS</div></div>
+            <div style="background:#fff;padding:26px 28px"><div style="font:700 48px 'Space Grotesk',sans-serif;letter-spacing:-.04em"><span data-count="" data-target="15">0</span>%</div><div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:10px;letter-spacing:.08em;line-height:1.6">OF PLATFORM-FACING USERS ACCESS MORE THAN 3 APPS</div></div>
+          </div>
+          <p style="margin:24px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">Yet everyone's apps were condensed into dropdowns — a navigation model built for a breadth of access almost nobody had.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;margin-bottom:32px">
+        <img src="media/innovaccer/nav/image-2.png" alt="Permissions research boards across customers" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-A · PERMISSIONS BOARDS — EMTIRO &amp; STEWARD TENANTS, PERSONA BY PERSONA</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MIRO</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:72px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/innovaccer/nav/group-22.png" alt="Care manager — old navigation" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-B · CARE MANAGER — TWO APPS, STILL BEHIND DROPDOWNS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">AS-IS</span></div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/innovaccer/nav/group-23.png" alt="Administrators — old navigation" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-C · ADMINISTRATOR — THE RARE MULTI-APP USER</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">AS-IS</span></div>
+        </div>
+      </div>
+
+      <!-- qual -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">LENS-2</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Qualitative</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">SESSIONS ACROSS THE USER SPECTRUM</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">Q-1</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Patients and Worklist</strong> are common across healthcare personas — and often left open in a separate tab.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">Q-2</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Application-specific <strong style="color:#10151a">configuration modules built for admins</strong> are irrelevant to generic users — yet sit in their nav.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">Q-3</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Users with a <strong style="color:#10151a">single module</strong> still navigate through dropdown systems instead of simple nav tabs — pure frustration.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">Q-4</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c">The nav is condensed into module dropdowns <strong style="color:#10151a">"for scalability"</strong> — despite users having limited access.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#7c878d">Q-5</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Third-party EMRs</strong> are used to access and feed data into the patient application.</p></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="media/innovaccer/nav/image-3.png" alt="App and module clustering per user tier" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-D · WHAT EACH TIER ACTUALLY TOUCHES — PG / PA / PAS-2 MODULE MAP</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RESEARCH ARTIFACT</span></div>
+      </div>
+    </div>
+
+    <!-- ============ INSIGHTS ============ -->
+    <div id="insights" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#10151a" data-screen-label="Insights">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">Eye-<em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">openers.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 03 / INSIGHTS THAT SHAPED THE DESIGN</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333b;border:1px solid #2a333b">
+        <div data-reveal="" style="background:#10151a;padding:36px 38px">
+          <span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">ASSUMPTION VALIDATED</span>
+          <div style="font:600 21px 'Space Grotesk',sans-serif;color:#fff;margin-top:20px;letter-spacing:-.01em">Interaction cost</div>
+          <p style="margin:12px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa">The cost of navigating between the sub-modules people use daily is high — the things they use most often stay hidden behind clicks.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 38px">
+          <span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#fff;background:#2a333b;border:1px solid #e0b45f;padding:4px 10px;letter-spacing:.1em">NEW FINDING</span>
+          <div style="font:600 21px 'Space Grotesk',sans-serif;color:#fff;margin-top:20px;letter-spacing:-.01em">Workflow speed-breakers</div>
+          <p style="margin:12px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa">A user with access to one app is still routed through the app grid instead of landing in their app. And that grid page offers nothing actionable — dead space that could personalise the sign-in journey.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 38px">
+          <span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#fff;background:#2a333b;border:1px solid #e0b45f;padding:4px 10px;letter-spacing:.1em">NEW FINDING</span>
+          <div style="font:600 21px 'Space Grotesk',sans-serif;color:#fff;margin-top:20px;letter-spacing:-.01em">Disjointed admin configs</div>
+          <p style="margin:12px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa">Configurations are admin-specific — there's no value exposing them to generic users. Ideally, all configs sit in one place.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 38px">
+          <span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">ASSUMPTION VALIDATED</span>
+          <div style="font:600 21px 'Space Grotesk',sans-serif;color:#fff;margin-top:20px;letter-spacing:-.01em">Overlaps within workflows</div>
+          <p style="margin:12px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa">Patient search is used by multiple personas and sits open in other tabs. Having it always available would be a genuine win.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 38px;grid-column:span 2">
+          <span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#fff;background:#2a333b;border:1px solid #e0b45f;padding:4px 10px;letter-spacing:.1em">NEW FINDING</span>
+          <div style="font:600 21px 'Space Grotesk',sans-serif;color:#fff;margin-top:20px;letter-spacing:-.01em">Need for better clustering</div>
+          <p style="margin:12px 0 0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:720px">We needed a framework for branding and clustering applications based on what is actually available to a particular user — not on the org chart of the product.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #2a333b;padding:10px;margin-top:32px;max-width:860px">
+        <img src="media/innovaccer/nav/ss-2023-04-23.png" alt="Old internal landing page" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">FIG. 03-A · THE OLD LANDING — A GRID WITH NOTHING ACTIONABLE ON IT</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">AS-IS</span></div>
+      </div>
+    </div>
+
+    <!-- ============ DESIGN ============ -->
+    <div id="design" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Design — re-imagining navigation">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Re-imagining <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">navigation.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 04 / THE NEW ANATOMY</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:680px">The new header splits navigation into clear zones: an <strong style="color:#10151a">app switcher</strong> for inter-app moves, flat <strong style="color:#10151a">tabs</strong> for intra-app moves, a <strong style="color:#10151a">global patient search</strong> always within reach, and central services + account tucked to the right.</p>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;margin-bottom:72px">
+        <img src="media/innovaccer/nav/group-24.png" alt="Redesigned navigation anatomy — annotated" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-A · THE REDESIGNED ANATOMY — SWITCHER · TABS · GLOBAL SEARCH · LANDING GRID</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · ANNOTATED</span></div>
+      </div>
+
+      <!-- principles -->
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">DESIGN PRINCIPLES — THE TWO TESTS EVERY DECISION HAD TO PASS</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:72px">
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#10151a;padding:14px 20px">
+            <span style="font:600 13px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">P-1 · SCALABLE</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">NEW APPS DON'T BREAK IT</span>
+          </div>
+          <div style="border:1px solid #ddd2b0;border-top:none;background:#fff;padding:10px">
+            <img src="media/innovaccer/nav/scalable.gif" alt="Scalable principle demo" style="width:100%;display:block">
+          </div>
+        </div>
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#10151a;padding:14px 20px">
+            <span style="font:600 13px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">P-2 · ADAPTABLE</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">THE NAV FITS THE PERSONA</span>
+          </div>
+          <div style="border:1px solid #ddd2b0;border-top:none;background:#fff;padding:10px">
+            <img src="media/innovaccer/nav/adaptable.gif" alt="Adaptable principle demo" style="width:100%;display:block">
+          </div>
+        </div>
+      </div>
+
+      <!-- tech behind, coded -->
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:40px 40px 32px;margin-bottom:72px">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:36px">FIG. 04-B · THE TECH BEHIND — ONE ACCESS TRUTH, EVERY TENANT</div>
+        <div style="display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr;gap:0;align-items:center">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:2px">APPS</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">care-management.app.js</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">outreach.app.js</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">analytics.app.js</div>
+          </div>
+          <div style="text-align:center;font:400 18px 'IBM Plex Mono',monospace;color:#e0b45f">→</div>
+          <div>
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:14px">TAM / LIC / UAM</div>
+            <div style="background:#10151a;color:#fff;padding:26px 20px;text-align:center">
+              <div style="font:600 16px 'Space Grotesk',sans-serif">Datashop DB</div>
+              <div style="font:400 10px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.08em">WHO GETS WHAT, RESOLVED ONCE</div>
+            </div>
+          </div>
+          <div style="text-align:center;font:400 18px 'IBM Plex Mono',monospace;color:#e0b45f">→</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:2px">CUSTOMER ENV</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">customer tenant 1</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">customer tenant 2</div>
+            <div style="border:1px solid #ddd2b0;padding:12px 16px;font:500 13px 'IBM Plex Mono',monospace">customer tenant 3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- landings -->
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">LANDING, ADAPTED TO ACCESS — TWO PATHS</div>
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">PATH-1</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Single-app users</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">NO SWITCHER · STRAIGHT INTO THE APP</div>
+        </div>
+        <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">The 85%. One app means no app grid, no switcher, no dropdown ceremony — login lands you inside your application with flat tabs for its modules.</p>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;margin-bottom:72px">
+        <img src="media/innovaccer/nav/group-27.png" alt="Single app user flow — without app switcher" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-C · SINGLE-APP FLOW — LOGIN → APPLICATION → SUB-MODULES</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FLOW + HI-FI</span></div>
+      </div>
+
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">PATH-2</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Multi-app users</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">PERSONALISED LANDING + APP SWITCHER</div>
+          <a href="https://www.figma.com/proto/aXyajls7tuPx1SiAx08lzl/Platform-navigation---PDM?node-id=27-2521&amp;scaling=min-zoom&amp;page-id=5%3A2416&amp;starting-point-node-id=27%3A2521&amp;show-proto-sidebar=1&amp;t=J3p0rxAM39vCXch4-1" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:10px 16px;border:1px solid #e0b45f;color:#e0b45f;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.1em;text-decoration:none;transition:background .25s" style-hover="background:#1a222b">VIEW PROTOTYPE ↗</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">Multi-app users get a personalised landing with a <strong style="color:#10151a">default-app choice</strong> — land where you work, or in a grid of exactly your apps — plus the switcher for one-click inter-app moves.</p>
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+            <img src="media/innovaccer/nav/image-9.png" alt="Multi-app user flow with app switcher" style="width:100%;display:block">
+            <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-D · MULTI-APP FLOW — GRID, DEFAULT APP, OR SWITCHER</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FLOW</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:32px;margin-bottom:32px;align-items:start">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/innovaccer/nav/group-20.png" alt="Personalised landing" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-E · PERSONALISED LANDING — HI JOHN, YOUR APPS, YOUR DEFAULT</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · SHIPPED</span></div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/innovaccer/nav/group-21.png" alt="App switcher close-up" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-F · THE APP SWITCHER</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · SHIPPED</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="media/innovaccer/nav/navigation.png" alt="Redesigned landing app grid with switcher open" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-G · THE REDESIGNED LANDING — ALL APPS, SWITCHER OPEN</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · SHIPPED</span></div>
+      </div>
+    </div>
+
+    <!-- ============ FUTURE ============ -->
+    <div style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0" data-screen-label="What the future looks like">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">What the future <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">looks like.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 05 / ROADMAP — P1 &amp; P2</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:44px">
+        <div data-reveal="" style="display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.08em;background:#10151a;padding:6px 10px;text-align:center">P1</span>
+          <p style="margin:0;font:400 16px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Admin config consoles across applications move into a separate <strong style="color:#10151a">tenant-configuration framework</strong> behind the settings icon — configs finally live in one place.</p>
+        </div>
+        <div data-reveal="" style="display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.08em;background:#10151a;padding:6px 10px;text-align:center">P2</span>
+          <p style="margin:0;font:400 16px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Patient search is used across personas — it becomes <strong style="color:#10151a">globally exposed</strong> in the header, always one keystroke away.</p>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="media/innovaccer/nav/group-28.png" alt="Future roadmap — config framework and patient search" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-A · FROM TODAY'S HEADER TO TOMORROW'S — P1 CONFIG FRAMEWORK · P2 PATIENT SEARCH</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ROADMAP</span></div>
+      </div>
+    </div>
+
+    <!-- ============ IMPACT ============ -->
+    <div id="impact" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Business impact">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Business <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">impact.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 06 / DERIVED FROM 3 MONTHS OF LAUNCH DATA</span>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div style="background:#10151a;padding:40px 36px">
+          <div style="font:700 56px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#e0b45f">&lt;<span data-count="" data-target="10">0</span>s</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:14px;letter-spacing:.08em;line-height:1.7">LESS TIME FROM SESSION LOGIN TO DESIRED MODULE</div>
+        </div>
+        <div style="background:#fff;padding:40px 36px">
+          <div style="font:700 56px 'Space Grotesk',sans-serif;letter-spacing:-.04em">+<span data-count="" data-target="34">0</span>%</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:14px;letter-spacing:.08em;line-height:1.7">INCREASE IN USER SATISFACTION SCORE</div>
+        </div>
+        <div style="background:#fff;padding:40px 36px">
+          <div style="font:700 56px 'Space Grotesk',sans-serif;letter-spacing:-.04em"><span data-count="" data-target="68">0</span>%</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:14px;letter-spacing:.08em;line-height:1.7">OF USERS LIKE AND USE THE DEFAULT-APP OPTION</div>
+        </div>
+      </div>
+
+      <!-- takeaways -->
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start;margin-top:88px">
+        <div data-reveal="">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:24px">TAKEAWAYS</div>
+          <div style="display:flex;flex-direction:column;gap:18px;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#4c565c">
+            <div style="display:grid;grid-template-columns:36px 1fr;gap:12px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">T-1</span><span><strong style="color:#10151a">Talking to users always helps</strong> — it validated assumptions from the quantitative data and made buy-in easier.</span></div>
+            <div style="display:grid;grid-template-columns:36px 1fr;gap:12px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">T-2</span><span><strong style="color:#10151a">Empathise, and you'll find more than you asked for</strong> — the landing-page problems, the scalability &amp; adaptability gaps, the flawed app-config consoles all surfaced this way.</span></div>
+            <div style="display:grid;grid-template-columns:36px 1fr;gap:12px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">T-3</span><span><strong style="color:#10151a">Keep in touch with your users</strong> — their problems are actually yours.</span></div>
+            <div style="display:grid;grid-template-columns:36px 1fr;gap:12px"><span style="font:700 13px 'Space Grotesk',sans-serif;color:#10151a">T-4</span><span><strong style="color:#10151a">Keep the PMs looped in on findings</strong> — it forms the ultimate roadmap.</span></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- ============ NEXT / FOOTER ============ -->
+    <div style="background:#10151a;padding:88px 64px 48px" data-screen-label="Next">
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:28px">END OF CASE FILE — WHERE TO NEXT?</div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333b;border:1px solid #2a333b;max-width:920px">
+        <a href="Innovaccer IAM.html" style="background:#10151a;padding:30px 32px;display:block" style-hover="background:#1a222b">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">NEXT CASE FILE — CF-02</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">User Access Management ↗</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.06em">RBAC · PERMISSION BUNDLES · 2022</div>
+        </a>
+        <a href="Innovaccer.html#cases" style="background:#10151a;padding:30px 32px;display:block" style-hover="background:#1a222b">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">OR RETURN TO</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">All Innovaccer case studies ↗</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.06em">WORK LOG 02 — INNOVACCER</div>
+        </a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:72px;padding-top:24px;border-top:1px solid #2a333b;flex-wrap:wrap;gap:16px">
+        <a href="Innovaccer.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK TO INNOVACCER</a>
+        <a href="Portfolio - Control Tower.html" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em" style-hover="color:#fff">CONTROL TOWER — HOME ↗</a>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<sc-if value="{{ lightboxSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:300;background:rgba(16,21,26,.95);display:flex;flex-direction:column;cursor:zoom-out">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;flex:none">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">FULL-SCREEN VIEW — CLICK ANYWHERE OR PRESS ESC TO CLOSE</span>
+      <button onClick="{{ closeLightbox }}" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;background:transparent;color:#fff;border:1px solid #2a333b;padding:10px 18px;cursor:pointer" style-hover="border-color:#e0b45f;color:#e0b45f">CLOSE ✕</button>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 44px 36px;box-sizing:border-box">
+      <div id="lightbox-img" role="img" aria-label="Full-screen view" onClick="{{ swallowClick }}" style="width:100%;height:100%;background-image:url('{{ lightboxSrc }}');background-size:contain;background-position:center;background-repeat:no-repeat;cursor:default"></div>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = { lightboxSrc: null };
+
+  componentDidMount() {
+    this._cleanup = [];
+    this._t = setTimeout(() => this.setupMotion(), 80);
+
+    this._onImgClick = (e) => {
+      const img = e.target.closest && e.target.closest('img');
+      if (!img) return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.setState({ lightboxSrc: img.currentSrc || img.src });
+      document.body.style.overflow = 'hidden';
+    };
+    document.addEventListener('click', this._onImgClick, true);
+    this._onKey = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
+    document.addEventListener('keydown', this._onKey);
+    this._cleanup.push(() => document.removeEventListener('click', this._onImgClick, true));
+    this._cleanup.push(() => document.removeEventListener('keydown', this._onKey));
+  }
+
+  closeLightbox() {
+    if (!this.state.lightboxSrc) return;
+    this.setState({ lightboxSrc: null });
+    document.body.style.overflow = '';
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._t);
+    (this._cleanup || []).forEach(fn => fn());
+  }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+    });
+    const riseIn = () => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    };
+    setTimeout(riseIn, 150);
+    setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        if (getComputedStyle(el).opacity !== '1') {
+          el.style.transition = 'none';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+      });
+    }, 1600);
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        this.runCounters(el);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+    document.querySelectorAll('[data-count]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) this.runCounters(el.closest('[data-reveal]') || el);
+    });
+  }
+
+  runCounters(scope) {
+    const counters = scope.matches && scope.matches('[data-count]') ? [scope] : Array.from(scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : []);
+    counters.forEach(el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = parseFloat(el.dataset.target);
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  renderVals() {
+    return {
+      lightboxSrc: this.state.lightboxSrc,
+      closeLightbox: () => this.closeLightbox(),
+      swallowClick: (e) => e.stopPropagation(),
+    };
+  }
+}
+</script>
+</body>
+</html>

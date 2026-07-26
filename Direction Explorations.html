@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#e9e8e4;font-family:system-ui,sans-serif}
+a{color:#1a1a1a}a:hover{color:#2a78d6}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Hybrids of <a class="dv-oid" href="#1b">1b</a> Flight Deck + <a class="dv-oid" href="#2b">2b</a> Monolith</span></div>
+<div class="dv-opts">
+
+<!-- ============ 3a CONTROL TOWER ============ -->
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Control Tower — Monolith's black rail + bold structure, run on Flight Deck's instrument grid and readouts</div>
+<div class="dv-card" style="width:1180px;background:#f4f6f7">
+  <div style="display:grid;grid-template-columns:88px 1fr">
+    <!-- vertical rail -->
+    <div style="background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;min-height:1240px">
+      <div style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</div>
+      <span style="writing-mode:vertical-rl;font:600 52px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg)">SABEEL DHAR</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#5fe08d;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">AVAILABLE</span>
+        <span style="width:7px;height:7px;background:#5fe08d;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+    <div style="min-width:0">
+      <!-- nav -->
+      <div style="display:flex;align-items:stretch;border-bottom:1px solid #d3d9dc">
+        <div style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #d3d9dc">
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">LEAD PRODUCT DESIGNER · SHAREFILE</span>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:36px;padding-right:32px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.1em">01 WORK</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">02 ABOUT</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">03 OFF-DUTY</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">04 CONTACT</span>
+        </div>
+      </div>
+      <!-- hero -->
+      <div style="display:grid;grid-template-columns:1fr 280px;border-bottom:1px solid #d3d9dc">
+        <div style="padding:76px 40px 60px;border-right:1px solid #d3d9dc">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:28px">MODULE 01 / MISSION STATEMENT</div>
+          <h1 style="margin:0;font:700 92px/0.98 'Space Grotesk',sans-serif;letter-spacing:-.045em;color:#10151a;text-transform:uppercase">Design<br>people<br><em style="font:italic 400 94px 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#10151a">actually</em> rely on.</h1>
+          <p style="margin:44px 0 0;font:400 16px/1.65 'Space Grotesk',sans-serif;color:#4c565c;max-width:480px">As much time untangling the problem as designing the solution — building what has to hold up in use, not just look right in a deck.</p>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="flex:1;padding:24px 26px;border-bottom:1px solid #d3d9dc">
+            <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">EXPERIENCE</div>
+            <div style="font:700 50px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a;margin-top:8px">6.2<span style="font-size:20px;color:#7c878d"> YRS</span></div>
+            <div style="height:4px;background:#e2e7e9;border-radius:2px;margin-top:14px;overflow:hidden"><div style="width:78%;height:100%;background:#10151a"></div></div>
+          </div>
+          <div style="flex:1;padding:24px 26px;border-bottom:1px solid #d3d9dc">
+            <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">REACH</div>
+            <div style="font:700 50px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a;margin-top:8px">90K<span style="font-size:20px;color:#7c878d"> ORGS</span></div>
+            <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:12px;letter-spacing:.04em">RUN CLIENT WORK ON MY SCREENS</div>
+          </div>
+          <div style="flex:1;padding:24px 26px;background:#10151a">
+            <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">CURRENT</div>
+            <div style="font:600 25px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#fff;margin-top:10px">ShareFile</div>
+            <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#5fe08d;margin-top:8px;letter-spacing:.06em">▲ LEAD PRODUCT DESIGNER</div>
+          </div>
+        </div>
+      </div>
+      <!-- ticker -->
+      <div style="overflow:hidden;border-bottom:1px solid #d3d9dc;background:#10151a;padding:10px 0;white-space:nowrap">
+        <div style="display:inline-flex;gap:56px;animation:marq 22s linear infinite;padding-left:28px">
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">SYSTEMS THINKING</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">INTERACTION DESIGN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">DESIGN OPS</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">RESEARCH-DRIVEN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">SYSTEMS THINKING</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">INTERACTION DESIGN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">DESIGN OPS</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">RESEARCH-DRIVEN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+        </div>
+      </div>
+      <!-- work -->
+      <div style="padding:52px 40px 64px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:34px">
+          <h2 style="margin:0;font:700 42px 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:#10151a;text-transform:uppercase">The record</h2>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / FLIGHT LOG · 2018 — 2026</span>
+        </div>
+        <div>
+          <div style="display:grid;grid-template-columns:56px 1fr 250px 140px;gap:20px;align-items:center;background:#10151a;color:#fff;padding:26px 28px">
+            <span style="font:700 18px 'Space Grotesk',sans-serif;color:#5fe08d">01</span>
+            <div><div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Progress ShareFile</div><div style="font:400 11.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:5px;letter-spacing:.06em">LEAD PRODUCT DESIGNER</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d;letter-spacing:.08em">2023 — NOW · ACTIVE</span>
+            <span style="font:600 13px 'Space Grotesk',sans-serif;text-align:right">4 PROJECTS ↗</span>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr 250px 140px;gap:20px;align-items:center;padding:26px 28px;background:#fff;border:1px solid #d3d9dc;border-top:none">
+            <span style="font:700 18px 'Space Grotesk',sans-serif;color:#aeb8bd">02</span>
+            <div><div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a">Innovaccer</div><div style="font:400 11.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:5px;letter-spacing:.06em">PRODUCT DESIGNER II</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">2021 — 2023</span>
+            <span style="font:600 13px 'Space Grotesk',sans-serif;color:#10151a;text-align:right">2 PROJECTS ↗</span>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr 250px 140px;gap:20px;align-items:center;padding:26px 28px;background:#fff;border:1px solid #d3d9dc;border-top:none">
+            <span style="font:700 18px 'Space Grotesk',sans-serif;color:#aeb8bd">03</span>
+            <div><div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a">Lollypop Studio</div><div style="font:400 11.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:5px;letter-spacing:.06em">UX DESIGNER</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">2020 — 2021</span>
+            <span style="font:600 13px 'Space Grotesk',sans-serif;color:#10151a;text-align:right">2 PROJECTS ↗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 3b SIGNAL ============ -->
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Signal — Flight Deck's modular grid as the base, turned up with Monolith's uppercase scale and acid accent</div>
+<div class="dv-card" style="width:1180px;background:#f4f6f7">
+  <!-- nav -->
+  <div style="display:flex;align-items:stretch;border-bottom:1px solid #d3d9dc">
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 28px;border-right:1px solid #d3d9dc">
+      <div style="width:34px;height:34px;background:#10151a;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#c8ff4d">SD</div>
+      <div><div style="font:600 14px 'Space Grotesk',sans-serif;color:#10151a;letter-spacing:-.01em">SABEEL DHAR</div><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">LEAD PRODUCT DESIGNER</div></div>
+    </div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:40px">
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.1em">WORK</span>
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ABOUT</span>
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">OFF-DUTY</span>
+    </div>
+    <div style="display:flex;align-items:center;padding:0 28px;border-left:1px solid #d3d9dc;background:#c8ff4d">
+      <span style="display:inline-flex;align-items:center;gap:8px;font:600 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.08em"><span style="width:6px;height:6px;background:#10151a;border-radius:50%;animation:blink 1.6s infinite"></span>STATUS: AVAILABLE</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="border-bottom:1px solid #d3d9dc;padding:74px 44px 58px;position:relative">
+    <div style="display:flex;justify-content:space-between;margin-bottom:30px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / MISSION STATEMENT</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">REF: SD-2026</span>
+    </div>
+    <h1 style="margin:0;font:700 108px/0.94 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:#10151a;text-transform:uppercase">Design people<br><span style="display:inline-flex;align-items:center;gap:24px"><span style="display:inline-block;height:14px;flex:0 0 150px;background:#c8ff4d"></span><em style="font:italic 400 110px 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em">actually</em> rely on.</span></h1>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:56px">
+      <p style="margin:0;font:400 16px/1.65 'Space Grotesk',sans-serif;color:#4c565c;max-width:470px">Lead product designer at ShareFile. As much time untangling the problem as designing the solution — what ships has to hold up in use, not just in a deck.</p>
+      <div style="display:flex;border:1px solid #10151a">
+        <div style="padding:20px 28px;border-right:1px solid #10151a"><div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#10151a">6+</div><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-top:3px">YEARS</div></div>
+        <div style="padding:20px 28px;border-right:1px solid #10151a"><div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#10151a">90K</div><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-top:3px">BUSINESSES</div></div>
+        <div style="padding:20px 28px;background:#10151a"><div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#c8ff4d">04</div><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em;margin-top:3px">COMPANIES</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- work modules -->
+  <div style="padding:52px 44px 64px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:34px">
+      <h2 style="margin:0;font:700 42px 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:#10151a;text-transform:uppercase">Flight log</h2>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / 2018 — 2026</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#d3d9dc;border:1px solid #10151a">
+      <div style="background:#10151a;padding:30px 32px;position:relative">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#c8ff4d;letter-spacing:.1em">2023 — NOW · ACTIVE</span><span style="font:700 16px 'Space Grotesk',sans-serif;color:#c8ff4d">01</span></div>
+        <div style="font:700 32px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#fff;margin-top:16px">Progress ShareFile</div>
+        <div style="font:400 12px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">LEAD PRODUCT DESIGNER · 4 PROJECTS 🔒</div>
+      </div>
+      <div style="background:#fff;padding:30px 32px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2021 — 2023</span><span style="font:700 16px 'Space Grotesk',sans-serif;color:#aeb8bd">02</span></div>
+        <div style="font:700 32px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:16px">Innovaccer</div>
+        <div style="font:400 12px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:6px;letter-spacing:.06em">PRODUCT DESIGNER II · 2 PROJECTS 🔒</div>
+      </div>
+      <div style="background:#fff;padding:30px 32px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2020 — 2021</span><span style="font:700 16px 'Space Grotesk',sans-serif;color:#aeb8bd">03</span></div>
+        <div style="font:700 32px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:16px">Lollypop Studio</div>
+        <div style="font:400 12px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:6px;letter-spacing:.06em">UX DESIGNER · 2 PROJECTS</div>
+      </div>
+      <div style="background:#fff;padding:30px 32px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2018 — 2019</span><span style="font:700 16px 'Space Grotesk',sans-serif;color:#aeb8bd">04</span></div>
+        <div style="font:700 32px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:16px">Urban Company</div>
+        <div style="font:400 12px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:6px;letter-spacing:.06em">PARTNER EXPERIENCE SPECIALIST</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "build the full page in <a class="dv-oid" href="#3a">3a</a>" · "<a class="dv-oid" href="#3b">3b</a> but with 1b's blue instead of acid green" · "show testimonials + off-duty in <a class="dv-oid" href="#3a">3a</a>"</p>
+</section>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Three more takes — pushing further from the safe zone</span></div>
+<div class="dv-opts">
+
+<!-- ============ 2a BLUEPRINT ============ -->
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Blueprint — technical drawing: registration marks, outlined display type, dimension lines</div>
+<div class="dv-card" style="width:1180px;background:#fdfdfc;position:relative">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(30,80,160,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(30,80,160,.05) 1px,transparent 1px);background-size:28px 28px;pointer-events:none"></div>
+  <!-- nav -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;border-bottom:1px dashed rgba(30,80,160,.35)">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font:400 16px 'IBM Plex Mono',monospace;color:#1e50a0">✛</span>
+      <span style="font:600 15px 'Archivo',sans-serif;color:#14161a;letter-spacing:-.01em">Sabeel Dhar</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#1e50a0;letter-spacing:.1em;border:1px solid rgba(30,80,160,.4);padding:3px 8px">DWG NO. SD-01 · REV 2026</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:26px">
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#14161a;letter-spacing:.06em">WORK</span>
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.06em">ABOUT</span>
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.06em">CONTACT</span>
+      <span style="display:inline-flex;align-items:center;gap:7px;font:500 11px 'IBM Plex Mono',monospace;color:#fff;background:#1e50a0;padding:7px 13px;letter-spacing:.05em"><span style="width:6px;height:6px;background:#5fe08d;border-radius:50%;animation:blink 2s infinite"></span>OPEN TO WORK</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="position:relative;padding:86px 40px 64px">
+    <div style="display:flex;justify-content:space-between;margin-bottom:34px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#1e50a0;letter-spacing:.14em">⌀ SECTION A—A / INTRODUCTION</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.14em">SCALE 1:1 · NOT FOR CONSTRUCTION</span>
+    </div>
+    <h1 style="margin:0;font:700 92px/1.03 'Archivo',sans-serif;letter-spacing:-.04em;color:#14161a">Design for platforms<br>people <span style="color:transparent;-webkit-text-stroke:1.5px #1e50a0">actually</span> rely on<span style="color:#1e50a0">.</span></h1>
+    <!-- dimension line -->
+    <div style="display:flex;align-items:center;gap:10px;margin-top:26px;max-width:560px">
+      <span style="font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">|←</span>
+      <div style="flex:1;border-top:1px solid #1e50a0;position:relative"><span style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);font:400 10px 'IBM Plex Mono',monospace;color:#1e50a0;background:#fdfdfc;padding:0 8px">6+ YEARS · 4 COMPANIES · 90K BUSINESSES</span></div>
+      <span style="font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">→|</span>
+    </div>
+    <p style="margin:44px 0 0;font:400 16px/1.65 'Archivo',sans-serif;color:#4d525b;max-width:520px">I'm Sabeel — lead product designer at ShareFile. I spend as much time untangling the problem as designing the solution; what ships has to hold up in use, not just in a deck.</p>
+  </div>
+  <!-- work -->
+  <div style="position:relative;border-top:1px dashed rgba(30,80,160,.35);padding:56px 40px 66px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#1e50a0;letter-spacing:.14em">⌀ SECTION B—B / WORK</span>
+      <h2 style="margin:0;font:700 40px 'Archivo',sans-serif;letter-spacing:-.03em;color:#14161a">Eight years. Four companies. <em style="font:italic 400 42px 'Instrument Serif',serif;color:#1e50a0">One craft.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div style="position:relative;border:1px solid #1e50a0;background:#fff;padding:24px 22px">
+        <span style="position:absolute;top:-7px;left:-7px;font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">+</span><span style="position:absolute;top:-7px;right:-7px;font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">+</span><span style="position:absolute;bottom:-8px;left:-7px;font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">+</span><span style="position:absolute;bottom:-8px;right:-7px;font:400 12px 'IBM Plex Mono',monospace;color:#1e50a0">+</span>
+        <div style="font:500 10px 'IBM Plex Mono',monospace;color:#1e50a0;letter-spacing:.1em">2023—NOW ● CURRENT</div>
+        <div style="font:700 22px 'Archivo',sans-serif;letter-spacing:-.02em;color:#14161a;margin-top:12px">Progress ShareFile</div>
+        <div style="font:400 12.5px 'Archivo',sans-serif;color:#7d838c;margin-top:4px">Lead Product Designer</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#1e50a0;margin-top:18px">4 PROJECTS 🔒 →</div>
+      </div>
+      <div style="border:1px solid rgba(30,80,160,.3);background:#fff;padding:24px 22px">
+        <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.1em">2021—2023</div>
+        <div style="font:700 22px 'Archivo',sans-serif;letter-spacing:-.02em;color:#14161a;margin-top:12px">Innovaccer</div>
+        <div style="font:400 12.5px 'Archivo',sans-serif;color:#7d838c;margin-top:4px">Product Designer II</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7d838c;margin-top:18px">2 PROJECTS →</div>
+      </div>
+      <div style="border:1px solid rgba(30,80,160,.3);background:#fff;padding:24px 22px">
+        <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.1em">2020—2021</div>
+        <div style="font:700 22px 'Archivo',sans-serif;letter-spacing:-.02em;color:#14161a;margin-top:12px">Lollypop Studio</div>
+        <div style="font:400 12.5px 'Archivo',sans-serif;color:#7d838c;margin-top:4px">UX Designer</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7d838c;margin-top:18px">2 PROJECTS →</div>
+      </div>
+      <div style="border:1px solid rgba(30,80,160,.3);background:#fff;padding:24px 22px">
+        <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7d838c;letter-spacing:.1em">2018—2019</div>
+        <div style="font:700 22px 'Archivo',sans-serif;letter-spacing:-.02em;color:#14161a;margin-top:12px">Urban Company</div>
+        <div style="font:400 12.5px 'Archivo',sans-serif;color:#7d838c;margin-top:4px">Partner Experience Specialist</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7d838c;margin-top:18px">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2b MONOLITH ============ -->
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Monolith — high-contrast split: giant vertical name, hard black/white, gallery-plinth feel</div>
+<div class="dv-card" style="width:1180px;background:#f1f0ee">
+  <div style="display:grid;grid-template-columns:96px 1fr">
+    <!-- vertical rail -->
+    <div style="background:#111;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:26px 0;min-height:1160px">
+      <span style="font:600 13px 'Archivo',sans-serif;color:#fff;letter-spacing:.02em">SD</span>
+      <span style="writing-mode:vertical-rl;font:600 64px 'Archivo',sans-serif;color:#fff;letter-spacing:-.02em;transform:rotate(180deg)">SABEEL DHAR</span>
+      <span style="width:8px;height:8px;background:#c8ff4d;border-radius:50%;animation:blink 2s infinite"></span>
+    </div>
+    <div>
+      <!-- nav -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid #111">
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.14em">LEAD PRODUCT DESIGNER — SHAREFILE</span>
+        <div style="display:flex;gap:30px;align-items:center">
+          <span style="font:600 12px 'Archivo',sans-serif;color:#111">WORK</span>
+          <span style="font:600 12px 'Archivo',sans-serif;color:#77756f">ABOUT</span>
+          <span style="font:600 12px 'Archivo',sans-serif;color:#77756f">CONTACT</span>
+          <span style="font:600 11px 'Archivo',sans-serif;color:#111;background:#c8ff4d;padding:8px 16px;letter-spacing:.03em">OPEN TO WORK</span>
+        </div>
+      </div>
+      <!-- hero -->
+      <div style="padding:80px 40px 60px">
+        <h1 style="margin:0;font:700 104px/0.96 'Archivo',sans-serif;letter-spacing:-.05em;color:#111;text-transform:uppercase">Design<br>people<br><em style="font:italic 400 106px 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em">actually</em> rely on.</h1>
+        <div style="display:flex;gap:0;margin-top:64px;border:1px solid #111">
+          <div style="flex:1.6;padding:26px 28px;border-right:1px solid #111">
+            <p style="margin:0;font:400 15px/1.6 'Archivo',sans-serif;color:#3d3b37">As much time untangling the problem as designing the solution. What ships has to hold up for the person using it — not just look right in a deck.</p>
+          </div>
+          <div style="flex:.55;padding:26px 24px;border-right:1px solid #111"><div style="font:700 40px 'Archivo',sans-serif;letter-spacing:-.03em;color:#111">6+</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.1em;margin-top:4px">YEARS</div></div>
+          <div style="flex:.55;padding:26px 24px;border-right:1px solid #111"><div style="font:700 40px 'Archivo',sans-serif;letter-spacing:-.03em;color:#111">90K</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.1em;margin-top:4px">BUSINESSES</div></div>
+          <div style="flex:.55;padding:26px 24px;background:#111"><div style="font:700 40px 'Archivo',sans-serif;letter-spacing:-.03em;color:#c8ff4d">04</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#a3a19b;letter-spacing:.1em;margin-top:4px">COMPANIES</div></div>
+        </div>
+      </div>
+      <!-- work -->
+      <div style="padding:24px 40px 70px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin:30px 0 34px">
+          <h2 style="margin:0;font:700 44px 'Archivo',sans-serif;letter-spacing:-.035em;color:#111;text-transform:uppercase">The record</h2>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.14em">2018 — 2026 · CHRONOLOGICAL</span>
+        </div>
+        <div>
+          <div style="display:grid;grid-template-columns:60px 1fr 260px 150px;gap:20px;align-items:center;background:#111;color:#fff;padding:28px 26px">
+            <span style="font:700 20px 'Archivo',sans-serif;color:#c8ff4d">01</span>
+            <div><div style="font:700 30px 'Archivo',sans-serif;letter-spacing:-.02em">Progress ShareFile</div><div style="font:400 12px 'IBM Plex Mono',monospace;color:#a3a19b;margin-top:5px;letter-spacing:.06em">LEAD PRODUCT DESIGNER</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#c8ff4d;letter-spacing:.08em">2023 — NOW · CURRENTLY HERE</span>
+            <span style="font:600 13px 'Archivo',sans-serif;text-align:right">4 PROJECTS ↗</span>
+          </div>
+          <div style="display:grid;grid-template-columns:60px 1fr 260px 150px;gap:20px;align-items:center;padding:28px 26px;border:1px solid #111;border-top:none">
+            <span style="font:700 20px 'Archivo',sans-serif;color:#b6b3ac">02</span>
+            <div><div style="font:700 30px 'Archivo',sans-serif;letter-spacing:-.02em;color:#111">Innovaccer</div><div style="font:400 12px 'IBM Plex Mono',monospace;color:#77756f;margin-top:5px;letter-spacing:.06em">PRODUCT DESIGNER II</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.08em">2021 — 2023</span>
+            <span style="font:600 13px 'Archivo',sans-serif;color:#111;text-align:right">2 PROJECTS ↗</span>
+          </div>
+          <div style="display:grid;grid-template-columns:60px 1fr 260px 150px;gap:20px;align-items:center;padding:28px 26px;border:1px solid #111;border-top:none">
+            <span style="font:700 20px 'Archivo',sans-serif;color:#b6b3ac">03</span>
+            <div><div style="font:700 30px 'Archivo',sans-serif;letter-spacing:-.02em;color:#111">Lollypop Studio</div><div style="font:400 12px 'IBM Plex Mono',monospace;color:#77756f;margin-top:5px;letter-spacing:.06em">UX DESIGNER</div></div>
+            <span style="font:400 11px 'IBM Plex Mono',monospace;color:#77756f;letter-spacing:.08em">2020 — 2021</span>
+            <span style="font:600 13px 'Archivo',sans-serif;color:#111;text-align:right">2 PROJECTS ↗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2c GLASS HORIZON ============ -->
+<div class="dv-opt" id="2c">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Glass Horizon — soft sci-fi light: airy gradient atmosphere, frosted panels, floating depth</div>
+<div class="dv-card" style="width:1180px;background:linear-gradient(165deg,#f7f9fc 0%,#eef2f8 40%,#e8edf6 70%,#eff1f4 100%);position:relative">
+  <div style="position:absolute;top:-120px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(120,150,255,.14),transparent 65%);pointer-events:none"></div>
+  <div style="position:absolute;top:340px;left:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(255,170,120,.1),transparent 65%);pointer-events:none"></div>
+  <!-- nav -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:space-between;margin:20px 28px 0;padding:16px 26px;background:rgba(255,255,255,.6);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:100px;box-shadow:0 8px 28px rgba(80,100,140,.08)">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <span style="font:600 15px 'Space Grotesk',sans-serif;color:#141821;letter-spacing:-.01em">Sabeel Dhar</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8b93a3;letter-spacing:.1em">LEAD PRODUCT DESIGNER</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px">
+      <span style="font:500 13px 'Space Grotesk',sans-serif;color:#141821">Work</span>
+      <span style="font:500 13px 'Space Grotesk',sans-serif;color:#8b93a3">About</span>
+      <span style="font:500 13px 'Space Grotesk',sans-serif;color:#8b93a3">Contact</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:500 12px 'Space Grotesk',sans-serif;color:#fff;background:#141821;padding:9px 18px;border-radius:100px"><span style="width:6px;height:6px;background:#5fe08d;border-radius:50%;animation:blink 2s infinite"></span>Open to work</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="position:relative;padding:96px 48px 70px;text-align:center">
+    <div style="display:inline-flex;align-items:center;gap:8px;font:400 10.5px 'IBM Plex Mono',monospace;color:#5a6478;letter-spacing:.14em;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);padding:7px 16px;border-radius:100px;box-shadow:0 4px 16px rgba(80,100,140,.06)">CURRENTLY AT SHAREFILE · 90K BUSINESSES</div>
+    <h1 style="margin:34px 0 0;font:500 94px/1.04 'Space Grotesk',sans-serif;letter-spacing:-.045em;color:#141821">Design for platforms<br>people <em style="font:italic 400 96px 'Instrument Serif',serif;background:linear-gradient(100deg,#3d5af1,#7a8cff 60%,#b07af1);-webkit-background-clip:text;background-clip:text;color:transparent">actually</em> rely on.</h1>
+    <p style="margin:36px auto 0;font:400 17px/1.65 'Space Grotesk',sans-serif;color:#5a6478;max-width:560px">As much time untangling the problem as designing the solution — building what holds up for the person using it, not just in a deck.</p>
+    <div style="display:flex;justify-content:center;gap:16px;margin-top:48px">
+      <div style="background:rgba(255,255,255,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:22px 34px;box-shadow:0 10px 30px rgba(80,100,140,.08)"><div style="font:600 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#141821">6+</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8b93a3;letter-spacing:.12em;margin-top:4px">YEARS</div></div>
+      <div style="background:rgba(255,255,255,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:22px 34px;box-shadow:0 10px 30px rgba(80,100,140,.08)"><div style="font:600 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#141821">90K+</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8b93a3;letter-spacing:.12em;margin-top:4px">BUSINESSES</div></div>
+      <div style="background:rgba(255,255,255,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:22px 34px;box-shadow:0 10px 30px rgba(80,100,140,.08)"><div style="font:600 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#141821">4</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8b93a3;letter-spacing:.12em;margin-top:4px">COMPANIES</div></div>
+    </div>
+  </div>
+  <!-- work -->
+  <div style="position:relative;padding:40px 48px 76px">
+    <div style="text-align:center;margin-bottom:40px">
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8b93a3;letter-spacing:.16em">SELECTED WORK</div>
+      <h2 style="margin:14px 0 0;font:500 44px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#141821">Eight years. Four companies. <em style="font:italic 400 46px 'Instrument Serif',serif">One craft.</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:920px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.95);border-radius:22px;padding:26px 32px;box-shadow:0 14px 38px rgba(80,100,140,.1)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#3d5af1;min-width:100px">2023 — NOW</span>
+        <div style="flex:1"><div style="font:600 24px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#141821">Progress ShareFile</div><div style="font:400 13px 'Space Grotesk',sans-serif;color:#8b93a3;margin-top:2px">Lead Product Designer</div></div>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;color:#3d5af1;background:rgba(61,90,241,.08);padding:6px 14px;border-radius:100px;letter-spacing:.06em">● CURRENT</span>
+        <span style="font:500 13px 'Space Grotesk',sans-serif;color:#141821">4 projects →</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.55);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);border-radius:22px;padding:26px 32px;box-shadow:0 8px 24px rgba(80,100,140,.06)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8b93a3;min-width:100px">2021 — 2023</span>
+        <div style="flex:1"><div style="font:600 24px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#141821">Innovaccer</div><div style="font:400 13px 'Space Grotesk',sans-serif;color:#8b93a3;margin-top:2px">Product Designer II</div></div>
+        <span></span>
+        <span style="font:500 13px 'Space Grotesk',sans-serif;color:#5a6478">2 projects →</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.55);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);border-radius:22px;padding:26px 32px;box-shadow:0 8px 24px rgba(80,100,140,.06)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8b93a3;min-width:100px">2020 — 2021</span>
+        <div style="flex:1"><div style="font:600 24px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#141821">Lollypop Studio</div><div style="font:400 13px 'Space Grotesk',sans-serif;color:#8b93a3;margin-top:2px">UX Designer</div></div>
+        <span></span>
+        <span style="font:500 13px 'Space Grotesk',sans-serif;color:#5a6478">2 projects →</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "build the full page in <a class="dv-oid" href="#2b">2b</a>" · "mix <a class="dv-oid" href="#2a">2a</a>'s blueprint marks into <a class="dv-oid" href="#1a">1a</a>" · "tone down <a class="dv-oid" href="#2c">2c</a>'s gradients"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Three takes on light precision — hero + work section for each</span></div>
+<div class="dv-opts">
+
+<!-- ============ 1a GRID LEDGER ============ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Grid Ledger — drafting-table Swiss: visible column grid, mono annotations, engineered restraint</div>
+<div class="dv-card" style="width:1180px;background:#fafaf7;position:relative">
+  <!-- column grid overlay -->
+  <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);pointer-events:none">
+    <div style="border-right:1px solid rgba(26,26,26,.06)"></div><div style="border-right:1px solid rgba(26,26,26,.06)"></div><div style="border-right:1px solid rgba(26,26,26,.06)"></div><div style="border-right:1px solid rgba(26,26,26,.06)"></div><div style="border-right:1px solid rgba(26,26,26,.06)"></div><div></div>
+  </div>
+  <!-- nav -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;border-bottom:1px solid rgba(26,26,26,.12)">
+    <div style="display:flex;align-items:baseline;gap:14px">
+      <span style="font:600 15px 'Archivo',sans-serif;letter-spacing:-.01em;color:#141414">Sabeel Dhar</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.08em">LEAD PRODUCT DESIGNER</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px">
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#141414;letter-spacing:.06em">01 WORK</span>
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.06em">02 ABOUT</span>
+      <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.06em">03 CONTACT</span>
+      <span style="display:inline-flex;align-items:center;gap:7px;font:500 11px 'IBM Plex Mono',monospace;color:#1a6b3c;border:1px solid #1a6b3c;padding:6px 12px;border-radius:2px;letter-spacing:.05em"><span style="width:6px;height:6px;background:#1a6b3c;border-radius:50%;animation:blink 2s infinite"></span>OPEN TO WORK</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="position:relative;padding:90px 40px 70px">
+    <div style="display:flex;justify-content:space-between;margin-bottom:36px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em">FIG. 01 — INTRODUCTION</span>
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em">27.09°N, 88.36°E / 2026</span>
+    </div>
+    <h1 style="margin:0;font:500 96px/1.02 'Archivo',sans-serif;letter-spacing:-.045em;color:#141414;max-width:1000px">Design for platforms people <em style="font:italic 400 100px/1 'Instrument Serif',serif;letter-spacing:-.01em">actually rely on</em>.</h1>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);margin-top:70px;align-items:end">
+      <p style="grid-column:1/3;margin:0;font:400 16px/1.65 'Archivo',sans-serif;color:#4a4a45;padding-right:32px">I'm Sabeel — I spend as much time untangling the problem as designing the solution. Currently at ShareFile, building collaboration tools 90,000 businesses run their client work on.</p>
+      <div style="grid-column:4/5;border-top:1px solid rgba(26,26,26,.16);padding-top:12px">
+        <div style="font:500 34px 'Archivo',sans-serif;letter-spacing:-.03em;color:#141414">6+</div>
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em;margin-top:4px">YEARS IN CRAFT</div>
+      </div>
+      <div style="grid-column:5/6;border-top:1px solid rgba(26,26,26,.16);padding-top:12px">
+        <div style="font:500 34px 'Archivo',sans-serif;letter-spacing:-.03em;color:#141414">90K+</div>
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em;margin-top:4px">BUSINESSES SERVED</div>
+      </div>
+      <div style="grid-column:6/7;border-top:1px solid rgba(26,26,26,.16);padding-top:12px">
+        <div style="font:500 34px 'Archivo',sans-serif;letter-spacing:-.03em;color:#141414">04</div>
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em;margin-top:4px">COMPANIES</div>
+      </div>
+    </div>
+  </div>
+  <!-- work -->
+  <div style="position:relative;border-top:1px solid rgba(26,26,26,.12);padding:60px 40px 70px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a8a84;letter-spacing:.1em">FIG. 02 — SELECTED WORK</span>
+      <h2 style="margin:0;font:500 42px 'Archivo',sans-serif;letter-spacing:-.035em;color:#141414">Eight years. Four companies. <em style="font:italic 400 44px 'Instrument Serif',serif">One craft.</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:120px 90px 1fr 200px 120px;gap:24px;align-items:center;padding:26px 0;border-top:1px solid #141414;background:linear-gradient(90deg,rgba(26,107,60,.04),transparent 60%)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#141414">2023 — NOW</span>
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8a8a84">/ 001</span>
+        <div><div style="font:600 24px 'Archivo',sans-serif;letter-spacing:-.02em;color:#141414">Progress ShareFile</div><div style="font:400 13px 'Archivo',sans-serif;color:#8a8a84;margin-top:3px">Lead Product Designer</div></div>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#1a6b3c;letter-spacing:.08em">● CURRENTLY HERE</span>
+        <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414;text-align:right">4 PROJECTS →</span>
+      </div>
+      <div style="display:grid;grid-template-columns:120px 90px 1fr 200px 120px;gap:24px;align-items:center;padding:26px 0;border-top:1px solid rgba(26,26,26,.14)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8a8a84">2021 — 2023</span>
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8a8a84">/ 002</span>
+        <div><div style="font:600 24px 'Archivo',sans-serif;letter-spacing:-.02em;color:#141414">Innovaccer</div><div style="font:400 13px 'Archivo',sans-serif;color:#8a8a84;margin-top:3px">Product Designer II</div></div>
+        <span></span>
+        <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8a8a84;text-align:right">2 PROJECTS →</span>
+      </div>
+      <div style="display:grid;grid-template-columns:120px 90px 1fr 200px 120px;gap:24px;align-items:center;padding:26px 0;border-top:1px solid rgba(26,26,26,.14);border-bottom:1px solid rgba(26,26,26,.14)">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8a8a84">2020 — 2021</span>
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8a8a84">/ 003</span>
+        <div><div style="font:600 24px 'Archivo',sans-serif;letter-spacing:-.02em;color:#141414">Lollypop Studio</div><div style="font:400 13px 'Archivo',sans-serif;color:#8a8a84;margin-top:3px">UX Designer</div></div>
+        <span></span>
+        <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8a8a84;text-align:right">2 PROJECTS →</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 1b FLIGHT DECK ============ -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Flight Deck — aerospace instrument: cool white modules, hairline frames, one signal accent</div>
+<div class="dv-card" style="width:1180px;background:#f4f6f7">
+  <!-- nav -->
+  <div style="display:flex;align-items:stretch;border-bottom:1px solid #d3d9dc">
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 28px;border-right:1px solid #d3d9dc">
+      <div style="width:34px;height:34px;border:1.5px solid #10151a;border-radius:50%;display:grid;place-items:center;font:600 13px 'Space Grotesk',sans-serif;color:#10151a">SD</div>
+      <div><div style="font:600 14px 'Space Grotesk',sans-serif;color:#10151a;letter-spacing:-.01em">SABEEL DHAR</div><div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">LEAD PRODUCT DESIGNER</div></div>
+    </div>
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:40px">
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.1em">WORK</span>
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ABOUT</span>
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">OFF-DUTY</span>
+    </div>
+    <div style="display:flex;align-items:center;padding:0 28px;border-left:1px solid #d3d9dc;background:#10151a">
+      <span style="display:inline-flex;align-items:center;gap:8px;font:500 11px 'IBM Plex Mono',monospace;color:#5fe08d;letter-spacing:.08em"><span style="width:6px;height:6px;background:#5fe08d;border-radius:50%;animation:blink 1.6s infinite"></span>STATUS: AVAILABLE</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="display:grid;grid-template-columns:1fr 300px;border-bottom:1px solid #d3d9dc">
+    <div style="padding:80px 48px 64px;border-right:1px solid #d3d9dc;position:relative">
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:30px">MODULE 01 / MISSION STATEMENT</div>
+      <h1 style="margin:0;font:600 84px/1.04 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a">Design for platforms<br>people <em style="font:italic 400 86px 'Instrument Serif',serif;color:#0b57d0">actually</em> rely on.</h1>
+      <p style="margin:44px 0 0;font:400 16px/1.65 'Space Grotesk',sans-serif;color:#4c565c;max-width:520px">Lead product designer at ShareFile. As much time untangling the problem as designing the solution — building what has to hold up in use, not just look right in a deck.</p>
+      <div style="position:absolute;right:20px;bottom:20px;font:400 9px 'IBM Plex Mono',monospace;color:#aeb8bd;letter-spacing:.1em">REF: SD-2026-HERO</div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="flex:1;padding:24px 26px;border-bottom:1px solid #d3d9dc">
+        <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">EXPERIENCE</div>
+        <div style="font:600 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a;margin-top:8px">6.2<span style="font-size:22px;color:#7c878d"> YRS</span></div>
+        <div style="height:4px;background:#e2e7e9;border-radius:2px;margin-top:14px;overflow:hidden"><div style="width:78%;height:100%;background:#0b57d0"></div></div>
+      </div>
+      <div style="flex:1;padding:24px 26px;border-bottom:1px solid #d3d9dc">
+        <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">REACH</div>
+        <div style="font:600 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a;margin-top:8px">90K<span style="font-size:22px;color:#7c878d"> ORGS</span></div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:14px">RUN CLIENT WORK ON MY SCREENS</div>
+      </div>
+      <div style="flex:1;padding:24px 26px">
+        <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">CURRENT</div>
+        <div style="font:600 26px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:10px">ShareFile</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#0b57d0;margin-top:8px;letter-spacing:.06em">▲ LEAD PRODUCT DESIGNER</div>
+      </div>
+    </div>
+  </div>
+  <!-- ticker -->
+  <div style="overflow:hidden;border-bottom:1px solid #d3d9dc;background:#10151a;padding:10px 0;white-space:nowrap">
+    <div style="display:inline-flex;gap:56px;animation:marq 22s linear infinite;padding-left:28px">
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">SYSTEMS THINKING</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">INTERACTION DESIGN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">DESIGN OPS</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">RESEARCH-DRIVEN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">SYSTEMS THINKING</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">INTERACTION DESIGN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">DESIGN OPS</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+      <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">RESEARCH-DRIVEN</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#5fe08d">✚</span>
+    </div>
+  </div>
+  <!-- work modules -->
+  <div style="padding:56px 48px 64px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px">
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / FLIGHT LOG</div>
+      <h2 style="margin:0;font:600 40px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#10151a">Eight years. Four companies. <em style="font:italic 400 42px 'Instrument Serif',serif;color:#0b57d0">One craft.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#d3d9dc;border:1px solid #d3d9dc">
+      <div style="background:#fff;padding:28px 30px;position:relative">
+        <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#0b57d0"></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#0b57d0;letter-spacing:.1em">2023 — NOW · ACTIVE</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#aeb8bd">001</span></div>
+        <div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:14px">Progress ShareFile</div>
+        <div style="font:400 13px 'Space Grotesk',sans-serif;color:#7c878d;margin-top:4px">Lead Product Designer · 4 projects 🔒</div>
+      </div>
+      <div style="background:#fff;padding:28px 30px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2021 — 2023</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#aeb8bd">002</span></div>
+        <div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:14px">Innovaccer</div>
+        <div style="font:400 13px 'Space Grotesk',sans-serif;color:#7c878d;margin-top:4px">Product Designer II · 2 projects 🔒</div>
+      </div>
+      <div style="background:#fff;padding:28px 30px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2020 — 2021</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#aeb8bd">003</span></div>
+        <div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:14px">Lollypop Studio</div>
+        <div style="font:400 13px 'Space Grotesk',sans-serif;color:#7c878d;margin-top:4px">UX Designer · 2 projects</div>
+      </div>
+      <div style="background:#fff;padding:28px 30px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2018 — 2019</span><span style="font:400 11px 'IBM Plex Mono',monospace;color:#aeb8bd">004</span></div>
+        <div style="font:600 28px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#10151a;margin-top:14px">Urban Company</div>
+        <div style="font:400 13px 'Space Grotesk',sans-serif;color:#7c878d;margin-top:4px">Partner Experience Specialist</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 1c PRECISION EDITORIAL ============ -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Precision Editorial — keeps your warm paper DNA, re-engineered: oversized serif, asymmetric grid, hairline rules</div>
+<div class="dv-card" style="width:1180px;background:#f6f4ef">
+  <!-- nav -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 44px">
+    <span style="font:italic 400 22px 'Instrument Serif',serif;color:#171512">Sabeel Dhar</span>
+    <div style="display:flex;align-items:center;gap:32px">
+      <span style="font:500 12px 'Archivo',sans-serif;color:#171512;letter-spacing:.02em">Work</span>
+      <span style="font:500 12px 'Archivo',sans-serif;color:#8d867a;letter-spacing:.02em">About</span>
+      <span style="font:500 12px 'Archivo',sans-serif;color:#8d867a;letter-spacing:.02em">Contact</span>
+      <span style="display:inline-flex;align-items:center;gap:7px;font:500 11px 'IBM Plex Mono',monospace;color:#171512;background:#e8e3d8;padding:7px 14px;border-radius:100px;letter-spacing:.04em"><span style="width:6px;height:6px;background:#3c7a4e;border-radius:50%;animation:blink 2s infinite"></span>OPEN TO WORK</span>
+    </div>
+  </div>
+  <!-- hero -->
+  <div style="padding:70px 44px 0;position:relative">
+    <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8d867a;letter-spacing:.14em;margin-bottom:24px">( LEAD PRODUCT DESIGNER — SHAREFILE )</div>
+    <h1 style="margin:0;font:400 128px/0.98 'Instrument Serif',serif;letter-spacing:-.03em;color:#171512">Design people<br><span style="margin-left:180px;display:inline-block"><em style="font-style:italic">actually</em> rely on<span style="color:#b0491f">.</span></span></h1>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:64px;padding-bottom:56px;border-bottom:1px solid #171512">
+      <p style="margin:0;font:400 16px/1.65 'Archivo',sans-serif;color:#57524a;max-width:440px">I'm Sabeel — lead product designer spending as much time untangling the problem as designing the solution. What I build has to earn its place: hold up for the person using it, not just look right in a deck.</p>
+      <div style="display:flex;gap:56px;text-align:right">
+        <div><div style="font:400 44px 'Instrument Serif',serif;color:#171512">6<span style="color:#b0491f">+</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8d867a;letter-spacing:.12em;margin-top:2px">YEARS</div></div>
+        <div><div style="font:400 44px 'Instrument Serif',serif;color:#171512">90K<span style="color:#b0491f">+</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8d867a;letter-spacing:.12em;margin-top:2px">BUSINESSES</div></div>
+        <div><div style="font:400 44px 'Instrument Serif',serif;color:#171512">4</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8d867a;letter-spacing:.12em;margin-top:2px">COMPANIES</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- work -->
+  <div style="padding:64px 44px 72px">
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:48px">
+      <div>
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8d867a;letter-spacing:.14em">01 / WORK</div>
+        <h2 style="margin:18px 0 0;font:400 46px/1.08 'Instrument Serif',serif;letter-spacing:-.02em;color:#171512">Eight years.<br>Four companies.<br><em>One craft.</em></h2>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;align-items:baseline;gap:28px;padding:24px 0;border-top:1px solid #171512">
+          <span style="font:400 64px 'Instrument Serif',serif;color:#d8d2c4;line-height:1">01</span>
+          <div style="flex:1"><div style="font:600 26px 'Archivo',sans-serif;letter-spacing:-.02em;color:#171512">Progress ShareFile</div><div style="font:400 13px 'Archivo',sans-serif;color:#8d867a;margin-top:3px">Lead Product Designer · 2023 — now</div></div>
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#3c7a4e;letter-spacing:.1em">● CURRENT</span>
+          <span style="font:400 12px 'IBM Plex Mono',monospace;color:#171512">4 PROJECTS ↗</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:28px;padding:24px 0;border-top:1px solid #d8d2c4">
+          <span style="font:400 64px 'Instrument Serif',serif;color:#d8d2c4;line-height:1">02</span>
+          <div style="flex:1"><div style="font:600 26px 'Archivo',sans-serif;letter-spacing:-.02em;color:#171512">Innovaccer</div><div style="font:400 13px 'Archivo',sans-serif;color:#8d867a;margin-top:3px">Product Designer II · 2021 — 2023</div></div>
+          <span></span>
+          <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8d867a">2 PROJECTS ↗</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:28px;padding:24px 0;border-top:1px solid #d8d2c4;border-bottom:1px solid #d8d2c4">
+          <span style="font:400 64px 'Instrument Serif',serif;color:#d8d2c4;line-height:1">03</span>
+          <div style="flex:1"><div style="font:600 26px 'Archivo',sans-serif;letter-spacing:-.02em;color:#171512">Lollypop Studio</div><div style="font:400 13px 'Archivo',sans-serif;color:#8d867a;margin-top:3px">UX Designer · 2020 — 2021</div></div>
+          <span></span>
+          <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8d867a">2 PROJECTS ↗</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "build the full page in <a class="dv-oid" href="#1b">1b</a>" · "mix <a class="dv-oid" href="#1a">1a</a>'s grid with <a class="dv-oid" href="#1c">1c</a>'s serif" · "show me the testimonials + off-duty sections in one of these"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

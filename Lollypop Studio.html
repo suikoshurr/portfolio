@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4f6f7;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:80px 44px"]{padding:56px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"],[data-shell] div[style*="padding:52px 44px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:5fr 4fr"],[data-shell] div[style*="grid-template-columns:4fr 5fr"],[data-shell] div[style*="grid-template-columns:1fr 56px 1fr"],[data-shell] div[style*="grid-template-columns:380px 1fr"],[data-shell] div[style*="grid-template-columns:320px 1fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-shell] div[style*="backdrop-filter"]>a{padding:14px 16px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="justify-content:space-between"][style*="align-items:baseline"][style*="flex-wrap:wrap"]{flex-direction:column-reverse !important;align-items:flex-start !important;gap:8px !important}
+[data-shell] div[style*="grid-template-columns:5fr 4fr"]{display:flex !important;flex-direction:column-reverse;gap:24px !important}
+[data-shell] div[style*="22px/1.5"]{font-size:18px !important}
+[data-shell] div[style*="font:700 52px"],[data-shell] div[style*="font:700 56px"]{font-size:38px !important}
+[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="flex:1 1 280px"]{flex-direction:row !important;max-width:100% !important;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+[data-shell] div[style*="flex:1 1 280px"]::-webkit-scrollbar{display:none}
+[data-shell] div[style*="flex:1 1 280px"] div[style*="border-left"]{min-width:225px;flex-shrink:0;box-sizing:border-box}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] div[style*="grid-template-columns"]:not([data-proto-scale] div){grid-template-columns:1fr !important}
+[data-shell] a[style*="grid-template-columns"]{display:flex !important;flex-wrap:wrap;gap:10px 14px !important}
+[data-shell] div[style*="padding:96px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:100px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:80px 64px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="border-right:1px solid #d3d9dc"]{border-right:none !important}
+[data-shell] div[style*="padding:44px"]{padding:24px 20px !important}
+[data-shell] div[style*="font:600 30px"]{font-size:22px !important}
+[data-shell] p[style*="font:400 19px"]{font-size:16px !important}
+[data-shell] div[style*="aspect-ratio:4/5"]{margin-bottom:28px}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="Lollypop Studio company page">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.html" title="Back" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 46px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">LOLLYPOP</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#5fe08d;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">LOG 03/04</span>
+        <span style="width:7px;height:7px;background:#5fe08d;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #d3d9dc;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #d3d9dc;background:rgba(244,246,247,.88);backdrop-filter:blur(12px)">
+      <a href="Portfolio - Control Tower.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #d3d9dc;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#e8edef">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;padding:20px 28px;border-right:1px solid #d3d9dc">
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">WORK LOG 03 / LOLLYPOP DESIGN STUDIO · 2020 — 2021</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:36px;padding-right:32px">
+        <a href="#mission" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#projects" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROJECTS</a>
+        <a href="#cases" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CASE STUDIES</a>
+      </div>
+    </div>
+
+    <!-- ============ BRIEF / HERO ============ -->
+    <div id="mission" style="background:#10151a;border-bottom:1px solid #d3d9dc" data-screen-label="Brief">
+      <div style="padding:76px 44px 64px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:36px">
+          <a href="Portfolio - Control Tower.html" style="color:#8fa0aa" style-hover="color:#fff">HOME</a>
+          <span style="color:#2a333b">/</span>
+          <span style="color:#5fe08d">WORK LOG 03 — LOLLYPOP DESIGN STUDIO</span>
+          <span style="color:#2a333b">/</span>
+          <span>2020 — 2021</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(52px,5.6vw,84px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#fff">
+          <span data-rise="" style="display:block;color:#5a6b74">All that</span>
+          <span data-rise="" style="display:block"><em style="font:italic 400 1.02em 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#5fe08d">studio</em> fun.</span>
+        </h1>
+        <p data-reveal="" style="margin:40px 0 0;font:400 17px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:560px">Lollypop is India's leading design studio — a driving force behind the design-first shift across the Indian software industry. Curating experiences that users fall in love with.</p>
+        <a data-reveal="" href="https://lollypop.design/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:24px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:12px 20px" style-hover="border-color:#5fe08d;color:#5fe08d">VISIT LOLLYPOP.DESIGN ↗</a>
+        <div data-reveal="" style="margin-top:44px;max-width:720px">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:14px">MY ROLE — FOUR DIRECTIVES</div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#2a333b;border:1px solid #2a333b">
+            <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#10151a;padding:16px 20px;align-items:start">
+              <span style="font:700 14px 'Space Grotesk',sans-serif;color:#5fe08d">D-1</span>
+              <p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">Research, workshops, experience mapping — ideate and iterate all the way to design delivery.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#10151a;padding:16px 20px;align-items:start">
+              <span style="font:700 14px 'Space Grotesk',sans-serif;color:#5fe08d">D-2</span>
+              <p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">Client and stakeholder management.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#10151a;padding:16px 20px;align-items:start">
+              <span style="font:700 14px 'Space Grotesk',sans-serif;color:#5fe08d">D-3</span>
+              <p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">Heuristic evaluation and audits.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#10151a;padding:16px 20px;align-items:start">
+              <span style="font:700 14px 'Space Grotesk',sans-serif;color:#5fe08d">D-4</span>
+              <p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#c5ced4">Design pitches.</p>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:44px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.06em;border:1px solid #2a333b;padding:9px 16px">ROLE — UX DESIGNER</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.06em;border:1px solid #2a333b;padding:9px 16px">TEAM — BANGALORE ↔ SINGAPORE ↔ HO CHI MINH</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#fff;letter-spacing:.06em;border:1px solid #2a333b;padding:9px 16px">PLATFORM — WEB &amp; MOBILE</span>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #2a333b">
+        <div style="padding:26px 44px;border-right:1px solid #2a333b;display:flex;align-items:baseline;gap:16px">
+          <span style="font:700 40px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#5fe08d"><span data-count="" data-target="2" style="color:#5fe08d">0</span>B+</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">LIVES TOUCHED</span>
+        </div>
+        <div style="padding:26px 44px;border-right:1px solid #2a333b;display:flex;align-items:baseline;gap:16px">
+          <span style="font:700 40px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#fff"><span data-count="" data-target="50">0</span>+</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">GLOBAL AWARDS</span>
+        </div>
+        <div style="padding:26px 44px;display:flex;align-items:baseline;gap:16px">
+          <span style="font:700 40px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#fff"><span data-count="" data-target="1000">0</span>+</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">CLIENTS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PROJECTS ============ -->
+    <div id="projects" style="padding:80px 44px 72px;border-bottom:1px solid #d3d9dc;scroll-margin-top:70px" data-screen-label="Projects">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">My contributions <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">so far.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / PROJECTS I'VE WORKED ON</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d3d9dc;border:1px solid #d3d9dc">
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><path d="M21 4C11 4 5 10 5 19c0 1 .1 2 .3 3C14 22 21 16 21 4z"></path><path d="M5.5 21.5C9 15 13 11 18 8"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PRJ-01 · BANGALORE, IN</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">The Organic World</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Digital transformation of one of the best organically farmed supplies in Bangalore city.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><path d="M13 5L1 10l12 5 12-5-12-5z"></path><path d="M6 12.5V18c0 1.5 3 3.5 7 3.5s7-2 7-3.5v-5.5"></path><path d="M25 10v6"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PRJ-02 · SINGAPORE, SG</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">MyGIIS</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">EduERP for a Singapore-based school — touching the lives of the student and teacher ecosystem in a post-COVID world.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><path d="M2 6h13v12H2zM15 10h5l4 4v4h-9"></path><circle cx="7" cy="20" r="2"></circle><circle cx="19" cy="20" r="2"></circle></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PRJ-03 · DUBAI, AE</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Trukkin</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Website for a logistics company based in Dubai.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CASE FILES ============ -->
+    <div id="cases" style="padding:80px 44px 88px;scroll-margin-top:70px" data-screen-label="Case studies">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Case <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">studies.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 03 / CASE STUDIES — OPEN ACCESS</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d3d9dc;border:1px solid #d3d9dc">
+        <a href="The Organic World.html" data-reveal="" style="background:#10151a;padding:30px 32px;display:block;transition:background .25s" style-hover="background:#1a222b;color:#fff">
+          <div style="display:flex;justify-content:space-between"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#5fe08d;letter-spacing:.1em">CF-01 · LIGHT CASE STUDY</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#5fe08d">OPEN ↗</span></div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;margin-top:14px;color:#fff">The Organic World</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:8px;letter-spacing:.06em">MY FIRST DOCUMENTED CASE STUDY — 2020</div>
+        </a>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CF-02 · LIGHT CASE STUDY</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#aeb8bd">SOON</span></div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;margin-top:14px">MyGIIS</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:8px;letter-spacing:.06em">COMING SOON</div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CF-03 · LIGHT CASE STUDY</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#aeb8bd">SOON</span></div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;margin-top:14px">Trukkin</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:8px;letter-spacing:.06em">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WORK LOG NAV ============ -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d3d9dc;border-top:1px solid #d3d9dc">
+      <a href="Innovaccer.html" style="display:block;padding:36px 44px;background:#fff" style-hover="background:#e8edef">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">← PREVIOUS WORK LOG</div>
+        <div style="font:700 28px 'Space Grotesk',sans-serif;letter-spacing:-.03em;margin-top:12px;text-transform:uppercase">Innovaccer</div>
+      </a>
+      <a href="Urban Company.html" style="display:block;padding:36px 44px;background:#fff;text-align:right" style-hover="background:#e8edef">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">NEXT WORK LOG →</div>
+        <div style="font:700 28px 'Space Grotesk',sans-serif;letter-spacing:-.03em;margin-top:12px;text-transform:uppercase">Urban Company</div>
+      </a>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div style="background:#10151a;padding:52px 44px 44px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+        <a href="Portfolio - Control Tower.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK</a>
+        
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = { unlockMsg: 'CASE STUDIES OPEN ON REQUEST — ASK ME FOR THE CODE' };
+
+  componentDidMount() {
+    this._cleanup = [];
+    this._t = setTimeout(() => this.setupMotion(), 80);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._t);
+    (this._cleanup || []).forEach(fn => fn());
+  }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }));
+    });
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        this.runCounters(el);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+    document.querySelectorAll('[data-count]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) this.runCounters(el.closest('[data-reveal]') || el);
+    });
+  }
+
+  runCounters(scope) {
+    const counters = scope.matches && scope.matches('[data-count]') ? [scope] : Array.from(scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : []);
+    counters.forEach(el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

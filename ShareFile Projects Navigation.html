@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf6ec;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+img{cursor:zoom-in}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+@keyframes pulsedot{0%{box-shadow:0 0 0 0 rgba(91,92,230,.55)}70%{box-shadow:0 0 0 10px rgba(91,92,230,0)}100%{box-shadow:0 0 0 0 rgba(91,92,230,0)}}
+@keyframes annin{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes menuloop{0%,10%{opacity:0;transform:translateY(-5px) scale(.96)}20%,82%{opacity:1;transform:translateY(0) scale(1)}94%,100%{opacity:0;transform:translateY(-5px) scale(.96)}}
+@keyframes dragLift{0%,7%{transform:translate(0,0) scale(1);box-shadow:0 0 0 rgba(0,0,0,0)}15%{transform:translate(0,-8px) scale(1.04);box-shadow:0 14px 26px rgba(28,30,46,.24)}34%,48%{transform:translate(92px,-8px) scale(1.04);box-shadow:0 14px 26px rgba(28,30,46,.24)}66%,80%{transform:translate(0,-8px) scale(1.04);box-shadow:0 14px 26px rgba(28,30,46,.24)}90%,100%{transform:translate(0,0) scale(1);box-shadow:0 0 0 rgba(0,0,0,0)}}
+@keyframes neighborSlide{0%,15%{transform:translateX(0)}34%,48%{transform:translateX(-92px)}66%,100%{transform:translateX(0)}}
+@keyframes iconpop{0%{opacity:0;transform:scale(.3)}55%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+@keyframes iconLoop{0%,10%{max-width:0;opacity:0;transform:scale(.4)}26%,72%{max-width:20px;opacity:1;transform:scale(1)}88%,100%{max-width:0;opacity:0;transform:scale(.4)}}
+@keyframes ringloop{0%{box-shadow:0 0 0 0 rgba(91,92,230,.5)}60%{box-shadow:0 0 0 9px rgba(91,92,230,0)}100%{box-shadow:0 0 0 0 rgba(91,92,230,0)}}
+@keyframes threeFade{0%,20%{opacity:1;max-width:640px}44%,88%{opacity:0;max-width:0}100%{opacity:1;max-width:640px}}
+@keyframes oneFade{0%,28%{opacity:0;transform:translateX(-6px)}48%,86%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(-6px)}}
+@keyframes skelpulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes ants{to{stroke-dashoffset:-26}}
+
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:80px 44px"]{padding:56px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"],[data-shell] div[style*="padding:52px 44px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:5fr 4fr"],[data-shell] div[style*="grid-template-columns:4fr 5fr"],[data-shell] div[style*="grid-template-columns:1fr 56px 1fr"],[data-shell] div[style*="grid-template-columns:380px 1fr"],[data-shell] div[style*="grid-template-columns:320px 1fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-shell] div[style*="backdrop-filter"]>a{padding:14px 16px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="justify-content:space-between"][style*="align-items:baseline"][style*="flex-wrap:wrap"]{flex-direction:column-reverse !important;align-items:flex-start !important;gap:8px !important}
+[data-shell] div[style*="grid-template-columns:5fr 4fr"]{display:flex !important;flex-direction:column-reverse;gap:24px !important}
+[data-shell] div[style*="22px/1.5"]{font-size:18px !important}
+[data-shell] div[style*="font:700 52px"],[data-shell] div[style*="font:700 56px"]{font-size:38px !important}
+[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="flex:1 1 280px"]{flex-direction:row !important;max-width:100% !important;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+[data-shell] div[style*="flex:1 1 280px"]::-webkit-scrollbar{display:none}
+[data-shell] div[style*="flex:1 1 280px"] div[style*="border-left"]{min-width:225px;flex-shrink:0;box-sizing:border-box}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] div[style*="grid-template-columns"]:not([data-proto-scale] div){grid-template-columns:1fr !important}
+[data-shell] a[style*="grid-template-columns"]{display:flex !important;flex-wrap:wrap;gap:10px 14px !important}
+[data-shell] div[style*="padding:96px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:100px 44px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="padding:80px 64px"]{padding:56px 20px 44px !important}
+[data-shell] div[style*="border-right:1px solid #ddd2b0"]{border-right:none !important}
+[data-shell] div[style*="padding:44px"]{padding:24px 20px !important}
+[data-shell] div[style*="font:600 30px"]{font-size:22px !important}
+[data-shell] p[style*="font:400 19px"]{font-size:16px !important}
+[data-shell] div[style*="aspect-ratio:4/5"]{margin-bottom:28px}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="ShareFile Projects Navigation case study">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.html" title="Home" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 42px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">NAVIGATING PROJECTS</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#e0b45f;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">CASE FILE 01/04 — CLEARED</span>
+        <span style="width:7px;height:7px;background:#e0b45f;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #ddd2b0;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #ddd2b0;background:rgba(250,246,236,.9);backdrop-filter:blur(12px)">
+      <a href="ShareFile.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #ddd2b0;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#f0e7cd">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;gap:10px;padding:20px 28px;border-right:1px solid #ddd2b0;background:#faf6ec">
+        <span style="width:8px;height:8px;background:#e0b45f;display:inline-block"></span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CASE FILE / NAVIGATING THE PROJECT CONTAINER · SHAREFILE</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding-right:32px">
+        <a href="#brief" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#context" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CONTEXT</a>
+        <a href="#research" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RESEARCH</a>
+        <a href="#problems" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROBLEMS</a>
+        <a href="#fix" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">THE FIX — LIVE</a>
+        <a href="#flows" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FLOWS</a>
+        <a href="#testing" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">TESTING</a>
+        <a href="#outcome" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">OUTCOME</a>
+      </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div id="brief" style="background:#faf6ec;background-image:radial-gradient(#d8caa0 1.1px, transparent 1.1px);background-size:22px 22px" data-screen-label="Brief">
+      <div data-reveal="" style="display:flex;align-items:stretch;justify-content:space-between;gap:24px;border-bottom:1px solid #e5d9b8;padding:0 64px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:16px 0">
+          <span style="font:700 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">CASE FILE Nº 01/04</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CLIENT — SHAREFILE</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">PERIOD — 2023 → NOW</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">STATUS — LIVE</span>
+        </div>
+      </div>
+      <div style="padding:100px 64px 72px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.14em;margin-bottom:44px;flex-wrap:wrap">
+          <a href="Portfolio - Control Tower.html" style="color:#6b6552" style-hover="color:#10151a">HOME</a>
+          <span style="color:#e5d9b8">/</span>
+          <a href="ShareFile.html" style="color:#6b6552" style-hover="color:#10151a">WORK LOG 01 — SHAREFILE</a>
+          <span style="color:#e5d9b8">/</span>
+          <span style="color:#b0812c">CASE FILE — NAVIGATING THE PROJECT CONTAINER</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(48px,5.2vw,80px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#10151a">
+          <span data-rise="" style="display:block;color:#9a9074">Projects grew tabs.</span>
+          <span data-rise="" style="display:block">craved a <em style="font: italic 400 1.02em &quot;Instrument Serif&quot;, serif; text-transform: none; letter-spacing: -0.02em; color: rgb(176, 129, 44);">system</em>.</span>
+        </h1>
+        <p data-reveal="" style="margin:44px 0 0;font:400 17px/1.7 'Space Grotesk',sans-serif;color:#6b6552;max-width:660px">In ShareFile, every project tab looked alike — requests, files, billing and tables all reading as one flat, unsortable strip, with the actions that mattered buried clicks deep. As projects grew, no one could tell the tabs apart or find what they needed.</p>
+        
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:44px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">ROLE — PRODUCT DESIGNER · ACTING LEAD, PROJECTS VERTICAL</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">TYPE — TECH-DEBT PAYDOWN · CORE NAVIGATION</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SCOPE — TAB SYSTEM · ADD &amp; IMPORT FLOWS · OVERFLOW</span>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e5d9b8">
+        <div style="padding:32px 64px;border-right:1px solid #e5d9b8;display:flex;align-items:baseline;gap:18px">
+          <span style="font:700 44px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#b0812c"><span data-count="" data-target="25" style="color:#b0812c">0</span></span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.1em">MODERATED STUDIES WITH SMB USERS</span>
+        </div>
+        <div style="padding:32px 64px;border-right:1px solid #e5d9b8;display:flex;align-items:baseline;gap:18px">
+          <span style="font:700 44px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a"><span data-count="" data-target="3">0</span></span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.1em">PROBLEM TRACKS IDENTIFIED</span>
+        </div>
+        <div style="padding:32px 64px;display:flex;align-items:baseline;gap:18px">
+          <span style="font:700 44px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#10151a"><span data-count="" data-target="7">0</span></span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.1em">FIXES SHIPPED INTO THE TAB SYSTEM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CONTEXT ============ -->
+    <div id="context" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Context">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">One container, two <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">personas.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / CONTEXT — "PROJECTS" IN SHAREFILE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:56px">
+        <p data-reveal="" style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">A Project is a time-boxed container for a full client engagement, and everything it produces lives in a <strong style="color:#10151a">tab</strong> — requests, documents, signatures, files, billing, custom tables. Two personas live here: <strong style="color:#10151a">Owners</strong>, who shape the structure, and <strong style="color:#10151a">Team members</strong>, who navigate it all day. By the time I took this on as acting lead, tabs were the container's spine — and its weakest joint. Steady user feedback about wrangling so many tabs finally pushed this long-standing debt to the top.</p>
+        <div data-reveal="">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:16px">WHO THIS WORK IS FOR</div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+            <div style="background:#fff;padding:16px 20px;display:flex;align-items:center;gap:14px">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#10151a" stroke-width="1.5"><circle cx="11" cy="7" r="3.2"></circle><path d="M4.5 18.5a6.5 6.5 0 0113 0"></path><path d="M8.2 2.6L11 1l2.8 1.6"></path></svg>
+              <span style="font:600 14px 'Space Grotesk',sans-serif;flex:1">Owners</span>
+              <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">SHAREFILE WORKSPACE · SHAPE THE TABS</span>
+            </div>
+            <div style="background:#fff;padding:16px 20px;display:flex;align-items:center;gap:14px">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#10151a" stroke-width="1.5"><circle cx="7.5" cy="8" r="2.8"></circle><circle cx="15" cy="9.2" r="2.3"></circle><path d="M2.5 18a5.2 5.2 0 0110 0M12.8 17.5a4.4 4.4 0 016.7-3.2"></path></svg>
+              <span style="font:600 14px 'Space Grotesk',sans-serif;flex:1">Team members</span>
+              <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">SHAREFILE WORKSPACE · LIVE IN THE TABS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="media/sharefile/projectnav/new-shell.png" alt="The project container in the current shell — tabs and quick actions up top" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 01-A · THE PROJECT CONTAINER TODAY — TABS AND QUICK ACTIONS SIT AT THE TOP OF EVERY PROJECT</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CURRENT SHELL</span></div>
+      </div>
+    </div>
+
+    <!-- ============ THE DEBT ============ -->
+    <div style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0" data-screen-label="The debt">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The debt, on <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">tape.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / THE TAB STRIP AS IT SHIPPED</span>
+      </div>
+      <div style="display:grid;grid-template-columns:5fr 4fr;gap:56px;align-items:start">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <video autoplay="" muted="" loop="" playsinline="" preload="auto" style="width:100%;display:block;background:#10151a" src="media/sharefile/projectnav/old-tabs.mp4"></video>
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 02-A · THE OLD TAB STRIP IN MOTION — IDENTICAL, UNORDERED, OVERFLOWING</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PRE-UPLIFT UI · RECORDING</span></div>
+        </div>
+        <div data-reveal="">
+          <p style="margin:0 0 28px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">Watch the recording and the debt announces itself. Every tab is a bare text label — a request list looks exactly like a billing table. Order is fixed at creation, so the tab a team uses daily can sit eleventh. Anything past the viewport simply vanishes: no scrollbar, no indicator, no count. And the actions that manage all of this — add, edit, create template — hide inside a "More" menu on the toolbar, nowhere near the tabs they act on.</p>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+            <div style="background:#fff;padding:14px 20px;font:400 13px 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a;font-weight:600">No identity</strong> — 13 tabs, one typeface, zero icons</div>
+            <div style="background:#fff;padding:14px 20px;font:400 13px 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a;font-weight:600">No order</strong> — tabs frozen in creation sequence</div>
+            <div style="background:#fff;padding:14px 20px;font:400 13px 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a;font-weight:600">No horizon</strong> — overflowed tabs disappear silently</div>
+            <div style="background:#fff;padding:14px 20px;font:400 13px 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a;font-weight:600">No verbs</strong> — add / edit / template buried in "More"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ RESEARCH ============ -->
+    <div id="research" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Research">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Twenty-five people, one <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">complaint.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 03 / EXPLORING THE PROBLEM SPACE</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">We ran <strong style="color:#10151a">25 moderated studies with SMB users</strong> — the owners and relationship managers who live inside projects. Sessions were built around real navigation tasks: find a tab, add a table, tell two tabs apart. The same frustrations surfaced in different accents.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:44px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:34px 36px">
+          <div style="font:400 22px/1.5 'Instrument Serif',serif;font-style:italic;color:#10151a">"When I have too many tabs, it becomes overwhelming — they all look the same, and I can't figure out which one does what. Adding new tables is even harder since the 'add' option is buried."</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:24px;border-top:1px solid #ddd2b0;padding-top:18px">
+            <span style="font:600 14px 'Space Grotesk',sans-serif">Amy Jones</span>
+            <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">LAW FIRM OWNER · STUDY 07</span>
+          </div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:34px 36px">
+          <div style="font:400 22px/1.5 'Instrument Serif',serif;font-style:italic;color:#10151a">"As my tabs increase, I lose visibility and control. The 'add' option is hard to find, and I wish templates would indicate whether they support integrations or not."</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:24px;border-top:1px solid #ddd2b0;padding-top:18px">
+            <span style="font:600 14px 'Space Grotesk',sans-serif">Rose Mary</span>
+            <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RELATIONSHIP MANAGER · STUDY 14</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;max-width:900px">
+        <video controls="" preload="metadata" data-vid="projectnav-usability" src="media/sharefile/projectnav/usability-of-navigating.mp4" style="width:100%;display:block;background:#10151a"></video>
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 03-A · A PARTICIPANT NAVIGATING THE OLD STRIP DURING A MODERATED SESSION</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STUDY RECORDING</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEMS ============ -->
+    <div id="problems" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Problem tracks">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Three tracks of <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">trouble.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 04 / TOP IDENTIFIED PROBLEMS</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">TRACK 01</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Tab management</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Tabs are identical text labels frozen in creation order. There's no way to reorder, no iconography, no grouping — a strip of thirteen tabs reads as one grey blur.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">TRACK 02</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Unclear interactions</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Add, edit and create-template live in a toolbar "More" menu — far from the tabs they act on. Import from other tools exists, but nobody can find it. Blank states offer no path.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">TRACK 03</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Access &amp; visibility</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">When tabs overflow the viewport they vanish — no indicator, no count, no dropdown. The add action scrolls away with them. Owners literally lose parts of their own project.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ THE FIX — LIVE ============ -->
+    
+
+    <!-- ============ SUPPORTING FLOWS ============ -->
+    <div id="fix" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#f2ecd8" data-screen-label="The fix — live prototype">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The fix — click it <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">in.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 05 / EIGHT STEPS, ONE LIVE PROTOTYPE</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 28px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:760px">The same walkthrough I gave in review, rebuilt as a working prototype in the <strong style="color:#10151a">current shell</strong>. <strong style="color:#10151a">Click through the steps below</strong> — each one plays a short looping animation in the mock and drops a note explaining what changed and why. No need to click inside the prototype; just step through and watch it evolve, tab by tab.</p>
+      <div data-reveal="" data-steprail="" style="display:flex;gap:1px;overflow-x:auto;background:#ddd2b0;border:1px solid #ddd2b0">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="7">
+          <div style="flex:none;display:flex;align-items:center;background:#f2ecd8">
+            <sc-if value="{{ s.notFirst }}" hint-placeholder-val="{{ true }}">
+              <span style="padding:0 10px;color:#b0812c;font:400 20px 'Space Grotesk',sans-serif;user-select:none">→</span>
+            </sc-if>
+            <div data-stepactive="{{ s.on }}" onClick="{{ s.go }}" style="position:relative;flex:none;width:238px;background:{{ s.bg }};padding:18px 22px;cursor:pointer;border-top:3px solid {{ s.edge }};transition:background .2s">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+                <span style="font:600 15px 'Space Grotesk',sans-serif;color:{{ s.fg }}">{{ s.t }}</span>
+                <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d">{{ s.num }}</span>
+              </div>
+              <div style="font:500 9.5px 'IBM Plex Mono',monospace;color:{{ s.tagColor }};letter-spacing:.08em;margin-top:6px">{{ s.tag }}</div>
+              <sc-if value="{{ s.hint }}" hint-placeholder-val="{{ false }}">
+                <div style="display:inline-flex;align-items:center;gap:5px;margin-top:11px;font:600 8.5px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#10151a;background:#e0b45f;padding:4px 9px;animation:blink 1.25s infinite">CLICK FOR NEXT →</div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div data-reveal="" style="margin-top:24px">
+        <div data-proto-outer="" style="border:1px solid #c9ced6;box-shadow:0 20px 50px rgba(16,21,26,.12);overflow:hidden">
+          <div data-proto-scale="" style="width:1160px;transform-origin:top left">{{ stepperCanvas }}</div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;align-items:center;margin-top:14px">
+          <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">LIVE PROTOTYPE · CURRENT SHELL + UPDATED TAB SYSTEM · CLICK STEPS TO PLAY</span>
+        </div>
+      </div>
+    </div><div id="flows" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Supporting flows">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Behind the plus <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">button.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 06 / THE ADD, TEMPLATE &amp; IMPORT FLOWS</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">Exposing the add button was the easy half — you just clicked it in step 5 of the prototype above. The harder half was making what's behind it worth exposing: three full flows, each designed against a specific research finding.</p>
+      <div style="display:grid;grid-template-columns:380px 1fr;gap:32px;align-items:stretch;margin-bottom:32px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;display:flex;flex-direction:column">
+          <div style="flex:1;background:#e3e4f3;display:flex;align-items:flex-start;justify-content:center;padding:34px 0 40px">
+            <div style="position:relative">
+              <div style="width:52px;height:52px;border-radius:10px;background:#fff;border:1px solid #d9dbe4;display:grid;place-items:center;font:300 30px 'Public Sans',sans-serif;color:#1c1e2e;box-shadow:0 2px 8px rgba(28,30,46,.1);margin:0 auto">+</div>
+              <div style="margin-top:10px;background:#fff;border:1px solid #d9dbe4;border-radius:12px;box-shadow:0 14px 36px rgba(28,30,46,.16);padding:8px;width:250px">
+                <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:8px;font:500 14.5px 'Public Sans',sans-serif;color:#1c1e2e">Blank tab</div>
+                <div style="display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:8px;font:500 14.5px 'Public Sans',sans-serif;color:#1c1e2e">From a template</div>
+                <div style="height:1px;background:#e9eaf1;margin:6px 5px"></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:11px;padding:11px 13px;border-radius:8px;background:#f4f4ff;font:600 14.5px 'Public Sans',sans-serif;color:#5b5ce6">Import from apps<span style="font:600 9px 'IBM Plex Mono',monospace;color:#8a6a1c;background:#dcf5e7;padding:3px 7px;border-radius:99px;letter-spacing:.05em">EXPOSED</span></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:11px;padding:11px 13px;border-radius:8px;background:#f4f4ff;font:600 14.5px 'Public Sans',sans-serif;color:#5b5ce6">Upload CSV / spreadsheet<span style="font:600 9px 'IBM Plex Mono',monospace;color:#8a6a1c;background:#dcf5e7;padding:3px 7px;border-radius:99px;letter-spacing:.05em">EXPOSED</span></div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-A · ZOOM — EVERYTHING BEHIND THE PLUS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">2× DETAIL</span></div>
+        </div>
+        <p data-reveal="" style="margin:0;align-self:center;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">Before this work, "import" technically existed — buried so deep that in 25 studies not one participant found it unprompted. The new add menu makes the whole creation surface legible in a single click: start blank, start from a template, or <strong style="color:#10151a">pull data straight in</strong> from a CSV or a connected app. The two paths users never found are now the two the menu leans on hardest.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="3" y="4" width="20" height="18" rx="2"></rect><path d="M13 10v6M10 13h6"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">F-01 · BLANK TAB</span>
+          </div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Start from zero, guided</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">A blank tab opens into a named, typed setup — table view first — instead of the unlabelled void users used to abandon.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="3" y="3" width="9" height="9" rx="1.5"></rect><rect x="14" y="3" width="9" height="9" rx="1.5"></rect><rect x="3" y="14" width="9" height="9" rx="1.5"></rect><path d="M18.5 15v6M15.5 18h6"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">F-02 · TEMPLATES</span>
+          </div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Templates that disclose</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">A sortable template gallery where every card states what it does — and whether it supports integrations. Rose Mary's ask, verbatim, shipped.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><path d="M13 3v12M8.5 10.5L13 15l4.5-4.5"></path><path d="M4 17v3a2 2 0 002 2h14a2 2 0 002-2v-3"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">F-03 · IMPORT</span>
+          </div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Import, finally findable</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">CSV upload and app connections — Podio, QuickBooks, Salesforce — promoted from a buried menu to a first-class path with its own guided connection flow.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TESTING ============ -->
+    <div id="testing" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Testing">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Proven before <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">shipped.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 07 / VALIDATION</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:44px">
+        <p data-reveal="" style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">We took the redesigned system back to the same population that surfaced the problems — <strong style="color:#10151a">13 moderated sessions</strong> against the three tracks, run through a clickable prototype, with a tasks-and-insights board tracing every stumble to a specific control. The riskiest bet, the import flow, was tested against <strong style="color:#10151a">QuickBooks, Salesforce and Podio</strong> connections, because integration drop-off was the number we most needed to move.</p>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">System Usability Scale</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">SUS 88.3 — WELL ABOVE THE 68 BENCHMARK</span></div>
+          <div style="background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Usability · Learnability</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">90.3 · 88</span></div>
+          <div style="background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Task completion</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">13/13 ON EXPLORE · 12/13 ON ADD-A-TABLE</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/projectnav/testing-tasks-insights.png" alt="Tasks and insights board — per-task success rates and observations across 13 participants" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-A · TASKS-AND-INSIGHTS BOARD — PER-TASK SUCCESS RATES &amp; OBSERVATIONS, 13 PARTICIPANTS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STUDY ARTEFACT</span></div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/projectnav/testing-results.png" alt="SUS scoring results — 88.3 SUS, 90.3 usability, 88 learnability" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-B · SUS SCORING — 88.3 SUS · 90.3 USABILITY · 88 LEARNABILITY</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STUDY ARTEFACT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OUTCOME ============ -->
+    <div id="outcome" style="background:#10151a;padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Outcome">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">What <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">moved.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 08 / OUTCOME — DATA AS OF DEC 28</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2a333b;border:1px solid #2a333b">
+        <div data-reveal="" style="background:#10151a;padding:36px 34px">
+          <div style="font:700 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#e0b45f">&lt;<span data-count="" data-target="32" style="color:#e0b45f">0</span>%</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:14px;letter-spacing:.08em;line-height:1.7">DROP-OFF DURING INTEGRATION SETUP — QUICKBOOKS, SALESFORCE, PODIO</div>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 34px">
+          <div style="font:700 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#fff"><span data-count="" data-target="45">0</span>s</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:14px;letter-spacing:.08em;line-height:1.7">TO ADD A TABLE VIA TEMPLATE OR INTEGRATION — DOWN FROM 1.24 MIN</div>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 34px">
+          <div style="font:700 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#fff">+<span data-count="" data-target="9">0</span>%</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:14px;letter-spacing:.08em;line-height:1.7">USER SATISFACTION ACROSS THE PROJECTS EXPERIENCE</div>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:36px 34px">
+          <div style="font:700 52px 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#fff">+<span data-count="" data-target="10">0</span>%</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:14px;letter-spacing:.08em;line-height:1.7">PROJECT ADOPTION AFTER THE NAVIGATION PAYDOWN</div>
+        </div>
+      </div>
+      <p data-reveal="" style="margin:44px 0 0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:720px">The pattern outlived the pixels. When the whole application was later uplifted into the current shell, the tab system carried over intact — icons, grouping, the exposed add, the overflow dropdown. Navigation debt, unlike visual debt, only had to be paid once.</p>
+    </div>
+
+    <!-- ============ NEXT / FOOTER ============ -->
+    <div style="background:#10151a;padding:52px 64px 44px;border-top:1px solid #2a333b">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+        <a href="ShareFile.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK TO SHAREFILE</a>
+        <a href="ShareFile Tables.html" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em" style-hover="color:#fff">NEXT CASE FILE: TABLES — A DATABASE FOR PROJECTS →</a>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<sc-if value="{{ lightboxSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:100;background:rgba(16,21,26,.92);display:flex;align-items:center;justify-content:center;padding:40px;cursor:zoom-out">
+    {{ lightboxImg }}
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;Scroll reveal + counter animations&quot;}, &quot;startStep&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0, &quot;min&quot;: 0, &quot;max&quot;: 6, &quot;step&quot;: 1, &quot;tsType&quot;: &quot;number&quot;, &quot;description&quot;: &quot;Which improvement step the live prototype opens on&quot;}}">
+class Component extends DCLogic {
+  state = { step: 0, tabs: null, active: 'Tasks', addOpen: false, tabMenuOpen: false, moreOpen: false, hiddenOpen: false, lightboxSrc: null, mergePhase: 0 };
+
+  componentDidMount() {
+    this._cleanup = [];
+    if (this.state.tabs === null) this.setState({ tabs: this.defaultTabs(), step: Math.max(0, Math.min(7, this.props.startStep ?? 0)) });
+    this._t = setTimeout(() => this.setupMotion(), 60);
+    const fit = () => {
+      const outer = document.querySelector('[data-proto-outer]');
+      const inner = document.querySelector('[data-proto-scale]');
+      if (!outer || !inner) return;
+      const w = outer.clientWidth;
+      const s = w / 1160;
+      inner.style.transform = 'scale(' + s + ')';
+      outer.style.height = (inner.offsetHeight * s) + 'px';
+    };
+    this._fit = fit;
+    fit();
+    const ro = new ResizeObserver(() => requestAnimationFrame(fit));
+    const outerEl = document.querySelector('[data-proto-outer]');
+    if (outerEl) ro.observe(outerEl);
+    const scaleEl = document.querySelector('[data-proto-scale]');
+    if (scaleEl) ro.observe(scaleEl);
+    this._cleanup.push(() => ro.disconnect());
+    const onDocClick = (e) => {
+      if (e.target.tagName === 'IMG' && e.target.closest('[data-reveal]') && !e.target.closest('[data-noproto]')) {
+        this.setState({ lightboxSrc: e.target.getAttribute('src') });
+        document.body.style.overflow = 'hidden';
+      }
+    };
+    document.addEventListener('click', onDocClick);
+    this._cleanup.push(() => document.removeEventListener('click', onDocClick));
+    const onTime = (e) => {
+      const v = e.target;
+      if (v.tagName === 'VIDEO' && v.dataset.vid) try { localStorage.setItem('vidpos-' + v.dataset.vid, String(v.currentTime)); } catch (err) {}
+    };
+    const onMeta = (e) => {
+      const v = e.target;
+      if (v.tagName === 'VIDEO' && v.dataset.vid) {
+        const p = parseFloat(localStorage.getItem('vidpos-' + v.dataset.vid) || '0');
+        if (p > 0 && p < v.duration - 1) v.currentTime = p;
+      }
+    };
+    document.addEventListener('timeupdate', onTime, true);
+    document.addEventListener('loadedmetadata', onMeta, true);
+    this._cleanup.push(() => { document.removeEventListener('timeupdate', onTime, true); document.removeEventListener('loadedmetadata', onMeta, true); });
+    this._merge = setInterval(() => { if (this.state.step === 2) this.setState(s => ({ mergePhase: (s.mergePhase + 1) % 4 })); }, 1500);
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); clearInterval(this._merge); (this._cleanup || []).forEach(fn => fn()); }
+
+  syncMerge() {}
+
+  defaultTabs() {
+    return [
+      { n: 'Home', k: 'home', g: 0 }, { n: 'Tasks', k: 'tasks', g: 0 }, { n: "To-do's", k: 'req', g: 0 }, { n: 'Files', k: 'files', g: 0 }, { n: 'Comments', k: 'com', g: 0 },
+      { n: 'Receipts', k: 'rec', g: 1 }, { n: 'Billing', k: 'bill', g: 1 },
+      { n: 'Meetings Tracker', k: 'meet', g: 2 }, { n: 'Expenditure', k: 'table', g: 2 }, { n: 'Invoices 2024', k: 'table', g: 2 }, { n: 'Client onboarding', k: 'table', g: 2 }
+    ];
+  }
+
+  coach() {
+    return React.createElement('span', { style: { position: 'absolute', top: -3, right: -3, width: 9, height: 9, borderRadius: '50%', background: '#5b5ce6', animation: 'pulsedot 1.5s infinite', zIndex: 5, pointerEvents: 'none' } });
+  }
+
+  closeLightbox() { this.setState({ lightboxSrc: null }); document.body.style.overflow = ''; }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+    });
+    setTimeout(() => { document.querySelectorAll('[data-rise]').forEach(el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }); }, 150);
+    setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        if (getComputedStyle(el).opacity !== '1') { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }
+      });
+    }, 1600);
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        this.runCounters(el); io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+    document.querySelectorAll('[data-count]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) this.runCounters(el.closest('[data-reveal]') || el);
+    });
+  }
+
+  runCounters(scope) {
+    const counters = scope.matches && scope.matches('[data-count]') ? [scope] : Array.from(scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : []);
+    counters.forEach(el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = parseFloat(el.dataset.target);
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  // ─── stepper canvas ───
+  icon(k, size, color) {
+    const e = React.createElement;
+    const paths = {
+      home: 'M2.5 7.5L8 2.5l5.5 5v6h-4v-4h-3v4h-4z',
+      tasks: 'M3 3.5h10v9H3zM5.5 8l1.8 1.8L10.5 5.5',
+      req: 'M4 2.5h6l3 3v8H4zM10 2.5v3h3M6 9h4M6 11.5h4',
+      files: 'M2.5 4.5h4l1.5 1.5h5.5v7h-11z',
+      com: 'M2.5 3h11v8h-6l-3 2.5V11h-2z',
+      rec: 'M4 2.5h8v11l-1.5-1-1.5 1-1.5-1-1.5 1-1.5-1-1.5 1zM6 6h4M6 8.5h4',
+      bill: 'M8 2v12M11 4.5H6.8a1.8 1.8 0 000 3.6h2.4a1.8 1.8 0 010 3.6H5',
+      meet: 'M3 4h10v9.5H3zM3 7h10M5.5 2.5V5M10.5 2.5V5',
+      sign: 'M2.5 12.6c1.7 0 2.7-.4 3.5-1.2L11 5.4 8.6 3 3.5 8.1c-.8.8-1.2 1.9-1.2 3.5zM8.6 3l2.4 2.4M6.5 13.3h7',
+      form: 'M4 2.5h8v11H4zM6 6h4M6 8.5h4M6 11h2.5',
+      flow: 'M3 3.5h3.5v3H3zM9.5 9.5h3.5v3h-3.5zM4.75 6.5v2.5a1.5 1.5 0 001.5 1.5h3.25',
+      table: 'M2.5 3.5h11v9h-11zM2.5 6.5h11M6 6.5v6M9.5 6.5v6',
+      reqhand: 'M5.2 8V4.3a.9.9 0 011.8 0V7.6M7 7.6V3.4a.9.9 0 011.8 0V7.6M8.8 7.7V4.1a.9.9 0 011.8 0v4.4M10.6 6.3a.9.9 0 011.8 0v3.6c0 2.1-1.5 3.6-3.6 3.6H8c-.9 0-1.5-.3-2.1-.9L3.2 9.4c-.5-.6.2-1.6 1-1.1l1 .7'
+    };
+    return e('svg', { width: size, height: size, viewBox: '0 0 16 16', fill: 'none', stroke: color, strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round', style: { flexShrink: 0 } }, e('path', { d: paths[k] || paths.table }));
+  }
+
+  menu(items, style) {
+    const e = React.createElement;
+    return e('div', { style: Object.assign({ position: 'absolute', top: 'calc(100% + 6px)', background: '#fff', border: '1px solid #d6d9de', borderRadius: 8, boxShadow: '0 8px 24px rgba(16,21,26,.14)', padding: '6px', zIndex: 20, minWidth: 190 }, style) },
+      items.map((it, i) => it === '—'
+        ? e('div', { key: i, style: { height: 1, background: '#e6e9ed', margin: '5px 4px' } })
+        : e('div', { key: i, onClick: (ev) => ev.stopPropagation(), style: { display: 'flex', alignItems: 'center', gap: 9, padding: '8px 10px', borderRadius: 6, font: '500 12.5px "Public Sans",sans-serif', color: it.hot ? '#5b5ce6' : '#24292e', cursor: 'pointer', background: it.hot ? '#f0f0fd' : 'transparent' },
+            onMouseEnter: (ev) => ev.currentTarget.style.background = '#f2f4f6', onMouseLeave: (ev) => ev.currentTarget.style.background = it.hot ? '#f0f0fd' : 'transparent' },
+          it.k ? this.icon(it.k, 13, it.hot ? '#5b5ce6' : '#586069') : null,
+          e('span', null, it.label),
+          it.badge ? e('span', { style: { font: '600 8.5px "IBM Plex Mono",monospace', color: '#8a6a1c', background: '#dcf5e7', padding: '2px 6px', borderRadius: 99, letterSpacing: '.05em' } }, it.badge) : null))
+    );
+  }
+
+  note(children, pos, opts) {
+    const e = React.createElement;
+    opts = opts || {};
+    const ap = opts.arrowPos != null ? opts.arrowPos : 22;
+    const arrows = {
+      left: { left: -7, top: ap, borderWidth: '7px 7px 7px 0', borderColor: 'transparent #10151a transparent transparent' },
+      right: { right: -7, top: ap, borderWidth: '7px 0 7px 7px', borderColor: 'transparent transparent transparent #10151a' },
+      top: { top: -7, left: ap, borderWidth: '0 7px 7px 7px', borderColor: 'transparent transparent #10151a transparent' },
+      bottom: { bottom: -7, left: ap, borderWidth: '7px 7px 0 7px', borderColor: '#10151a transparent transparent transparent' }
+    };
+    return e('div', { key: 'note', style: Object.assign({ position: 'absolute', width: 300, background: '#10151a', color: '#eef0f6', borderRadius: 10, padding: '13px 15px', boxShadow: '0 16px 40px rgba(16,21,26,.32)', zIndex: 40, animation: 'annin .45s ease both', pointerEvents: 'none' }, pos) },
+      opts.arrow ? e('span', { style: Object.assign({ position: 'absolute', width: 0, height: 0, borderStyle: 'solid' }, arrows[opts.arrow]) }) : null,
+      opts.title ? e('div', { style: { font: '600 8.5px "IBM Plex Mono",monospace', letterSpacing: '.12em', color: '#e0b45f', marginBottom: 7 } }, opts.title) : null,
+      e('div', { style: { font: '500 12px/1.55 "Public Sans",sans-serif' } }, children));
+  }
+
+  buildCanvas() {
+    const e = React.createElement;
+    const S = this.state, step = S.step;
+    const V = '#5b5ce6', ink = '#1c1e2e', sub = '#5c6370', line = '#e4e6ee';
+    const cols = '2.4fr 1.1fr 1.7fr 1.3fr 1.4fr 30px';
+    const stop = (fn) => (ev) => { ev.stopPropagation(); fn(); };
+    const setS = (o) => this.setState(o);
+    const chev = (c) => e('svg', { width: 11, height: 11, viewBox: '0 0 16 16', fill: 'none', stroke: c, strokeWidth: 1.8, strokeLinecap: 'round', style: { flexShrink: 0 } }, e('path', { d: 'M4 6.5L8 10.5l4-4' }));
+    const mkAnts = (col, r) => e('svg', { style: { position: 'absolute', inset: 0, width: '100%', height: '100%', overflow: 'visible', pointerEvents: 'none' } },
+      e('rect', { x: 0, y: 0, width: '100%', height: '100%', rx: r || 9, fill: 'none', stroke: col, strokeWidth: 2, strokeDasharray: '7 6', style: { animation: 'ants .6s linear infinite' } }));
+
+    const consolidated = step >= 2;
+    const divided = step >= 4;
+    const hasAdd = step >= 5;
+    const tabIcons = step >= 6;
+    const overflow = step >= 7;
+    const active = consolidated ? 'Requests' : 'Information requests';
+
+    const reqTabs = consolidated
+      ? [{ n: 'Requests', k: 'reqhand' }]
+      : [{ n: 'Information requests', k: 'req' }, { n: 'Document requests', k: 'files' }, { n: 'Signature requests', k: 'sign' }];
+    const coreTabs = [{ n: 'Home', k: 'home' }].concat(reqTabs, [{ n: "To-do's", k: 'tasks' }, { n: 'Files', k: 'files' }, { n: 'Comments', k: 'com' }]);
+    const customTabsAll = [{ n: 'Receipts', k: 'rec' }, { n: 'Billing', k: 'bill' }, { n: 'Meetings Tracker', k: 'meet' }, { n: 'Expenditure', k: 'table' }, { n: 'Invoices 2024', k: 'table' }, { n: 'Client onboarding', k: 'table' }];
+    const hiddenExtra = [{ n: 'Budget 2025', k: 'bill' }, { n: 'Vendor list', k: 'req' }, { n: 'Timeline review', k: 'meet' }];
+    const customVisible = customTabsAll;
+    const hiddenTabs = overflow ? hiddenExtra : [];
+
+    const tabEl = (t, isCore, idx) => {
+      const isActive = t.n === active;
+      const anim = {};
+      const dragged = step === 3 && !isCore && idx === 0;
+      if (dragged) { anim.animation = 'dragLift 4s ease-in-out infinite'; anim.zIndex = 6; anim.background = '#fff'; anim.borderRadius = '8px'; anim.padding = '10px 10px 12px'; anim.cursor = 'grab'; }
+      if (step === 3 && !isCore && idx === 1) anim.animation = 'neighborSlide 4s ease-in-out infinite';
+      const kids = [];
+      if (tabIcons) kids.push(e('span', { key: 'ic', style: { display: 'inline-flex', overflow: 'hidden', animation: step === 6 ? 'iconLoop 4s ease-in-out infinite' : 'iconpop .55s ease both', animationDelay: (idx * 0.05) + 's' } }, this.icon(t.k, 13, isActive ? V : sub)));
+      kids.push(e('span', { key: 'n', style: { whiteSpace: 'nowrap' } }, t.n));
+      if (step >= 1 && isActive) kids.push(e('span', { key: 'cv', style: { display: 'inline-flex' } }, chev(V)));
+      const menuHere = step === 1 && isActive
+        ? this.menu([{ label: 'Edit tab', k: 'req' }, { label: 'Create template', k: 'table' }, { label: 'Duplicate tab', k: 'files' }, '—', { label: 'Delete tab', k: 'rec' }], { left: 0, animation: 'menuloop 4.8s ease-in-out infinite' })
+        : null;
+      const ring = ((step === 2 && t.n === 'Requests')) ? { animation: 'ringloop 2s ease-out infinite' } : {};
+      return e('div', { key: t.n, style: Object.assign({ position: 'relative', display: 'flex', alignItems: 'center', gap: 6, padding: '10px 4px 12px', font: (isActive ? '600' : '500') + ' 13.5px "Public Sans",sans-serif', color: isActive ? V : sub, borderBottom: isActive ? '2.5px solid ' + V : '2.5px solid transparent', marginBottom: -1, flexShrink: 0 }, anim, ring) },
+        ...kids, menuHere);
+    };
+
+    const dividerEl = e('div', { key: 'divider', style: { position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', alignSelf: 'stretch', justifyContent: 'center', margin: '0 8px', flexShrink: 0 } },
+      e('div', { style: { width: 2, height: 22, borderRadius: 2, background: '#c3487f' } }));
+
+    const addBtn = hasAdd ? e('div', { key: 'add', style: { position: 'relative', flexShrink: 0, alignSelf: 'center', marginBottom: 6 } },
+      e('div', { style: { position: 'relative', width: 28, height: 28, borderRadius: 7, display: 'grid', placeItems: 'center', color: ink, font: '300 20px "Public Sans",sans-serif', background: step === 5 ? '#eef0f6' : 'transparent', animation: step === 5 ? 'ringloop 2s ease-out infinite' : 'none' } }, '+'),
+      step === 5 ? this.menu([{ label: 'Blank tab', k: 'req' }, { label: 'From a template', k: 'table' }, '—', { label: 'Import from apps', k: 'bill', hot: true, badge: 'EXPOSED' }, { label: 'Upload CSV / spreadsheet', k: 'files', hot: true, badge: 'EXPOSED' }], { right: 0, animation: 'menuloop 5s ease-in-out infinite' }) : null) : null;
+
+    const moreTabsBtn = hiddenTabs.length ? e('div', { key: 'more-tabs', style: { position: 'relative', flexShrink: 0, alignSelf: 'center', marginBottom: 6 } },
+      e('div', { style: { position: 'relative', display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 99, font: '600 12px "Public Sans",sans-serif', color: V, background: '#eeeefc', animation: 'ringloop 2s ease-out infinite' } }, hiddenTabs.length + ' more', chev(V)),
+      step === 7 ? this.menu(hiddenTabs.map(h => ({ label: h.n, k: h.k })), { right: 0, animation: 'menuloop 5s ease-in-out infinite' }) : null) : null;
+
+    const mergeOne = S.mergePhase >= 2;
+    const mtab = (label, act) => e('div', { key: label, style: { display: 'flex', alignItems: 'center', gap: 6, padding: '10px 4px 12px', font: (act ? '600' : '500') + ' 13.5px "Public Sans",sans-serif', color: act ? V : sub, borderBottom: act ? '2.5px solid ' + V : '2.5px solid transparent', marginBottom: -1, whiteSpace: 'nowrap', flexShrink: 0 } }, label, act ? chev(V) : null);
+    const mergeGroup = e('div', { key: 'merge', style: { position: 'relative', display: 'flex', alignItems: 'flex-end', flexShrink: 0 } },
+      e('div', { style: { position: 'relative', display: 'flex', alignItems: 'flex-end', padding: '3px 8px', margin: '0 -2px', borderRadius: 8, animation: 'ringloop 2s ease-out infinite' } },
+        e('div', { style: { display: 'flex', alignItems: 'flex-end', gap: 18, overflow: 'hidden', maxWidth: mergeOne ? 0 : 640, opacity: mergeOne ? 0 : 1, transition: 'max-width .7s cubic-bezier(.4,0,.2,1), opacity .5s ease' } },
+          mtab('Information requests', false), mtab('Document requests', false), mtab('Signature requests', false)),
+        e('div', { style: { overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: mergeOne ? 180 : 0, opacity: mergeOne ? 1 : 0, transition: 'max-width .7s cubic-bezier(.4,0,.2,1), opacity .5s ease' } }, mtab('Requests', true))));
+
+    const tabsChildren = [];
+    if (step === 2) {
+      tabsChildren.push(tabEl({ n: 'Home', k: 'home' }, true, 0));
+      tabsChildren.push(mergeGroup);
+      [{ n: "To-do's", k: 'tasks' }, { n: 'Files', k: 'files' }, { n: 'Comments', k: 'com' }].forEach((t) => tabsChildren.push(tabEl(t, true, 0)));
+    } else {
+      coreTabs.forEach((t) => tabsChildren.push(tabEl(t, true, 0)));
+    }
+    if (divided) tabsChildren.push(dividerEl);
+    customVisible.forEach((t, i) => tabsChildren.push(tabEl(t, false, i)));
+
+    const tabsClip = e('div', { style: { position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 18, flex: '1 1 auto', minWidth: 0, overflow: (moreTabsBtn || addBtn) ? 'hidden' : 'visible', paddingTop: 10, marginTop: -10 } }, ...tabsChildren);
+    const rightCluster = (moreTabsBtn || addBtn) ? e('div', { style: { position: 'relative', zIndex: 4, display: 'flex', alignItems: 'flex-end', gap: 12, flexShrink: 0, paddingLeft: 18, background: '#fff' } }, moreTabsBtn, addBtn) : null;
+    const stepNotes = {
+      1: this.note(['These live on the tab now — ', e('b', { key: 'b', style: { color: '#fff' } }, 'edit, template, delete'), ' act on the tab you clicked, not from a distant toolbar.'], { top: 'calc(100% + 14px)', left: 300, width: 288 }, { title: 'CONTROLS MOVED ONTO THE TAB', arrow: 'left', arrowPos: 22 }),
+      2: this.note(['The three request tabs fold into one ', e('b', { key: 'b', style: { color: '#fff' } }, 'Requests'), ' view — information, document and signature requests now read as a single combined list.'], { top: 'calc(100% + 14px)', left: 120, width: 300 }, { title: 'THREE TABS → ONE', arrow: 'top', arrowPos: 90 }),
+      3: this.note(['Tabs unfreeze — an owner can drag any custom tab to reorder, and the strip rearranges smoothly to match how the project actually runs. (Playing on loop; nothing to drag yourself.)'], { top: 'calc(100% + 10px)', left: 300, width: 330 }, { title: 'DRAG TO REARRANGE', arrow: 'top', arrowPos: 60 }),
+      4: this.note(['Left of the line: ', e('b', { key: 'a', style: { color: '#fff' } }, 'core tabs'), " (Home, Requests, To-do's, Files, Comments) — fixed, always present. Right: ", e('b', { key: 'c', style: { color: '#fff' } }, 'custom tabs'), ' owners add and arrange. Neither side can cross the divider.'], { top: 'calc(100% + 10px)', left: 360, width: 370 }, { title: 'ONE DIVIDER · CORE vs. CUSTOM', arrow: 'top', arrowPos: 60 }),
+      5: this.note(['The + pins to the right end of the strip. Open it and the once-invisible ', e('b', { key: 'b', style: { color: '#fff' } }, 'import & upload'), ' sit one click away — no more digging through “More”.'], { top: 'calc(100% + 10px)', right: 260, width: 290 }, { title: 'ADD — NOW WITH IMPORT', arrow: 'right', arrowPos: 20 }),
+      7: this.note(['This dropdown is ', e('b', { key: 'b', style: { color: '#fff' } }, 'live'), ' — as the strip scrolls, whichever tabs fall off the edge collect here and the list updates to match. Nothing ever clips away silently.'], { top: 'calc(100% + 4px)', right: 300, width: 290 }, { title: 'DYNAMIC OVERFLOW · NEVER LOSE A TAB', arrow: 'right', arrowPos: 18 })
+    };
+    const strip = e('div', { style: { display: 'flex', alignItems: 'flex-end', borderBottom: '1px solid ' + line, margin: '14px 28px 0', position: 'relative', minWidth: 0 } }, tabsClip, rightCluster, stepNotes[step] || null);
+
+    const moreItems0 = [{ label: 'Edit tab', k: 'req' }, { label: 'Create template', k: 'table' }, { label: 'Duplicate tab', k: 'files' }, '—', { label: 'Delete tab', k: 'rec' }];
+    const toolbar = e('div', { style: { display: 'flex', alignItems: 'center', gap: 12, padding: '16px 28px 12px', position: 'relative' } },
+      e('span', { style: { font: '600 12.5px "Public Sans",sans-serif', color: '#fff', background: ink, borderRadius: 99, padding: '7px 16px' } }, 'Created by me'),
+      e('span', { style: { font: '500 12.5px "Public Sans",sans-serif', color: ink, background: '#eef0f4', borderRadius: 99, padding: '7px 16px' } }, 'Shared with me'),
+      e('span', { style: { display: 'flex', alignItems: 'center', gap: 6, font: '500 12.5px "Public Sans",sans-serif', color: ink, marginLeft: 6 } }, e('svg', { width: 13, height: 13, viewBox: '0 0 16 16', fill: 'none', stroke: ink, strokeWidth: 1.5, strokeLinecap: 'round' }, e('path', { d: 'M2.5 4.5h11M4.5 8h7M6.5 11.5h3' })), 'Filter'),
+      step === 0 ? e('div', { style: { position: 'relative' } },
+        e('span', { onClick: stop(() => setS({ moreOpen: !S.moreOpen })), style: { position: 'relative', display: 'flex', alignItems: 'center', gap: 5, font: '500 12.5px "Public Sans",sans-serif', color: ink, cursor: 'pointer', background: S.moreOpen ? '#eef0f4' : 'transparent', padding: '5px 10px', borderRadius: 7 } }, '⋮ More', this.coach()),
+        this.menu(moreItems0, { left: 0 }),
+        this.note(['Every tab action — edit, create template, delete — was buried in this toolbar ‘More’ menu. That breaks hierarchy: the control belongs on the tab it affects, not in the table’s chrome. (Still opens — click to see what was hiding.)'], { top: 'calc(100% + 4px)', left: 218, width: 320 }, { title: 'THE PROBLEM · CONTROLS IN THE WRONG PLACE', arrow: 'left', arrowPos: 18 })) : null,
+      e('span', { style: { marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8, border: '1px solid #d8dbe4', borderRadius: 99, padding: '7px 14px', font: '400 12px "Public Sans",sans-serif', color: sub, width: 150 } }, '⌕', 'Search'));
+
+    const circ = (txt, bg, c) => e('span', { style: { width: 22, height: 22, borderRadius: '50%', background: bg, color: c, display: 'grid', placeItems: 'center', font: '600 9.5px "Public Sans",sans-serif', marginLeft: -5, border: '1.5px solid #fff' } }, txt);
+    const badge = (label, hot) => e('span', { style: { font: '500 11px "Public Sans",sans-serif', color: hot ? '#0b6bcb' : '#3f4650', background: hot ? '#e3f0fc' : '#eef0f4', border: hot ? '1px solid #b7d9f6' : '1px solid #e0e3ea', borderRadius: 6, padding: '3px 8px', whiteSpace: 'nowrap' } }, label);
+    const barCell = (frac, label) => e('div', null,
+      e('div', { style: { width: 140, height: 4, borderRadius: 99, background: '#e4e6ee' } }, e('div', { style: { width: (frac * 100) + '%', height: 4, borderRadius: 99, background: V } })),
+      e('div', { style: { font: '400 11.5px "Public Sans",sans-serif', color: ink, marginTop: 6 } }, label));
+    const assignBtn = e('span', { style: { display: 'flex', alignItems: 'center', gap: 5, font: '500 12.5px "Public Sans",sans-serif', color: ink } }, '+ Assign');
+    const duo = e('div', { style: { display: 'flex', paddingLeft: 5 } }, circ('H', '#dfe0fa', '#3c3e8f'), circ('C', '#dfe0fa', '#3c3e8f'), circ('+2', '#dfe0fa', '#3c3e8f'));
+    const row = (iconK, iconBg, iconC, name, st, hot, prog, due, asg) => e('div', { key: name, style: { display: 'grid', gridTemplateColumns: cols, alignItems: 'center', borderTop: '1px solid ' + line, padding: '13px 0' } },
+      e('div', { style: { display: 'flex', alignItems: 'center', gap: 12, font: '500 13px "Public Sans",sans-serif', color: ink } }, e('span', { style: { width: 30, height: 30, borderRadius: '50%', background: iconBg, display: 'grid', placeItems: 'center', flexShrink: 0 } }, this.icon(iconK, 14, iconC)), name),
+      e('div', null, badge(st, hot)),
+      typeof prog === 'string' ? e('div', { style: { font: '400 12.5px "Public Sans",sans-serif', color: ink } }, prog) : prog,
+      e('div', { style: { display: 'flex', alignItems: 'center', gap: 6, font: '400 12.5px "Public Sans",sans-serif', color: ink } }, this.icon('meet', 12, sub), due),
+      e('div', { style: { display: 'flex' } }, asg),
+      e('div', { style: { color: sub, font: '600 13px "Public Sans",sans-serif', textAlign: 'center', letterSpacing: '1px' } }, '⋮'));
+
+    const infoRows = [
+      row('req', '#fde4d8', '#c2470a', '2025 business earnings', 'Draft', false, 'Not started', 'Set due date', assignBtn),
+      row('req', '#fde4d8', '#c2470a', 'Q3 tax questionnaire', 'Draft', false, 'Not started', '10/25/2025', assignBtn),
+      row('req', '#fde4d8', '#c2470a', 'Vendor KYC details', 'In progress', true, barCell(0.3, '3 of 10 filled'), '10/25/2025', duo),
+      row('req', '#fde4d8', '#c2470a', 'Beneficiary information', 'In progress', true, barCell(0.6, '6 of 10 filled'), '10/25/2025', duo)
+    ];
+    const mixRows = [
+      row('req', '#fde4d8', '#c2470a', '2025 business earnings', 'Draft', false, 'Not started', 'Set due date', assignBtn),
+      row('files', '#dbeafd', '#1d4ed8', 'Bank statements 2024', 'In progress', true, 'Awaiting upload', '10/25/2025', duo),
+      row('sign', '#eadffb', '#7e22ce', 'Working agreement – Creator', 'In progress', true, barCell(0.5, '5 of 10 signed'), '10/25/2025', duo),
+      row('files', '#dbeafd', '#1d4ed8', 'Insurance certificate', 'Draft', false, 'Not started', '10/28/2025', assignBtn),
+      row('sign', '#eadffb', '#7e22ce', 'NDA – Q2 vendors', 'Draft', false, 'Not started', 'Set due date', assignBtn)
+    ];
+    const skelBar = (w) => e('span', { style: { display: 'inline-block', width: w, height: 11, borderRadius: 6, background: '#eef0f4', animation: 'skelpulse 1.6s ease-in-out infinite' } });
+    const skelRow = (i) => e('div', { key: 'sk' + i, style: { display: 'grid', gridTemplateColumns: cols, alignItems: 'center', borderTop: '1px solid ' + line, padding: '17px 0', animationDelay: (i * 0.12) + 's' } },
+      e('div', { style: { display: 'flex', alignItems: 'center', gap: 12 } }, e('span', { style: { width: 30, height: 30, borderRadius: '50%', background: '#eef0f4', flexShrink: 0, animation: 'skelpulse 1.6s ease-in-out infinite' } }), skelBar(150)),
+      skelBar(58), skelBar(92), skelBar(80), skelBar(50), e('span', null));
+    const tableRows = step === 2 ? (S.mergePhase === 0 ? infoRows : S.mergePhase === 2 ? mixRows : [skelRow(0), skelRow(1), skelRow(2), skelRow(3)]) : (consolidated ? mixRows : infoRows);
+    const typeChip = (bg, c, label) => e('span', { style: { display: 'inline-flex', alignItems: 'center', gap: 5, font: '600 10px "IBM Plex Mono",monospace', letterSpacing: '.04em', color: c, background: bg, borderRadius: 99, padding: '3px 9px' } }, label);
+    const listLabel = e('div', { style: { display: 'flex', alignItems: 'center', gap: 10, padding: '14px 28px 0', flexWrap: 'wrap' } },
+      e('span', { style: { font: '700 15px "Public Sans",sans-serif', color: ink } }, active),
+      consolidated
+        ? e('span', { style: { display: 'flex', gap: 6 } }, typeChip('#fde4d8', '#c2470a', 'INFO'), typeChip('#dbeafd', '#1d4ed8', 'DOCS'), typeChip('#eadffb', '#7e22ce', 'SIGN'))
+        : typeChip('#fde4d8', '#c2470a', 'INFORMATION REQUESTS'),
+      e('span', { style: { font: '400 11.5px "Public Sans",sans-serif', color: sub } }, tableRows.length + ' items'));
+
+    const tableEl = e('div', { style: { padding: '2px 28px 22px', minHeight: 392, boxSizing: 'border-box' } },
+      e('div', { style: { display: 'grid', gridTemplateColumns: cols, padding: '10px 0 12px' } }, ...['Name', 'Status', 'Progress', 'Due date', 'Assigned to', ''].map((h, i) => e('span', { key: i, style: { font: '600 12.5px "Public Sans",sans-serif', color: ink } }, h))),
+      ...tableRows);
+
+    const qa = (bg, ic, label) => e('div', { style: { display: 'flex', alignItems: 'center', gap: 10, border: '1px solid #e0e3ea', borderRadius: 12, padding: '8px 16px 8px 8px', font: '600 13px "Public Sans",sans-serif', color: ink, background: '#fff' } },
+      e('span', { style: { width: 30, height: 30, borderRadius: 8, background: bg, display: 'grid', placeItems: 'center' } }, ic), label);
+    const qrow = e('div', { style: { display: 'flex', alignItems: 'center', gap: 12, padding: '18px 28px 0', flexWrap: 'wrap' } },
+      qa('#dbeafd', this.icon('reqhand', 15, '#1d4ed8'), 'Create request list'),
+      qa('#d6f5e2', this.icon('sign', 15, '#15803d'), 'Request signature'),
+      qa('#eadffb', this.icon('form', 15, '#7e22ce'), 'Create form'),
+      qa('#faf0c4', this.icon('tasks', 15, '#a16207'), 'Create to-do'),
+      e('div', { style: { marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 } },
+        e('span', { style: { width: 34, height: 34, borderRadius: '50%', border: '1px solid #e0e3ea', display: 'grid', placeItems: 'center', color: ink, font: '400 14px "Public Sans",sans-serif' } }, '↗'),
+        e('span', { style: { width: 1, height: 22, background: '#e0e3ea' } }),
+        e('div', { style: { display: 'flex', paddingLeft: 5 } }, circ('S', '#d6f5e2', '#1c6b3c'), circ('H', '#dfe0fa', '#3c3e8f'), circ('+2', '#dfe0fa', '#3c3e8f')),
+        e('span', { style: { width: 34, height: 34, borderRadius: '50%', border: '1px solid #e0e3ea', display: 'grid', placeItems: 'center' } }, this.icon('com', 15, ink))));
+
+    const title = e('div', { style: { display: 'flex', alignItems: 'center', gap: 12, padding: '20px 28px 0', flexWrap: 'wrap' } },
+      e('span', { style: { font: '700 24px "Public Sans",sans-serif', color: ink, letterSpacing: '-.01em' } }, 'ElevateX Ventures – Federal Filling'),
+      chev(ink),
+      badge('In progress', true),
+      e('div', { style: { marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 20, font: '500 12.5px "Public Sans",sans-serif', color: ink } },
+        e('span', { style: { display: 'flex', alignItems: 'center', gap: 6 } }, this.icon('meet', 13, ink), 'Due: 06/15/2026'),
+        e('span', { style: { display: 'flex', alignItems: 'center', gap: 6 } }, this.icon('files', 13, ink), 'Client: Jane Thomas')));
+
+    const bell = e('svg', { width: 15, height: 15, viewBox: '0 0 16 16', fill: 'none', stroke: ink, strokeWidth: 1.4, strokeLinecap: 'round', strokeLinejoin: 'round' }, e('path', { d: 'M8 2a4 4 0 00-4 4v3L2.5 11h11L12 9V6a4 4 0 00-4-4zM6.5 13a1.6 1.6 0 003 0' }));
+    const topbar = e('div', { style: { display: 'flex', alignItems: 'center', padding: '13px 22px', gap: 20 } },
+      e('div', { style: { display: 'flex', alignItems: 'baseline', gap: 4, width: 190, flexShrink: 0 } },
+        e('span', { style: { font: '700 15.5px "Public Sans",sans-serif', color: ink } }, '▸ Progress'),
+        e('span', { style: { font: '400 15.5px "Public Sans",sans-serif', color: ink } }, 'ShareFile')),
+      e('div', { style: { flex: 1, display: 'flex', justifyContent: 'center' } },
+        e('div', { style: { display: 'flex', alignItems: 'center', gap: 9, background: '#fff', borderRadius: 10, padding: '9px 14px', width: '54%', minWidth: 220, font: '400 12.5px "Public Sans",sans-serif', color: sub, boxShadow: '0 1px 2px rgba(28,30,46,.05)' } }, '⌕', 'Search', e('span', { style: { marginLeft: 'auto', font: '500 11px "Public Sans",sans-serif', color: '#9aa0ad' } }, '⌘K'))),
+      e('div', { style: { display: 'flex', alignItems: 'center', gap: 16, width: 190, justifyContent: 'flex-end', flexShrink: 0 } },
+        e('span', { style: { font: '500 12.5px "Public Sans",sans-serif', color: ink } }, 'Dark mode'),
+        e('span', { style: { width: 18, height: 18, borderRadius: '50%', border: '1.4px solid ' + ink, display: 'grid', placeItems: 'center', font: '600 11px "Public Sans",sans-serif', color: ink } }, '?'),
+        bell,
+        e('span', { style: { width: 28, height: 28, borderRadius: '50%', background: '#dfe0fa', color: '#3c3e8f', display: 'grid', placeItems: 'center', font: '600 10.5px "Public Sans",sans-serif' } }, 'JT')));
+
+    const sideIcon = (k) => this.icon(k, 15, ink);
+    const item = (k, label, opts) => e('div', { style: { display: 'flex', alignItems: 'center', gap: 11, padding: '9px 12px', font: '500 13px "Public Sans",sans-serif', color: ink } }, sideIcon(k), e('span', { style: { flex: 1 } }, label), opts && opts.chev ? e('span', { style: { color: sub, font: '400 13px "Public Sans",sans-serif' } }, '›') : null);
+    const projSub = (label, act) => e('div', { style: { borderLeft: '2.5px solid ' + (act ? V : '#e0e3ea'), margin: '0 0 0 22px', padding: '8px 12px', font: (act ? '600' : '500') + ' 12.5px "Public Sans",sans-serif', color: act ? ink : sub } }, label);
+    const sidebar = e('div', { style: { width: 185, flexShrink: 0, padding: '4px 10px 16px 12px', boxSizing: 'border-box' } },
+      item('home', 'Dashboard'), item('com', 'Client hub', { chev: 1 }), item('tasks', 'Tasks', { chev: 1 }), item('files', 'Folders', { chev: 1 }),
+      e('div', { style: { background: '#fff', borderRadius: 10, padding: '2px 0 8px', margin: '2px 0', boxShadow: '0 1px 3px rgba(28,30,46,.06)' } },
+        e('div', { style: { display: 'flex', alignItems: 'center', gap: 11, padding: '9px 12px', font: '600 13px "Public Sans",sans-serif', color: ink } }, sideIcon('table'), e('span', { style: { flex: 1 } }, 'Projects'), chev(sub)),
+        projSub('All projects', true), projSub('Closed', false), projSub('Deleted', false)),
+      item('flow', 'Workflows'), item('table', 'Templates'), item('sign', 'Signatures'), item('meet', 'Inbox', { chev: 1 }), item('com', 'People'));
+
+    return e('div', { onClick: () => setS({ moreOpen: false }), style: { background: '#dfe1f2', fontFamily: '"Public Sans",sans-serif', userSelect: 'none', cursor: 'default', overflow: 'hidden' } },
+      topbar,
+      e('div', { style: { display: 'flex' } },
+        sidebar,
+        e('div', { style: { flex: 1, minWidth: 0, background: '#fff', borderRadius: '16px 16px 0 0', boxShadow: '0 0 18px rgba(28,30,46,.10)', paddingBottom: 4 } },
+          qrow, title, strip, toolbar, tableEl)));
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState && prevState.step !== this.state.step) this.centerStep();
+  }
+
+  centerStep() {
+    const run = () => {
+      const rail = document.querySelector('[data-steprail]');
+      if (!rail) return;
+      const active = rail.querySelector('[data-stepactive="1"]');
+      if (!active) return;
+      const max = rail.scrollWidth - rail.clientWidth;
+      const target = active.offsetLeft - (rail.clientWidth - active.offsetWidth) / 2;
+      rail.scrollLeft = Math.max(0, Math.min(max, target));
+    };
+    [0, 70, 320].forEach(d => setTimeout(run, d));
+  }
+
+  renderVals() {
+    const stepDefs = [
+      { t: 'How it was', tag: 'BASELINE · CONTROLS BURIED IN “MORE”' },
+      { t: 'Controls on the tab', tag: 'TAB-LEVEL MENU REPLACES “MORE”' },
+      { t: 'Consolidated requests', tag: 'THREE REQUEST TABS → ONE' },
+      { t: 'Let owners reorder', tag: 'DRAG TO REARRANGE' },
+      { t: 'Group by function', tag: 'CORE vs. CUSTOM · ONE DIVIDER' },
+      { t: 'Surface add — and import', tag: 'ADD BUTTON EXPOSES IMPORT' },
+      { t: 'Give tabs identity', tag: 'AN ICON FOR EVERY TAB' },
+      { t: 'Never lose a tab', tag: 'DYNAMIC OVERFLOW DROPDOWN' }
+    ];
+    const cur = this.state.step;
+    const last = stepDefs.length - 1;
+    const steps = stepDefs.map((s, i) => ({
+      t: s.t, tag: s.tag, num: '0' + (i + 1), on: i === cur ? '1' : '0', notFirst: i > 0,
+      hint: i === cur + 1,
+      bg: i === cur ? '#10151a' : '#fff',
+      fg: i === cur ? '#fff' : '#10151a',
+      edge: i === cur ? '#e0b45f' : (i < cur ? '#9fb3a8' : 'transparent'),
+      tagColor: i === cur ? '#e0b45f' : '#7c878d',
+      go: () => this.setState({ step: i, moreOpen: i === 0, mergePhase: 0 }, () => this.centerStep())
+    }));
+    return {
+      steps,
+      stepperCanvas: this.buildCanvas(),
+      lightboxSrc: this.state.lightboxSrc || '',
+      lightboxImg: this.state.lightboxSrc ? React.createElement('img', { src: this.state.lightboxSrc, onClick: (e) => e.stopPropagation(), style: { maxWidth: '100%', maxHeight: '100%', boxShadow: '0 30px 80px rgba(0,0,0,.5)', cursor: 'default' } }) : null,
+      closeLightbox: () => this.closeLightbox(),
+      swallowClick: (e) => e.stopPropagation()
+    };
+  }
+}
+</script>
+</body>
+</html>

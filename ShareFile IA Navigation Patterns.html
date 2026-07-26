@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf6ec;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+img{cursor:zoom-in}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:5fr 4fr"],[data-shell] div[style*="grid-template-columns:4fr 5fr"],[data-shell] div[style*="grid-template-columns:2fr 3fr"],[data-shell] div[style*="grid-template-columns:3fr 2fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="justify-content:space-between"][style*="align-items:baseline"][style*="flex-wrap:wrap"]{flex-direction:column-reverse !important;align-items:flex-start !important;gap:8px !important}
+[data-shell] div[style*="22px/1.5"]{font-size:18px !important}
+[data-shell] div[style*="font:700 52px"]{font-size:38px !important}
+[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] div[style*="border-right:1px solid #ddd2b0"]{border-right:none !important}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="ShareFile IA, Navigation and Patterns case study">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.html" title="Home" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 42px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">REDRAWING THE MAP</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#e0b45f;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">CASE FILE 02/04 — CLEARED</span>
+        <span style="width:7px;height:7px;background:#e0b45f;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #ddd2b0;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #ddd2b0;background:rgba(250,246,236,.9);backdrop-filter:blur(12px)">
+      <a href="ShareFile.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #ddd2b0;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#f0e7cd">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;gap:10px;padding:20px 28px;border-right:1px solid #ddd2b0;background:#faf6ec">
+        <span style="width:8px;height:8px;background:#e0b45f;display:inline-block"></span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CASE FILE / IA · NAVIGATION · PAGE PATTERNS · SHAREFILE</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding-right:32px">
+        <a href="#brief" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#context" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CONTEXT</a>
+        <a href="#personas" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PERSONAS</a>
+        <a href="#research" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">RESEARCH</a>
+        <a href="#problems" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROBLEMS</a>
+        <a href="#ia" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">01 — IA</a>
+        <a href="#nav" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">02 — NAVIGATION</a>
+        <a href="#patterns" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">03 — PATTERNS</a>
+        <a href="#status" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STATUS</a>
+      </div>
+    </div>
+
+    <!-- ============ HERO — CASE FILE (paper, gold — level-2 identity) ============ -->
+    <div id="brief" style="background:#faf6ec;background-image:radial-gradient(#d8caa0 1.1px, transparent 1.1px);background-size:22px 22px" data-screen-label="Brief">
+      <div data-reveal="" style="display:flex;align-items:stretch;justify-content:space-between;gap:24px;border-bottom:1px solid #e5d9b8;padding:0 64px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:16px 0">
+          <span style="font:700 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">CASE FILE Nº 02/04</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CLIENT — SHAREFILE</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">PERIOD — 2023 → NOW</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">STATUS — LIVE</span>
+        </div>
+      </div>
+      <div style="padding:84px 64px 72px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:44px;flex-wrap:wrap">
+          <a href="Portfolio - Control Tower.html" style="color:#7c878d" style-hover="color:#10151a">HOME</a>
+          <span style="color:#d3c69e">/</span>
+          <a href="ShareFile.html" style="color:#7c878d" style-hover="color:#10151a">WORK LOG 01 — SHAREFILE</a>
+          <span style="color:#d3c69e">/</span>
+          <span style="color:#8a6a1c">CASE FILE — IA · NAVIGATION · PAGE PATTERNS</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(48px,5.2vw,80px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#10151a">
+          <span data-rise="" style="display:block;color:#9a9074">ShareFile outgrew</span>
+          <span data-rise="" style="display:block">its <em style="font:italic 400 1.02em 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#b0812c">navigation</em>.</span>
+        </h1>
+        <p data-reveal="" style="margin:44px 0 0;font:400 17px/1.7 'Space Grotesk',sans-serif;color:#5f5a48;max-width:680px">ShareFile grew from file sharing into full work management — requests, signatures, tasks, projects — but its information architecture stayed frozen in the file era. Customers rely on work arounds just to bridge navigation gaps. This is the widest brief I've owned here: re-ground the product's IA, rebuild the left navigation, modernise and standardise the page patterns everything sits on.</p>
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:44px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">ROLE — LEAD PRODUCT DESIGNER</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">TYPE — PRODUCT-WIDE REDESIGN</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SCOPE — IA · NAVIGATION · REPEATABLE PAGE PATTERNS</span><div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 12px"><span style="font: 500 11px 'IBM Plex Mono',monospace; color: #10151a; letter-spacing: .06em; border: 1px solid #d3c69e; background: #fff; padding: 9px 16px">TEAMS - RESEARCH&nbsp;<span style="letter-spacing: 0.66px;">· DESIGN&nbsp;</span><span style="letter-spacing: 0.66px;">· SALES&nbsp;</span><span style="letter-spacing: 0.66px;">· PM's</span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CONTEXT ============ -->
+    <div id="context" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Context">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The problem, and the&nbsp;<em data-om-id="817dc016:58" style="font: italic 400 1em &quot;Instrument Serif&quot;, serif; text-transform: none;">opportunity.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / PROBLEM STATEMENT &amp; HMW</span>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-bottom:56px">
+        <div style="background:#10151a;padding:44px 46px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em;margin-bottom:20px">PROBLEM STATEMENT — NAVIGATION STRUCTURE · CORE PAGE PATTERNS</div>
+          <p style="margin:0;font:400 16.5px/1.75 'Space Grotesk',sans-serif;color:#c5ced4">As ShareFile evolves from file sharing into broader work management - inconsistent design patterns, confusing navigation and fragmented experiences have created real customer confusion. The cognitive load falls on customers — who struggle to navigate to their work, and to learn and adopt new features. So they build workarounds: <strong style="color: rgb(255, 255, 255);">Inbox, Filebox and Favorites re-purposed to bridge navigation gaps</strong> — slowing, feature adoption and overall usability.</p>
+        </div>
+        <div style="background:#fff;padding:44px 46px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:20px">OPPORTUNITY — HOW MIGHT WE</div>
+          <p style="margin:0;font:italic 400 27px/1.45 'Instrument Serif',serif;color:#10151a">How might we establish recognition and familiarity through consistent page and pattern experiences — so customers spend their attention on their work, not on finding it?</p>
+        </div>
+      </div>
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">WHY IT IS WORTH INVESTING IN — INDUSTRY EVIDENCE USED TO MAKE THE CASE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em">2–3×</div>
+          <p style="margin:12px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Higher adoption of non-core features in top SaaS apps with strong IA.</p>
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em;margin-top:14px">PENDO BENCHMARK</div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em">+25–30%</div>
+          <p style="margin:12px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">User productivity and higher satisfaction reported with clearer IA.</p>
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em;margin-top:14px">SALESFORCE LIGHTENING REDESIGN</div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.03em">+17% · +10</div>
+          <p style="margin:12px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Feature adoption and CSAT lift from better surfacing of features.</p>
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em;margin-top:14px">INTERCOM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PERSONAS ============ -->
+    <div id="personas" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Personas">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Who gets <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">lost.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / PERSONAS — AND WHAT THE MAP COSTS EACH OF THEM</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: #ddd2b0; border: 1px solid #ddd2b0; align-items: stretch">
+        <div data-reveal="" style="background: #fff; padding: 30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="3" y="8" width="20" height="14" rx="1"></rect><path d="M9 8V5a1 1 0 011-1h6a1 1 0 011 1v3M3 14h20"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">P-01 · RUNS THE FIRM</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Service providers</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Owners of tax, law, real-estate and insurance practices, running client engagements end to end.</p>
+          <div style="margin-top:18px;border-top:1px solid #ddd2b0;padding-top:14px;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c"><span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#b0562c;letter-spacing:.08em;display:block;margin-bottom:6px">WHERE THE MAP FAILS THEM</span>A cluttered sidebar their staff asks to hide, and no single place to see work across clients — so they monitor engagements in Trello boards and spreadsheets instead.</div>
+        </div>
+        <div data-reveal="" style="background: #fff; padding: 30px 32px; overflow: visible">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="5" y="3" width="16" height="20" rx="1"></rect><path d="M9 8h8M9 12h8M9 16h4"></path><path d="M16 17.5l1.5 1.5 3-3"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">P-02 · RUNS THE WORK</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Associates</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Small teams collecting documents, information and signatures — chasing submissions all day, every day.</p>
+          <div style="margin-top:18px;border-top:1px solid #ddd2b0;padding-top:14px;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c"><span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#b0562c;letter-spacing:.08em;display:block;margin-bottom:6px">WHERE THE MAP FAILS THEM</span>Every page behaves differently — core actions buried in ambiguous "+" and "…" menus, table views designed four different ways. They recall paths instead of recognising patterns.</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- ============ RESEARCH ============ -->
+    <div id="research" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Research">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Triangulate, then <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">act.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 03 / DISCOVERY → SOLUTION DESIGN</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:44px">
+        <p data-reveal="" style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Discovery:</strong> we reviewed ShareFile end to end and triangulated every data point we could get — customer usage, drop-offs, gaps, support feedback, pain points and needs — annotating the live product page by page against heuristic and experience principles. <strong style="color:#10151a"><br><br>Solution design:</strong> IA re-design concepts were then evaluated through a card sort study, an A/B + usability study and a content study before anything was committed to build. No single method got to decide; every problem below is backed by at least two.</p>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Qualitative</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">USABILITY TESTING · CONTENT STUDY</span></div>
+          <div style="background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Quantitative</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">A/B TESTING · CARD SORT · ADOPTION FUNNELS</span></div>
+          <div style="background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Behavioral</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">CLICK DATA · DROP-OFFS · SUPPORT &amp; CSE SIGNALS</span></div>
+          <div style="background:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px 'Space Grotesk',sans-serif">Benchmarking</span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">HEURISTIC EVALUATION AGAINST INDUSTRY PATTERNS</span></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/old-nav-six-patterns.png" alt="Annotated review of the Personal Folders page — heuristic violations called out on the live product" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font: 400 9.5px 'IBM Plex Mono',monospace; color: #7c878d; letter-spacing: .1em; width: 100%">FIG. 03-A · ANNOTATION — HEURISTIC VIOLATIONS&nbsp;&nbsp;</span><span style="font: 400 9.5px 'IBM Plex Mono',monospace; color: #7c878d; letter-spacing: .1em; width: 172px">DISCOVERY ARTEFACT</span></div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/research-generative-board.jpg" alt="Generative research board for left navigation and landing pages" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 03-B · INCONSISTENT LEFT NAV</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DISCOVERY ARTEFACT</span></div>
+        </div>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:2fr 3fr;gap:32px;margin-bottom:56px;align-items:start">
+        <div data-reveal="" style="border: 1px solid #ddd2b0; background: #fff; padding: 10px; width: 429px; height: 734px">
+          <img src="media/sharefile/ianav/old-left-nav-screens.png" alt="Internal chat — a customer asks to hide left navigation options because employees feel overwhelmed" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 03-C · "EMPLOYEES MIGHT BE OVERWHELMED WITH OPTIONS" — A CUSTOMER ASKS TO HIDE THE NAV</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CSE SIGNAL</span></div>
+        </div>
+        <div data-reveal="">
+          <p style="margin: 0 0 24px; font: 400 17px/1.75 'Space Grotesk',sans-serif; color: #4c565c; width: 825px; height: 184px">The sharpest signals weren't in dashboards — they were in what customers did to survive the product. Support threads showed firms asking to <strong style="color:#10151a">hide parts of the navigation</strong> because their staff found it overwhelming. And when we ran contextual inquiries, we found owners maintaining entire <strong style="color:#10151a">shadow systems outside ShareFile</strong> — Trello boards and Excel sheets rebuilt by hand, just to see task progress across projects.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:8px">
+              <img src="media/sharefile/ianav/workaround-trello.png" alt="Accounting customer's Trello board recreating ShareFile project tracking" style="width:100%;display:block">
+              <div style="padding:10px 8px 4px;font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">FIG. 03-D · ACCOUNTING FIRM — TRELLO BOARD TRACKING TASKS ACROSS PROJECTS</div>
+            </div>
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:8px">
+              <img src="media/sharefile/ianav/workaround-excel.png" alt="Construction customer's Excel sheet monitoring tasks across projects" style="width:100%;display:block">
+              <div style="padding:10px 8px 4px;font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.08em">FIG. 03-E · CONSTRUCTION FIRM — EXCEL SHEET DOING THE SAME JOB</div>
+            </div>
+          </div>
+        </div>
+      </div><div data-reveal="" style="background:#10151a;border:1px solid #10151a;padding:34px 36px">
+        <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em;margin-bottom:24px">WHAT THE FUNNEL SAID — PROJECTS &amp; TASKS ADOPTION, PRE-REDESIGN</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+          <div><div style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#fff"><span data-count="" data-target="22">0</span> days</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">AVERAGE TIME FROM PREMIUM TO FIRST PROJECT CREATED</div></div>
+          <div><div style="font: 700 36px 'Space Grotesk',sans-serif; letter-spacing: -.03em; color: #FFFFFF"><span data-count="" data-target="9" style="color: #FFFFFF">0</span>%</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF PROJECTS-PAGE VISITORS STAY OR PROCEED — 42% BOUNCE BACK TO FOLDERS</div></div>
+          <div><div style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#fff"><span data-count="" data-target="54">0</span>%</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF CREATED PROJECTS NEVER GET A SINGLE TASK INSIDE THEM</div></div>
+          <div><div style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#fff"><span data-count="" data-target="5">0</span>%</div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF USERS RETURN TO CREATE A PROJECT BY MONTH 2 — 1% BY MONTH 3</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEMS ============ -->
+    <div id="problems" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Problems">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Three problems, three <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">tracks.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 04 / RESEARCH INSIGHTS → DELIVERY TRACKS</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-bottom:44px">
+        <div data-reveal="" style="background:#fff;padding:34px 36px;display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">INSIGHT 01</span><span style="font:500 9px 'IBM Plex Mono',monospace;color:#b0562c;border:1px solid #b0562c;padding:3px 8px;letter-spacing:.08em">HIGH SEVERITY</span></div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Fragmented architecture</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c;flex:1">Tasks live in silos — document requests, information requests, signatures, to-dos — each with its own home, rules and statuses. The same lifecycle stage carries a different label in every feature, and don't aggregates across product.</p>
+          <div style="margin-top:20px;border-top:1px solid #ddd2b0;padding-top:14px"><div style="font:italic 400 14.5px/1.5 'Instrument Serif',serif;color:#10151a">JTBD — "I need to understand the progress I'm making on the tasks I work on, and those I've assigned to others."</div><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.08em;margin-top:12px">→ RESOLVED BY TRACK 01 — INFORMATION ARCHITECTURE</div></div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:34px 36px;display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">INSIGHT 02</span><span style="font:500 9px 'IBM Plex Mono',monospace;color:#b0562c;border:1px solid #b0562c;padding:3px 8px;letter-spacing:.08em">LOW → CHRONIC</span></div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Six navigations in one</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c;flex:1">Heuristic evaluation found six different interaction patterns on a single, very cluttered left navigation — expanding sections, sub-pages, mixed hierarchies. Customers described it as overwhelming; some asked to hide it.</p>
+          <div style="margin-top:20px;border-top:1px solid #ddd2b0;padding-top:14px"><div style="font:italic 400 14.5px/1.5 'Instrument Serif',serif;color:#10151a">JTBD — "I need to understand where to go to start work, or to access the resources I need while working."</div><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.08em;margin-top:12px">→ RESOLVED BY TRACK 02 — NAVIGATION</div></div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:34px 36px;display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">INSIGHT 03</span><span style="font:500 9px 'IBM Plex Mono',monospace;color:#b0562c;border:1px solid #b0562c;padding:3px 8px;letter-spacing:.08em">HIGH SEVERITY</span></div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Patterns that don't repeat</div>
+          <p style="margin:14px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c;flex:1">Every table view is designed differently. Core functionality hides in ambiguous "+" and "…" drop-downs that overlap page content at common resolutions. Title bars displace buttons page to page; nothing is responsive.</p>
+          <div style="margin-top:20px;border-top:1px solid #ddd2b0;padding-top:14px"><div style="font:italic 400 14.5px/1.5 'Instrument Serif',serif;color:#10151a">JTBD — "I need to feel familiar with ShareFile regardless of where I land and which capability I need."</div><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.08em;margin-top:12px">→ RESOLVED BY TRACK 03 — PAGE PATTERNS</div></div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-bottom: 32px">
+        <div data-reveal="" style="border: 1px solid #ddd2b0; background: #fff; padding: 10px; width: 622px; height: 699px">
+          <img src="media/sharefile/ianav/status-inconsistency-1.png" alt="Status matrix — the same lifecycle phase named differently across task types" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-A · ONE LIFECYCLE, MANY NAMES — STATUS AUDIT ACROSS TASK TYPES</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">INSIGHT 01 EVIDENCE</span></div>
+        </div>
+        <div data-reveal="" style="display: flex; flex-direction: column; gap: 20px; width: 649px; height: 720px">
+          <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/research-generative-board.jpg" alt="Generative research board for left navigation and landing pages" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-B · INCONSISTENT LEFT NAV</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DISCOVERY ARTEFACT</span></div>
+        </div><div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center">
+            <img src="media/sharefile/ianav/pattern-inconsistency-1.png" alt="Ambiguous create menu — eight unrelated actions behind one plus button" style="display:block;max-height:230px;width:auto">
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c;padding-right:12px">Eight unrelated verbs behind one unlabeled "+" — upload, create, request — a menu that looks like an add button and overlaps table filters at common screen sizes.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em"><span style="letter-spacing: 0.95px; background-color: #FFFFFF; width: 100%; height: 30px">FIG. 04-C · BURIED CORE FUNCTIONALITY</span></span><span style="font: 400 9.5px 'IBM Plex Mono',monospace; color: #7c878d; letter-spacing: .1em; width: 77px; height: 24px"><span style="letter-spacing: 0.95px; background-color: #FFFFFF; width: 100%; height: 15px; display: inline">INSIGHT 03 EVIDENCE</span></span></div>
+        </div>
+          <div style="display:flex;justify-content:space-between;padding:0 4px"></div>
+          
+        </div>
+      </div><div style="background:#10151a;padding:26px 30px">
+            <p style="margin:0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#c5ced4"><strong style="color:#e0b45f">Impact:</strong> the learning curve compounds. Customers must <em style="font:italic 400 1.05em 'Instrument Serif',serif">recollect</em> each page's private pathway instead of <em style="font:italic 400 1.05em 'Instrument Serif',serif">recognising</em> a shared pattern — and that frustration shows up in every study we ran.</p>
+          </div>
+    </div>
+
+    <!-- ============ TRACK 01 — IA ============ -->
+    <div id="ia" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#f2ecd8" data-screen-label="Track 01 — Information architecture">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Track 01 — one home for every <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">task.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 05 / INFORMATION ARCHITECTURE — AGGREGATED TASKS</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:44px">
+        <p data-reveal="" style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">The IA fix started with a content exercise, not a screen: we mapped <strong style="color: rgb(16, 21, 26);">every object in ShareFile</strong> — clients, folders, requests, forms, signatures, to-dos, projects, payments — and decided, object by object, what aggregates, what takes templates, and what belongs to which section. That grid became the contract for the new architecture, and its first shipped expression is<strong style="color: rgb(16, 21, 26);">&nbsp;Tasks</strong>: document requests, information requests, signatures and approvals pulled out of their silos into one personal, prioritised view — with one status language across all of them.</p>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/creation-flow-map.png" alt="Object creation grid — mapping every ShareFile object to sections, aggregation and templates" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-A · THE OBJECT GRID — WHAT AGGREGATES, WHAT TEMPLATES, WHAT LIVES WHERE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">IA CONTRACT</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="display: flex; flex-direction: row; gap: 1px; border: 1px solid #ddd2b0; padding-bottom: 0px; background-color: #FFFFFF00; margin-bottom: 32px">
+          <div style="background: #fff; padding: 20px 24px; width: 100%"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em">NOW — FOUNDATION</div><p style="margin:10px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">All Tasks as a personal, focused view: document requests, information requests, signatures and feedback &amp; approvals aggregated with unified statuses.</p></div>
+          <div style="background: #fff; padding: 20px 24px; width: 100%"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">NEXT — USABILITY &amp; VISIBILITY</div><p style="margin:10px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">More quick actions and creation flows, filters to narrow the list, and a dedicated space for task types that don't exist yet.</p></div>
+          <div style="background: #fff; padding: 20px 24px; width: 100%"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">LATER — FLEXIBILITY</div><p style="margin:10px 0 0;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Quick-filter to help users narrow down to what they need.</p></div>
+        </div><div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;margin-bottom:32px">
+        
+        <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-tasks-clicknav" src="media/sharefile/ianav/tasks-click-nav.mp4" style="width:100%;display:block;background:#10151a"></video><div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em"><span style="letter-spacing: 0.95px;">FIG. 05-B · "NOW" AGGREGATE TASKS TO</span></span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em"><span style="letter-spacing: 0.95px;">PROTOTYPE RECORDING</span></span></div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333a;border:1px solid #10151a;margin-bottom:32px">
+        <div style="background:#10151a;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">IMPROVEMENTS</div>
+          <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#c6d0d6">
+            <li>Centralized task management surfaces key actions and due items — improving discoverability &amp; scalability.</li>
+            <li>Enables flexibility to use tasks without requiring a project container.</li>
+            <li>Reduces time spent navigating across the product.</li>
+            <li>Gives users clearer insight into their responsibilities.</li>
+          </ul>
+        </div>
+        <div style="background:#10151a;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">SOLUTION DESIGN &amp; TESTING</div>
+          <p style="margin:16px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#c6d0d6"><strong style="color:#fff;font-size:26px;letter-spacing:-.02em">87.5%</strong> success rate — usability testing showed people finding and completing test scenarios using this navigation pattern.</p>
+          <p style="margin:14px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#c6d0d6">Two studies done to refine task labels &amp; terminology.</p>
+        </div>
+      </div>
+      
+      
+        
+        
+      
+      
+    </div>
+
+    <!-- ============ TRACK 02 — NAVIGATION ============ -->
+    <div id="nav" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Track 02 — Navigation">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Track 02 — a calmer UI&nbsp;<em style="font: italic 400 1em &quot;Instrument Serif&quot;, serif; text-transform: none;">lift.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 06 / NAVIGATION — SHIPPED IN PHASES</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:760px">Six patterns had to become one — but a navigation used by every customer, every day, can't flip overnight. We phased the change so each release moved customers toward the new mental model without breaking the old one.</p>
+      <div data-reveal="" style="display:grid;grid-template-columns:3fr 7fr;gap:32px;align-items:start;margin-bottom:32px">
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px;position:sticky;top:100px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PHASE 01</div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Streamline</div>
+          <p style="margin: 12px 0 0; font: 400 13.5px/1.65 'Space Grotesk',sans-serif; color: #4c565c; margin-bottom: 14px; margin-top: 14px">Personal and admin settings move off the sidebar into the avatar menu. Top-bar links consolidate, text links become icons, search becomes a true input field, and the refreshed logo lands.</p><span style="font: 500 9px 'IBM Plex Mono',monospace; color: #000000; border: 1px solid #b0562c; padding: 3px 8px; letter-spacing: .08em; border-color: #5FE08D; background-color: #E0B45F; font-size: 14px; padding-bottom: 3px">DONE</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/phase-1.png" alt="Phase 1 — top bar streamlined: refreshed logo, search as a true input, help moved to the question icon, settings nested under the avatar popup" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-A · PHASE 01 STREAMLINE — TOP BAR CONSOLIDATED, SETTINGS MOVE TO THE AVATAR</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ANNOTATED DESIGN</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:3fr 7fr;gap:32px;align-items:start;margin-bottom:32px">
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px;position:sticky;top:100px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PHASE 02</div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Hierarchy &amp; brand</div>
+          <p style="margin: 12px 0 0; font: 400 13.5px/1.65 'Space Grotesk',sans-serif; color: #4c565c; margin-bottom: 14px">Content layering separates nav from work. Tasks moves above Folders — priorities first. Sidebar and submenu styles unify, and a lavender surface replaces the grey wash as the brand evolves.</p><span style="font: 500 9px 'IBM Plex Mono',monospace; color: #000000; border: 1px solid #b0562c; padding: 3px 8px; letter-spacing: .08em; border-color: #5FE08D; background-color: #E0B45F; font-size: 14px; padding-bottom: 3px">DONE</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/phase-2.png" alt="Phase 2 — content layering, new sub navigation design, tasks introduced into the navigation, lavender surface color" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-B · PHASE 02 HIERARCHY &amp; BRAND — LAYERING, SUB-NAV, TASKS, LAVENDER SURFACE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ANNOTATED DESIGN</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:3fr 7fr;gap:32px;align-items:start;margin-bottom:32px">
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px;position:sticky;top:100px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PHASE 03</div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Workspace</div>
+          <p style="margin: 12px 0 0; font: 400 13.5px/1.65 'Space Grotesk',sans-serif; color: #4c565c; margin-bottom: 14px">A dedicated, visually separated area for solutions — the first step toward an organised workspace that keeps customers focused and in flow.</p><span style="font: 500 9px 'IBM Plex Mono',monospace; color: #000000; border: 1px solid #b0562c; padding: 3px 8px; letter-spacing: .08em; border-color: #E0B45F; background-color: #E0B45F; font-size: 14px; padding-bottom: 3px">TESTING</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/phase-3.png" alt="Phase 3 — projects and other solutions move into a dedicated workspaces area" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-C · PHASE 03 WORKSPACE — SOLUTIONS GET A DEDICATED, SEPARATED AREA</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ANNOTATED DESIGN</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:3fr 7fr;gap:32px;align-items:start;margin-bottom:44px">
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px;position:sticky;top:100px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PHASE FINAL</div>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Focus</div>
+          <p style="margin: 12px 0 0; font: 400 13.5px/1.65 'Space Grotesk',sans-serif; color: #4c565c; margin-bottom: 14px">Related actions grouped in one place — an intentional experience that guides users to what matters most, on any screen size.</p><span style="font: 500 9px 'IBM Plex Mono',monospace; color: #000000; border: 1px solid #b0562c; padding: 3px 8px; letter-spacing: .08em; border-color: #E0B45F; background-color: #E0B45F; font-size: 14px; padding-bottom: 3px">TESTING</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <img src="media/sharefile/ianav/phase-final.png" alt="Final phase — navigation items consolidated, future vision of the workspace area" style="width:100%;display:block">
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-D · PHASE FINAL FOCUS — NAV CONSOLIDATED, FUTURE VISION OF WORKSPACES</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">ANNOTATED DESIGN</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333a;border:1px solid #10151a;margin-bottom:44px">
+        <div style="background:#10151a;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">IMPROVEMENTS</div>
+          <ul style="margin:16px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#c6d0d6">
+            <li>Streamlines and clarifies navigation to reduce user frustration &amp; increase engagement.</li>
+            <li>Simplifies structure, aligning with user workflows.</li>
+          </ul>
+        </div>
+        <div style="background:#10151a;padding:34px 36px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">SOLUTION DESIGN &amp; TESTING</div>
+          <p style="margin:16px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#c6d0d6"><strong style="color:#fff;font-size:26px;letter-spacing:-.02em">82%</strong> success rate — usability testing showed people finding and completing test scenarios using this navigation pattern.</p>
+        </div>
+      </div>
+      <div style="display: flex; grid-template-columns: 5fr 4fr; gap: 32px; align-items: start; flex-direction: column">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-responsive" src="media/sharefile/ianav/responsive.mp4" style="width:100%;display:block;background:#10151a"></video>
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 06-E · THE NEW NAVIGATION RESPONDING ACROSS WINDOW SIZES</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN RECORDING</span></div>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:32px">
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TRACK 03 — PATTERNS ============ -->
+    <div id="patterns" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#f2ecd8" data-screen-label="Track 03 — Page patterns">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Track 03 — recognition over <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">recall.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 07 / PAGE PATTERNS — DESIGNED, DOCUMENTED, ENFORCED</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 56px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:760px">Patterns only fix inconsistency if they come with rules. Each pattern below shipped with full documentation — where it appears, how it responds to window size, what can and cannot live in it, and in what order — so every team builds the same page the same way.</p>
+
+      <!-- Pattern A — quick action bar -->
+      <div data-reveal="" style="display: grid; grid-template-columns: 3fr 7fr; gap: 32px; align-items: start; margin-bottom: 148px">
+        <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:100px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN A · TOP OF MOST SHAREFILE PAGES</div>
+            <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">The quick action bar</div>
+            <p style="margin:12px 0 0;font:400 13.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c">One bar, top of page, carrying the actions that used to hide in "+" menus — send for signature, request feedback, start from template. The button component is unique to this bar, with variants per object type, and documented rules decide which actions can appear and in what order.</p>
+          </div>
+          <div style="background:#10151a;padding:26px 28px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">IMPROVEMENTS</div>
+            <ul style="margin:14px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#c6d0d6">
+              <li>Displays core actions and capabilities contextually — raising awareness and driving adoption of core features.</li>
+              <li>Enhances discoverability &amp; increases speed &amp; efficiency.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+            <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-quickactions" src="media/sharefile/ianav/quick-actions-2.mp4" style="width:100%;display:block;background:#10151a"></video>
+            <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-A · QUICK ACTIONS IN MOTION — CREATION FLOWS ONE CLICK FROM ANY LIST</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN RECORDING</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+              <img src="media/sharefile/ianav/quick-action-spec-1.png" alt="Quick action button spacing specification with design tokens" style="width:100%;display:block">
+              <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-B · BUTTON SPEC — SPACING MAPPED TO DESIGN TOKENS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN DOCUMENTATION</span></div>
+            </div>
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+              <img src="media/sharefile/ianav/quick-action-spec-2.png" alt="Quick action bar variants documentation" style="width:100%;display:block">
+              <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-C · VARIANTS PER OBJECT — WHAT MAY APPEAR, IN WHAT ORDER</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN DOCUMENTATION</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pattern B — quick filter bar -->
+      <div data-reveal="" style="display: grid; grid-template-columns: 3fr 7fr; gap: 32px; align-items: start; margin-bottom: 148px">
+        <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:100px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN B · TOP OF EVERY LIST VIEW</div>
+            <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">The quick filter bar</div>
+            <p style="margin:12px 0 0;font:400 13.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Every list view gets the same bar: navigational quick filters on the left, the filter button and view switcher on the right. Select one row and it swaps to single-item actions; select ten and it swaps to bulk actions. The documentation answers the hard questions — what can be a navigational filter, what shows when nothing is selected, and how the bar collapses when the window narrows.</p>
+          </div>
+          <div style="background:#10151a;padding:26px 28px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">IMPROVEMENTS</div>
+            <ul style="margin:14px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#c6d0d6">
+              <li>One bar for filtering, view switching and selection actions — the same on every list.</li>
+              <li>Recognition over recall — customers read every list the same way.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+            <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-quickfilters" src="media/sharefile/ianav/client-quick-filters.mp4" style="width:100%;display:block;background:#10151a"></video>
+            <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-D · QUICK FILTERS ON THE CLIENT LIST</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN RECORDING</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+              <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-multiselect" src="media/sharefile/ianav/multi-select.mp4" style="width:100%;display:block;background:#10151a"></video>
+              <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-E · MULTI-SELECT — THE BAR SWAPS TO BULK ACTIONS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN RECORDING</span></div>
+            </div>
+            <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+              <img src="media/sharefile/ianav/contextual-bar-spec-2.png" alt="Contextual action bar responsive behavior documentation" style="width:100%;display:block">
+              <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-F · RESPONSIVE RULES — OVERFLOWING FILTERS TUCK INTO A MENU</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN DOCUMENTATION</span></div>
+            </div>
+          </div>
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+            <img src="media/sharefile/ianav/contextual-bar-spec-1.png" alt="Navigational filter button spacing specification" style="width:100%;display:block">
+            <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-G · NAVIGATIONAL FILTER BUTTON — FINALISED &amp; DOCUMENTED</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN DOCUMENTATION</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pattern C — empty / FTU states -->
+      <div data-reveal="" style="display:grid;grid-template-columns:3fr 7fr;gap:32px;align-items:start;margin-bottom:64px">
+        <div style="display:flex;flex-direction:column;gap:20px;position:sticky;top:100px">
+          <div style="border:1px solid #ddd2b0;background:#fff;padding:30px 32px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERN C · EVERY FIRST-TIME-USE PAGE</div>
+            <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Empty &amp; FTU states</div>
+            <p style="margin:12px 0 0;font:400 13.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c">An empty page used to be a dead end — a blank table and a lonely "+" button. The FTU pattern turns it into a starting line: it explains what the page is for, surfaces relevant templates contextually, and offers quick actions — start from a template, or create from scratch. The same structure repeats on every first-time-use page.</p>
+          </div>
+          <div style="background:#10151a;padding:26px 28px">
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">IMPROVEMENTS</div>
+            <ul style="margin:14px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#c6d0d6">
+              <li>Exposing templates contextually in FTU pages increases learnability &amp; reduces bottlenecks to active use.</li>
+              <li>Provides flexibility to start work via templates &amp; quick actions.</li>
+            </ul>
+            <div style="font:500 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em;margin-top:22px">SOLUTION DESIGN</div>
+            <ul style="margin:14px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font:400 13.5px/1.6 'Space Grotesk',sans-serif;color:#c6d0d6">
+              <li>Two studies done to refine task labels &amp; terminology.</li>
+              <li>Leverages patterns found in competitive research — FTU patterns and template structures.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+          <video autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" data-vid="ianav-emptystate" src="media/sharefile/ianav/empty-state.mp4" style="width:100%;display:block;background:#10151a"></video>
+          <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-I · THE FTU EMPTY STATE — TEMPLATES AND QUICK ACTIONS INSTEAD OF A BLANK PAGE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN RECORDING</span></div>
+        </div>
+      </div>
+
+      <!-- Creation flow -->
+      
+    </div>
+
+    <!-- ============ STATUS ============ -->
+    <div id="status" style="background:#10151a;padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Status">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">Where it <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">stands.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 08 / STATUS — SOLUTION DESIGN → BUILD</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#2a333b;border:1px solid #2a333b">
+          <div style="background:#10151a;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="font:500 14.5px 'Space Grotesk',sans-serif;color:#fff">List pattern</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.08em">LIVE</span></div>
+          <div style="background:#10151a;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="font:500 14.5px 'Space Grotesk',sans-serif;color:#fff">Quick action bar</span><span style="font: 400 9.5px 'IBM Plex Mono',monospace; color: #E0B45F; letter-spacing: .08em">LIVE</span></div>
+          <div style="background:#10151a;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="font:500 14.5px 'Space Grotesk',sans-serif;color:#fff">Contextual action bar</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.08em"><span style="color: #E0B45F8D; letter-spacing: 0.76px">PARTIALLY LIVE</span></span></div>
+          <div style="background:#10151a;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="font:500 14.5px 'Space Grotesk',sans-serif;color:#fff">Left navigation — phases 1 &amp; 2</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.08em"><span style="color: #E0B45F; letter-spacing: 0.76px">LIVE</span></span></div>
+          <div style="background:#10151a;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="font:500 14.5px 'Space Grotesk',sans-serif;color:#fff">Aggregated Tasks MVP — iteration #1</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.08em">CURRENTLY IN INTERNAL TESTING</span></div>
+        </div>
+        <div data-reveal="">
+          <p style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#8fa0aa">This is deliberately a case study of work in flight: the research is done, designed and documented, and MVP iteration is running with PM and Engineering. The patterns are already outliving their first screens — every new feature that ships now starts from the documented list pattern, action bars and navigation model instead of inventing its own.</p>
+          <div style="margin-top:36px;border-left:2px solid #e0b45f;padding-left:24px">
+            <p style="margin:0;font:italic 400 22px/1.45 'Instrument Serif',serif;color:#fff">"We are continually faced with great opportunities brilliantly disguised as insoluble problems."</p>
+            <div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em;margin-top:14px">LEE IACOCCA — THE CLOSING SLIDE OF THIS REVIEW</div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #2a333b;padding:34px 36px;margin-top:64px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px">
+          <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">HOW MUCH OF THIS WORK IS LIVE TODAY</span>
+          <span style="font:700 28px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#fff">~70% <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.08em">SHIPPED TO CUSTOMERS</span></span>
+        </div>
+        <div style="display:flex;height:14px;gap:2px">
+          <div style="width:50%;background:#e0b45f"></div>
+          <div style="width: 20%; background-color: #BD8212"></div>
+          <div style="width:30%;background:#2a333b"></div>
+        </div>
+        <div style="display:flex;gap:36px;flex-wrap:wrap;margin-top:18px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;background:#e0b45f;display:inline-block"></span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#c6d0d6;letter-spacing:.08em">50% — LIVE &amp; COVERED IN THIS CASE STUDY</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="width: 10px; height: 10px; display: inline-block; background-color: #BE8212"></span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#c6d0d6;letter-spacing:.08em">20% — LIVE, NOT INCLUDED IN THIS STUDY</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;background:#2a333b;display:inline-block"></span><span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.08em">30% — IN BUILD / PLANNED</span></div>
+        </div>
+      </div>
+      <div data-reveal="" style="border:1px solid #2a333b;padding:34px 36px;margin-top:32px">
+        <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em;margin-bottom:24px">WHAT THE FUNNEL SAYS NOW — PROJECTS &amp; TASKS ADOPTION, POST-REDESIGN</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+          <div><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font:400 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#5a6b74;text-decoration:line-through">22 days</span><span style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#e0b45f">18 days</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">AVERAGE TIME FROM PREMIUM TO FIRST PROJECT CREATED</div></div>
+          <div><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font:400 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#5a6b74;text-decoration:line-through">9%</span><span style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#e0b45f">37%</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF PROJECTS-PAGE VISITORS STAY OR PROCEED</div></div>
+          <div><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font:400 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#5a6b74;text-decoration:line-through">54%</span><span style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#e0b45f">28%</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF CREATED PROJECTS NEVER GET A SINGLE TASK INSIDE THEM</div></div>
+          <div><div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font:400 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#5a6b74;text-decoration:line-through">5%</span><span style="font:700 36px 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#e0b45f">22%</span></div><div style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:10px;letter-spacing:.06em;line-height:1.7">OF USERS RETURN TO CREATE A PROJECT BY MONTH 2 — 1% BY MONTH 3</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ NEXT / FOOTER ============ -->
+    <div style="background:#10151a;padding:52px 64px 44px;border-top:1px solid #2a333b">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+        <a href="ShareFile.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK TO SHAREFILE</a>
+        <a href="ShareFile Projects Navigation.html" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em" style-hover="color:#fff">NEXT CASE FILE: NAVIGATING THE PROJECT CONTAINER →</a>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<sc-if value="{{ lightboxSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:100;background:rgba(16,21,26,.92);display:flex;align-items:center;justify-content:center;padding:40px;cursor:zoom-out">
+    {{ lightboxImg }}
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;Scroll reveal + counter animations&quot;}}">
+class Component extends DCLogic {
+  state = { lightboxSrc: null };
+
+  componentDidMount() {
+    this._cleanup = [];
+    this._t = setTimeout(() => this.setupMotion(), 60);
+    const onDocClick = (e) => {
+      if (e.target.tagName === 'IMG' && e.target.closest('[data-reveal]')) {
+        this.setState({ lightboxSrc: e.target.getAttribute('src') });
+        document.body.style.overflow = 'hidden';
+      }
+    };
+    document.addEventListener('click', onDocClick);
+    this._cleanup.push(() => document.removeEventListener('click', onDocClick));
+    // Videos autoplay in a loop — React sets muted as a property (not attribute), which can
+    // fail the browser's load-time autoplay check, so force muted + play() until they run.
+    const kick = () => document.querySelectorAll('video[autoplay]').forEach(v => { v.muted = true; if (v.paused) v.play().catch(() => {}); });
+    const onReady = (e) => { const v = e.target; if (v.tagName === 'VIDEO' && v.autoplay && v.paused) { v.muted = true; v.play().catch(() => {}); } };
+    document.addEventListener('loadeddata', onReady, true);
+    document.addEventListener('canplay', onReady, true);
+    document.addEventListener('visibilitychange', kick);
+    kick();
+    this._iv = setInterval(kick, 500);
+    this._t2 = setTimeout(() => clearInterval(this._iv), 6000);
+    this._cleanup.push(() => { clearInterval(this._iv); clearTimeout(this._t2); document.removeEventListener('loadeddata', onReady, true); document.removeEventListener('canplay', onReady, true); document.removeEventListener('visibilitychange', kick); });
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); (this._cleanup || []).forEach(fn => fn()); }
+
+  closeLightbox() { this.setState({ lightboxSrc: null }); document.body.style.overflow = ''; }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+    });
+    setTimeout(() => { document.querySelectorAll('[data-rise]').forEach(el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }); }, 150);
+    setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        if (getComputedStyle(el).opacity !== '1') { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }
+      });
+    }, 1600);
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        this.runCounters(el); io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+    document.querySelectorAll('[data-count]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) this.runCounters(el.closest('[data-reveal]') || el);
+    });
+  }
+
+  runCounters(scope) {
+    const counters = scope.matches && scope.matches('[data-count]') ? [scope] : Array.from(scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : []);
+    counters.forEach(el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = parseFloat(el.dataset.target);
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  renderVals() {
+    return {
+      lightboxSrc: this.state.lightboxSrc || '',
+      lightboxImg: this.state.lightboxSrc ? React.createElement('img', { src: this.state.lightboxSrc, onClick: (e) => e.stopPropagation(), style: { maxWidth: '100%', maxHeight: '100%', boxShadow: '0 30px 80px rgba(0,0,0,.5)', cursor: 'default' } }) : null,
+      closeLightbox: () => this.closeLightbox()
+    };
+  }
+}
+
+</script>
+</body>
+</html>
