@@ -21,8 +21,8 @@ re-export (the script is idempotent — safe to run every time):
    `sessionStorage` key (`sd-clearance`). Enter the code on either page and both
    unlock for the tab session; closing the tab clears it and the wall returns.
    (Lollypop Studio has no lock — it is open by design.)
-2. **Favicon.** The brand mark (`media/logos/brand-mark.svg`) is set as the
-   browser-tab icon on every page.
+2. **Favicon.** The "SD" monogram (`media/logos/favicon.svg`, matching the
+   left rail) is set as the browser-tab icon on every page.
 3. **"Enter the lab" CTA** on the home page points to the live Lab site
    (https://suikoshurr.github.io/the-lab/) instead of the Claude design URL.
 

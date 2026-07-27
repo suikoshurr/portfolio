@@ -42,7 +42,7 @@ echo "→ Fix 2: favicon on every page missing it"
 added=0
 for f in *.html; do
   if ! grep -q 'rel="icon"' "$f"; then
-    perl -0pi -e 's#</head>#<link rel="icon" type="image/svg+xml" href="media/logos/brand-mark.svg">\n</head>#' "$f"
+    perl -0pi -e 's#</head>#<link rel="icon" type="image/svg+xml" href="media/logos/favicon.svg">\n</head>#' "$f"
     added=$((added+1))
   fi
 done
