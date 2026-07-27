@@ -48,4 +48,15 @@ for f in *.html; do
 done
 echo "   added favicon to $added file(s)"
 
+echo "→ Fix 3: 'Enter the lab' CTA points to the live Lab site"
+relinked=0
+for f in index.html "Portfolio - Control Tower.html"; do
+  [ -f "$f" ] || continue
+  if grep -q 'href="https://claude\.ai/design/p/324a15c5' "$f"; then
+    perl -pi -e 's#href="https://claude\.ai/design/p/324a15c5[^"]*"#href="https://suikoshurr.github.io/the-lab/"#g' "$f"
+    relinked=$((relinked+1))
+  fi
+done
+echo "   relinked $relinked file(s)"
+
 echo "✅ Done. Review with 'git diff', then commit + push."

@@ -23,6 +23,8 @@ re-export (the script is idempotent — safe to run every time):
    (Lollypop Studio has no lock — it is open by design.)
 2. **Favicon.** The brand mark (`media/logos/brand-mark.svg`) is set as the
    browser-tab icon on every page.
+3. **"Enter the lab" CTA** on the home page points to the live Lab site
+   (https://suikoshurr.github.io/the-lab/) instead of the Claude design URL.
 
 ## Images
 Images render via `image-slot.js`, which `fetch()`es a sidecar file
