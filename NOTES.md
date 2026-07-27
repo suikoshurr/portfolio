@@ -25,6 +25,8 @@ re-export (the script is idempotent — safe to run every time):
    left rail) is set as the browser-tab icon on every page.
 3. **"Enter the lab" CTA** on the home page points to the live Lab site
    (https://suikoshurr.github.io/the-lab/) instead of the Claude design URL.
+4. **Browser-tab title.** Every page gets `<title>Sabeel Dhar</title>` (the
+   export ships no title, so tabs otherwise show the raw filename).
 
 ## Images
 Images render via `image-slot.js`, which `fetch()`es a sidecar file

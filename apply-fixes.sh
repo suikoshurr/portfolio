@@ -48,6 +48,16 @@ for f in *.html; do
 done
 echo "   added favicon to $added file(s)"
 
+echo "→ Fix 4: browser-tab title on every page missing it"
+titled=0
+for f in *.html; do
+  if ! grep -qi "<title>" "$f"; then
+    perl -0pi -e 's#</head>#<title>Sabeel Dhar</title>\n</head>#' "$f"
+    titled=$((titled+1))
+  fi
+done
+echo "   added title to $titled file(s)"
+
 echo "→ Fix 3: 'Enter the lab' CTA points to the live Lab site"
 relinked=0
 for f in index.html "Portfolio - Control Tower.html"; do
