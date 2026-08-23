@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf6ec;color:#10151a;font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10151a;text-decoration:none}a:hover{color:#5a6b74}
+img{cursor:zoom-in}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+[data-anchors]{overflow-x:auto;scrollbar-width:none;justify-content:flex-start !important}
+[data-anchors]>a:first-child,[data-anchors]>*:first-child{margin-left:auto}
+[data-anchors]::-webkit-scrollbar{display:none}
+[data-anchors] a{white-space:nowrap;flex-shrink:0}
+@media (max-width:860px){
+[data-shell]{display:block !important}
+[data-shell]>div:first-of-type{display:none !important}
+[data-navlabel]{display:none !important}
+[data-shell] div[data-screen-label]{padding-left:20px !important;padding-right:20px !important}
+[data-shell] div[style*="padding:110px 64px"]{padding:64px 20px 56px !important}
+[data-shell] div[style*="padding:100px 64px"]{padding:64px 20px 48px !important}
+[data-shell] div[style*="padding:80px 44px"]{padding:56px 20px 48px !important}
+[data-shell] div[style*="padding:52px 64px"]{padding:36px 20px !important}
+[data-shell] div[style*="padding:32px 64px"]{padding:22px 20px !important}
+[data-shell] h1{font-size:37px !important;letter-spacing:-.03em !important}
+[data-shell] h2{font-size:29px !important}
+[data-shell] div[style*="grid-template-columns:repeat(2"],[data-shell] div[style*="grid-template-columns:repeat(3"],[data-shell] div[style*="grid-template-columns:repeat(4"],[data-shell] div[style*="grid-template-columns:1fr 1fr"],[data-shell] div[style*="grid-template-columns:340px 1fr"],[data-shell] div[style*="grid-template-columns:1fr 1.2fr"]{grid-template-columns:1fr !important}
+[data-shell] div[style*="gap:64px"]{gap:28px !important}
+[data-anchors]{gap:18px !important;padding-right:20px !important}
+[data-shell] div[style*="font:700 44px"],[data-shell] span[style*="font:700 44px"]{font-size:34px !important}
+[data-shell] div[style*="font:700 56px"]{font-size:38px !important}
+[data-shell] div[style*="font:600 24px"]{font-size:20px !important}
+[data-shell] div[style*="padding:34px 36px"]{padding:24px 20px !important}
+[data-shell] div[style*="padding:36px 34px"]{padding:26px 22px !important}
+[data-shell] div[style*="padding:30px 32px"]{padding:22px 20px !important}
+[data-shell] iframe{height:460px !important}
+[data-shell] div[style*="padding:88px 64px"]{padding:56px 20px 40px !important}
+}
+</style>
+</helmet>
+
+<div data-shell="" style="display:grid;grid-template-columns:88px 1fr" data-screen-label="ShareFile Share and Assign case study">
+
+  <!-- ============ RAIL ============ -->
+  <div style="position:relative">
+    <div style="position:sticky;top:0;height:100vh;background:#10151a;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px 0;box-sizing:border-box">
+      <a href="Portfolio - Control Tower.dc.html" title="Home" style="width:36px;height:36px;border:1.5px solid #fff;border-radius:50%;display:grid;place-items:center;font:600 12px 'Space Grotesk',sans-serif;color:#fff">SD</a>
+      <span style="writing-mode:vertical-rl;font:600 42px 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;transform:rotate(180deg);white-space:nowrap">SHARE ≠ ASSIGN</span>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <span style="font:400 9px 'IBM Plex Mono',monospace;color:#e0b45f;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.14em">CASE FILE 01/04 — IN PROGRESS</span>
+        <span style="width:7px;height:7px;background:#e0b45f;border-radius:50%;animation:blink 1.6s infinite"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <div style="min-width:0;width:100%;max-width:1440px;margin:0 auto;border-right:1px solid #ddd2b0;box-sizing:border-box">
+
+    <!-- nav -->
+    <div style="position:sticky;top:0;z-index:50;display:flex;align-items:stretch;border-bottom:1px solid #ddd2b0;background:rgba(250,246,236,.9);backdrop-filter:blur(12px)">
+      <a href="ShareFile.dc.html" style="display:flex;align-items:center;padding:20px 32px;border-right:1px solid #ddd2b0;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em" style-hover="background:#f0e7cd">← BACK</a>
+      <div data-navlabel="" style="display:flex;align-items:center;gap:10px;padding:20px 28px;border-right:1px solid #ddd2b0;background:#faf6ec">
+        <span style="width:8px;height:8px;background:#e0b45f;display:inline-block"></span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CASE FILE / SHARE + ASSIGN · PLATFORM · 2026</span>
+      </div>
+      <div data-anchors="" style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding-right:32px">
+        <a href="#brief" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em">BRIEF</a>
+        <a href="#problem" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROBLEM</a>
+        <a href="#evidence" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">EVIDENCE</a>
+        <a href="#findings" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FINDINGS</a>
+        <a href="#patterns" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PATTERNS</a>
+        <a href="#model" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">MODEL</a>
+        <a href="#design" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">DESIGN</a>
+        <a href="#prototype" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROTOTYPE</a>
+        <a href="#status" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STATUS</a>
+      </div>
+    </div>
+
+    <!-- live ticker -->
+    <div style="background:#e0b45f;border-bottom:1px solid #ddd2b0;overflow:hidden;white-space:nowrap">
+      <div style="display:inline-flex;animation:marquee 30s linear infinite">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em;padding:9px 0">◉ LIVE CASE FILE — CURRENTLY IN SOLUTION DESIGN · FIRST SLICE IMPLEMENTS IN THE PROJECT SPACE, Q1 27 · WHAT YOU SEE IS WORK IN MOTION, NOT A SHIPPED STATE&nbsp;·&nbsp;</span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em;padding:9px 0">◉ LIVE CASE FILE — CURRENTLY IN SOLUTION DESIGN · FIRST SLICE IMPLEMENTS IN THE PROJECT SPACE, Q1 27 · WHAT YOU SEE IS WORK IN MOTION, NOT A SHIPPED STATE&nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div id="brief" style="background:#faf6ec;background-image:radial-gradient(#d8caa0 1.1px, transparent 1.1px);background-size:22px 22px" data-screen-label="Brief">
+      <div data-reveal="" style="display:flex;align-items:stretch;justify-content:space-between;gap:24px;border-bottom:1px solid #e5d9b8;padding:0 64px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:16px 0">
+          <span style="font:700 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">CASE FILE Nº 01/04</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">CLIENT — SHAREFILE PLATFORM</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">PERIOD — 2026 → Q1 27</span>
+          <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">STATUS — IN SOLUTION DESIGN</span>
+        </div>
+      </div>
+      <div style="padding:100px 64px 72px">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font:400 10px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.14em;margin-bottom:44px;flex-wrap:wrap">
+          <a href="Portfolio - Control Tower.dc.html" style="color:#6b6552" style-hover="color:#10151a">HOME</a>
+          <span style="color:#e5d9b8">/</span>
+          <a href="ShareFile.dc.html" style="color:#6b6552" style-hover="color:#10151a">WORK LOG 01 — SHAREFILE</a>
+          <span style="color:#e5d9b8">/</span>
+          <span style="color:#b0812c">CASE FILE — SHARE + ASSIGN</span>
+          <span style="color:#e5d9b8">/</span>
+          <span style="color:#e0b45f">2026 · IN PROGRESS</span>
+        </div>
+        <h1 style="margin:0;font:700 clamp(48px,5.2vw,80px)/1 'Space Grotesk',sans-serif;letter-spacing:-.045em;text-transform:uppercase;color:#10151a">
+          <span data-rise="" style="display:block;color:#9a9074">ONE MODEL,</span>
+          <span data-rise="" style="display:block">every<em style="font:italic 400 1.02em 'Instrument Serif',serif;text-transform:none;letter-spacing:-.02em;color:#b0812c">where</em>.</span>
+        </h1>
+        <p data-reveal="" style="margin:44px 0 0;font:400 17px/1.7 'Space Grotesk',sans-serif;color:#6b6552;max-width:660px">ShareFile grew from files and folders into work-management containers — and every new surface invented its own way to give someone access. Share started doing assign's job. This is the story of pulling the two intents apart, and rebuilding people-and-access as one predictable model the whole platform can stand on.</p>
+        <div data-reveal="" style="display:inline-flex;align-items:center;gap:12px;margin-top:28px;border:1px dashed #e0b45f;padding:12px 18px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">LIVE · IN PROGRESS</span>
+          <span style="font:400 11px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.06em">SOLUTION DESIGN — PATTERNS STILL BEING ALIGNED ACROSS TEAMS. READ AS DIRECTION, NOT FINAL SPEC.</span>
+        </div>
+        <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:44px">
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">ROLE — LEAD PRODUCT DESIGNER</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">TYPE — CROSS-FEATURE PLATFORM WORKFLOW</span>
+          <span style="font:500 11px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em;border:1px solid #d3c69e;background:#fff;padding:9px 16px">SCOPE — SHARING CONTAINERS · ASSIGNMENT WORKFLOWS</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- ============ PROBLEM ============ -->
+    <div id="problem" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Problem">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Two intents, one <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">modal.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 01 / THE PROBLEM &amp; THE OPPORTUNITY</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:72px">
+        <div data-reveal="">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:16px">PROBLEM STATEMENT</div>
+          <p style="margin:0;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c">The pace of building new features outran the thinking behind them. Assign and sharing workflow was left wide open — read as flexibility, experienced as confusion. The <strong style="color: rgb(16, 21, 26);">share modal became the assign modal</strong>, blurring two very different intents. Meanwhile sharing in files and folders — the most core thing ShareFile does — hadn't been revisited in years, still asking users to hand-build a permission matrix on every single share.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:34px 36px">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.14em;margin-bottom:16px">THE OPPORTUNITY — HMW</div>
+          <p style="margin:0;font:500 20px/1.55 'Space Grotesk',sans-serif;color:#fff">How might we design one consistent, intuitive way to share or assign anything in ShareFile — sharp enough to respect each feature's nuance, so users never have to relearn the interaction when they move from one part of the product to the next?</p>
+        </div>
+      </div>
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">WHAT THE DRIFT COST US — THREE SYMPTOMS</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a333b;border:1px solid #2a333b">
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">S-1</span>
+          <p style="margin:14px 0 0;font:500 17px/1.5 'Space Grotesk',sans-serif;color:#fff">Relearning the same action in every feature</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">S-2</span>
+          <p style="margin:14px 0 0;font:500 17px/1.5 'Space Grotesk',sans-serif;color:#fff">No confident answer to "who can see this, and what can they do?"</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:700 13px 'Space Grotesk',sans-serif;color:#e0b45f">S-3</span>
+          <p style="margin:14px 0 0;font:500 17px/1.5 'Space Grotesk',sans-serif;color:#fff">Sharing a project buys nothing — you assign every item again anyway</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ EVIDENCE ============ -->
+    <div id="evidence" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Evidence">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">How we know it's <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">real.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 02 / SIGNALS — CSAT · SUPPORT · ADOPTION</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-bottom:72px">
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#b0562c">↓</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">CSAT for sharing keeps sliding</strong> in the legacy files-and-folders areas — the flows nobody has revisited.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#b0562c">↑</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Support tickets are climbing</strong> — how do I revoke someone's access to a folder, and I gave the wrong person access by mistake.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#b0562c">—</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Adoption of Projects is plateauing</strong> — sharing reads as hard, permissions read as cryptic.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 14px 'Space Grotesk',sans-serif;color:#b0562c">×</span><p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Teams run their own training sessions</strong> internally — just to teach colleagues how to assign work.</p></div>
+      </div>
+
+      <!-- personas -->
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">WHO IS FEELING IT</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;align-items:stretch;margin-bottom:72px">
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="3" y="8" width="20" height="14" rx="1"></rect><path d="M9 8V5a1 1 0 011-1h6a1 1 0 011 1v3M3 14h20"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">P-01 · RUNS THE FIRM</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Service providers</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Owners of tax, law, real-estate and insurance practices, running client engagements end to end.</p>
+          <div style="margin-top:18px;border-top:1px solid #ddd2b0;padding-top:14px;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c"><span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#b0562c;letter-spacing:.08em;display:block;margin-bottom:6px">WHERE ACCESS FAILS THEM</span>They carry the liability for who saw what. Today they can't answer it from one place — so a mis-share becomes a support ticket, and a client who can't find their folder becomes a client who stops logging in.</div>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#10151a" stroke-width="1.5"><rect x="5" y="3" width="16" height="20" rx="1"></rect><path d="M9 8h8M9 12h8M9 16h4"></path><path d="M16 17.5l1.5 1.5 3-3"></path></svg>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">P-02 · RUNS THE WORK</span>
+          </div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:16px">Associates</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Small teams collecting documents, information and signatures — chasing submissions all day, every day.</p>
+          <div style="margin-top:18px;border-top:1px solid #ddd2b0;padding-top:14px;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c"><span style="font:500 9.5px 'IBM Plex Mono',monospace;color:#b0562c;letter-spacing:.08em;display:block;margin-bottom:6px">WHERE ACCESS FAILS THEM</span>Assignment is the job. They do it dozens of times a day across folders, requests, forms and signatures — and each surface asks for it differently, with a wall of options they don't need.</div>
+        </div>
+      </div>
+
+      <!-- quotes -->
+      <div data-reveal="" style="background:#10151a;padding:44px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:32px">
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff">In their words</div>
+          <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">SOURCE — CSAT, FILES EXPERIENCE PHASE 1 · Q2 2026</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333b;border:1px solid #2a333b">
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#fff">"Sometimes the interface is not clear on how to set permissions and invite people."</p></div>
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#fff">"Difficult to share files with internal coworkers."</p></div>
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#fff">"Wish there was a way to send to a specific person without requiring a sign in."</p></div>
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#fff">"I enjoy the product. Clients don't find it easy enough to go to their folders, so they don't use it."</p></div>
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#e0b45f">"Your system told me I do not have authorization to change my own file name — when I AM THE ADMIN!"</p></div>
+          <div style="background:#10151a;padding:26px 28px"><p style="margin:0;font:400 17px/1.6 'Space Grotesk',sans-serif;color:#e0b45f">"How ShareFile operates is a mystery to me. It's not folders, it's links to something that acts like a folder? Permissions are also cryptic."</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ KNOWNS + APPROACH ============ -->
+    <div style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0" data-screen-label="Knowns and approach">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">What we knew, and what we <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">didn't.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 03 / FRAMING THE UNKNOWNS → THE PLAN</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:72px">
+        <div data-reveal="">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:16px">WE KNEW</div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">K-1</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Share and assign share one modal because of pace, not intent — and users pay for that shortcut by relearning it everywhere.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">K-2</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Users can't see who has access and what they can do, in one glance.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">K-3</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Confidence in the new permission sets is low — outcomes feel unpredictable.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">K-4</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Links are the fast path to sharing — and untraceable afterwards. Nobody can tell who holds which link.</span></div>
+          </div>
+        </div>
+        <div data-reveal="">
+          <div style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:16px">WE NEEDED CLARITY ON</div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#8a6a1c">U-1</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Which permission combinations actually repeat, in legacy folders and in the new features — a question for warehouse data, not opinion.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#8a6a1c">U-2</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Whether multiple links are needed everywhere, or anywhere.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#8a6a1c">U-3</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">How users read our permission names today — do the words mean what we think they mean?</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#8a6a1c">U-4</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Which surfaces lose the most adoption to confusing sharing — where to aim first.</span></div>
+            <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;background:#fff;padding:18px 22px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#8a6a1c">U-5</span><span style="font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#4c565c">How many steps we can take out of assigning a task before it stops being safe.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">THE APPROACH — HOW WE WORKED IT</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 01</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Collate requirements from existing sources</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 02</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Validate them in interviews and live customer calls</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 03</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Pull usage data for the permission patterns that repeat</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 04</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Study the patterns the market has already taught users</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 05</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Rebuild share and assign from a conceptual model up</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 06</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Prototype, put it in front of users, cut what doesn't land</div></div>
+        <div data-reveal="" style="background:#fff;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.12em">STEP 07</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px">Bring every impacted team into one shared direction</div></div>
+        <div data-reveal="" style="background:#10151a;padding:26px 26px"><div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">STEP 08</div><div style="font:600 16px/1.4 'Space Grotesk',sans-serif;margin-top:12px;color:#fff">Pilot in a low-risk space, prove it, then take it to legacy</div></div>
+      </div>
+    </div>
+
+    <!-- ============ FINDINGS ============ -->
+    <div id="findings" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Findings">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">The matrix nobody <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">wanted.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 04 / WHAT DATA AND INTERVIEWS TOLD US</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">We gave users a permission matrix(UI full of checkboxes) and full freedom. The data says they don't want either — they pick the same handful of combinations, over and over, and the flexibility we shipped mostly goes unused.</p>
+
+      <!-- permission split -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-bottom:56px">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:34px 36px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em;margin-bottom:24px">HOW ACCESS IS ACTUALLY GRANTED — LEGACY FOLDERS &amp; PROJECTS</div>
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px"><span style="font:500 14px 'Space Grotesk',sans-serif">Create, modify &amp; view — for everyone</span><span style="font:700 18px 'Space Grotesk',sans-serif;color:#b0812c">70%</span></div>
+              <div style="height:10px;background:#f0e7cd"><div style="width:70%;height:10px;background:#b0812c"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px"><span style="font:500 14px 'Space Grotesk',sans-serif">View &amp; download</span><span style="font:700 18px 'Space Grotesk',sans-serif;color:#10151a">20%</span></div>
+              <div style="height:10px;background:#f0e7cd"><div style="width:20%;height:10px;background:#10151a"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px"><span style="font:500 14px 'Space Grotesk',sans-serif">Full access</span><span style="font:700 18px 'Space Grotesk',sans-serif;color:#10151a">10%</span></div>
+              <div style="height:10px;background:#f0e7cd"><div style="width:10%;height:10px;background:#7c878d"></div></div>
+            </div>
+          </div>
+          <div style="margin-top:26px;border-top:1px solid #ddd2b0;padding-top:16px;font:400 13px/1.6 'Space Grotesk',sans-serif;color:#4c565c">Three combinations cover effectively everything. Custom permissions in the new features? A rounding error.</div>
+        </div>
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">F-1</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">One permanent link does the job.</strong> We allow many; users configure a single one and decide whether sign-in is required.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">F-2</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Access gets overwritten by accident.</strong> Re-adding someone who already had access silently replaces what they had — usually because nobody could see what they had.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">F-3</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Access should cascade.</strong> Users expect what they granted on the parent to hold for the children — not to be re-declared at every assignment.</p></div>
+          <div style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:20px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">F-4</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Assignment makes people nervous.</strong> Too many options, no sense of consequence — an anxious click on a screen that should feel routine.</p></div>
+        </div>
+      </div>
+
+      <!-- audit board -->
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">THE AUDIT — EVERY SHARE AND ASSIGN SURFACE IN THE PRODUCT, WALKED AS A USER STORY</div>
+      <div data-reveal="" style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#10151a;padding:14px 20px;flex-wrap:wrap;gap:10px">
+          <span style="font:600 13px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">DOC-01 · CURRENT-STATE AUDIT BOARD</span>
+          <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">SCROLL · ZOOM · DOWNLOAD — FULL VIEWER CONTROLS</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;border-top:none;background:#fff;padding:10px">
+          <iframe data-pdf="media/sharefile/share-assign/current-state-board.pdf" title="Current-state audit board" style="width:100%;height:780px;border:none;display:block;background:#f4f6f7"></iframe>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px 6px;flex-wrap:wrap;gap:10px">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-A · AS-IS FLOWS ANNOTATED AGAINST THE USER STORY THEY WERE MEANT TO SERVE</span>
+            <span style="display:flex;gap:14px"><a href="media/sharefile/share-assign/current-state-board.pdf" target="_blank" rel="noopener" style="font:500 9.5px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em;border-bottom:1px solid #ddd2b0">OPEN FULL SCREEN ↗</a><a href="media/sharefile/share-assign/current-state-board.pdf" download="" style="font:500 9.5px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em;border-bottom:1px solid #ddd2b0">DOWNLOAD PDF ↓</a></span>
+          </div>
+        </div>
+      </div><div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px;margin-bottom:44px">
+        <img src="./share-vs-assign-ux-checklist---copy-of-s-mt67b6c0-carq.jpg" alt="Tasks — request lists, forms and signatures each have a share layer and an assign layer" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 04-B · ON A PROJECT, ON A TASK — EVERY BLURRED MOMENT MARKED UP, WITH THE FIX IT IMPLIES</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">CRITIQUE</span></div>
+      </div>
+      
+    </div>
+
+    <!-- ============ PATTERNS ============ -->
+    <div id="patterns" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Industry patterns">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">What the market already <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">taught them.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 05 / COMPETITIVE RESEARCH</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 28px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">Share and assign is a platform primitive, so we deliberately looked past file-sharing products — into document workflows and work management — rather than inheriting the conventions of our own category.</p>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px">
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">GOOGLE WORKSPACE</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">MICROSOFT 365</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">DROPBOX</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">DOCUSIGN</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">ACROBAT</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">ASANA</span>
+        <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:9px 16px">WRIKE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-bottom:44px">
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-1</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Two distinct paths, one experience.</strong> Share and assign are separated where it counts — the intent — and kept familiar everywhere else.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-2</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">It starts with a people search.</strong> One field that quietly handles every kind of person and entity behind it — the user never picks a "type" first.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-3</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Link sharing is one click.</strong> Extra links and link controls still exist — they just move behind an obvious door instead of standing in the main flow.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-4</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Assignment reads its context.</strong> The container already knows the client, the team and the reviewers — good products spend that knowledge on suggestions.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-5</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Sharing is a subset of managing access.</strong> Not two screens — one continuous flow: everyone who has access, and the field to add more, in the same view.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">L-6</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Changes happen in place.</strong> Promote, demote or revoke without leaving the flow — visibility and control in one breath.</p></div>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;padding:10px">
+        <img src="./patterns-out-there-1--mt66vh2y-m7sg.png" alt="Benchmark board — sharing and access management patterns across Google, Dropbox and Wrike" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 05-A · PATTERNS OUT THERE — PEOPLE SEARCH, ONE-CLICK LINKS, ACCESS LISTS THAT DOUBLE AS CONTROLS</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">BENCHMARK</span></div>
+      </div>
+    </div>
+
+    <!-- ============ THE BLUR ============ -->
+    <div style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;background:#10151a" data-screen-label="The blur">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">Three intents, wearing <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">one face.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 06 / WHY THE BLUR HURTS WORK MANAGEMENT MOST</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:760px">We assumed users would carry the distinction in their heads while we gave them a single interface for both. They didn't — and shouldn't have to. The cost shows up as an exhaustive option set on a screen where the user wanted to do one small thing, plus steps the product could have taken for them if it understood the intent.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a333b;border:1px solid #2a333b;margin-bottom:56px">
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">WHEN I SHARE</span>
+          <div style="font:600 26px 'Space Grotesk',sans-serif;color:#fff;margin-top:14px">Grant access</div>
+          <p style="margin:12px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa">I want people to see and work inside a resource or a space. The audience changes with what's being shared — a folder is not a project.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">WHEN I ASSIGN</span>
+          <div style="font:600 26px 'Space Grotesk',sans-serif;color:#fff;margin-top:14px">Hand over the work</div>
+          <p style="margin:12px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa">I want someone specific to do something specific — complete a request, fill a form, sign a document. Internal or external, it's a responsibility, not a door.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:32px 34px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.12em">WHEN I MANAGE ACCESS</span>
+          <div style="font:600 26px 'Space Grotesk',sans-serif;color:#fff;margin-top:14px">See and correct</div>
+          <p style="margin:12px 0 0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa">I want the truth about who has access and what they can do — and the ability to change it right there, without fear.</p>
+        </div>
+      </div>
+      
+      <div data-reveal="" style="display:inline-flex;align-items:center;gap:12px;border:1px dashed #e0b45f;padding:12px 18px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">THE PRIZE</span>
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.06em">ONE PREDICTABLE MODEL FOR PEOPLE AND ACCESS — CONSISTENT, INTENTIONAL, THE SAME WHEREVER THE USER IS STANDING.</span>
+      </div>
+    </div>
+
+    <!-- ============ CONCEPTUAL MODEL ============ -->
+    <div id="model" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Conceptual model">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Building it from the model <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">up.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 07 / THE CONCEPTUAL MODEL — SHARED WITH EVERY TEAM</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:720px">Before a single screen, we wrote down what the two words mean in ShareFile — for every resource we have. This became the artefact other teams argue with, agree on, and design against.</p>
+
+      <!-- 01 · THE DEFINITION -->
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:14px;margin-bottom:18px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">MODEL · 01</span>
+        <span style="flex:1;height:1px;background:#ddd2b0"></span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">TWO PRIMITIVES — NOT TWO NAMES FOR THE SAME ACTION</span>
+      </div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #ddd2b0;background:#fff;margin-bottom:64px">
+        <div style="padding:40px 40px 34px;border-right:1px solid #ddd2b0;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="width:10px;height:10px;background:#10151a"></span>
+            <span style="font:700 32px/1 'Space Grotesk',sans-serif;letter-spacing:-.03em;text-transform:uppercase">Share</span>
+          </div>
+          <div style="font:400 22px/1.35 'Instrument Serif',serif;color:#10151a">Grants <em style="font-style:italic">access.</em></div>
+          <p style="margin:0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Gives visibility and edit rights to a container or resource, so people can see and work within it. Nothing changes hands.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid #ece0c0;padding-top:16px;margin-top:auto">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">OBJECT OF THE VERB</span>
+            <span style="font:500 13px 'IBM Plex Mono',monospace;color:#10151a">a place → the people who need in</span>
+          </div>
+        </div>
+        <div style="padding:40px 40px 34px;background:#fdfaf1;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="width:10px;height:10px;background:#8a6a1c"></span>
+            <span style="font:700 32px/1 'Space Grotesk',sans-serif;letter-spacing:-.03em;text-transform:uppercase;color:#8a6a1c">Assign</span>
+          </div>
+          <div style="font:400 22px/1.35 'Instrument Serif',serif;color:#10151a">Hands over <em style="font-style:italic">responsibility.</em></div>
+          <p style="margin:0;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#4c565c">Gives ownership of a specific task, item or request that somebody now has to complete. Someone is accountable at the end of it.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid #ece0c0;padding-top:16px;margin-top:auto">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">OBJECT OF THE VERB</span>
+            <span style="font:500 13px 'IBM Plex Mono',monospace;color:#8a6a1c">a piece of work → one person</span>
+          </div>
+        </div>
+        <div style="grid-column:1/-1;border-top:1px solid #ddd2b0;background:#10151a;padding:16px 40px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">WHY IT MATTERS</span>
+          <span style="font:400 12.5px/1.6 'IBM Plex Mono',monospace;color:#c3ccd2;letter-spacing:.02em">Today, sharing silently assigns. Users can't tell which action they're taking — separating the two removes the ambiguity.</span>
+        </div>
+      </div>
+
+      <!-- 02 · WHERE IT APPLIES -->
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:14px;margin-bottom:18px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">MODEL · 02</span>
+        <span style="flex:1;height:1px;background:#ddd2b0"></span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">EVERY RESOURCE SUPPORTS SHARE, ASSIGN OR BOTH — NEVER WITH THE SAME AUDIENCE</span>
+      </div>
+      <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff;margin-bottom:64px">
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;background:#faf6ec;border-bottom:1px solid #ddd2b0">
+          <div style="padding:14px 22px;font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">RESOURCE</div>
+          <div style="padding:14px 22px;border-left:1px solid #ddd2b0;font:600 9.5px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">SHARE — GRANTS ACCESS TO</div>
+          <div style="padding:14px 22px;border-left:1px solid #ddd2b0;font:600 9.5px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">ASSIGN — HANDS WORK TO</div>
+        </div>
+        <div style="padding:12px 22px 6px;font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em;background:#fdfaf1">CONTAINERS</div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Folder</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em">INTERNAL + EXTERNAL</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#b8b2a0;letter-spacing:.06em">—</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Files</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em">INTERNAL + EXTERNAL</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#b8b2a0;letter-spacing:.06em">—</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Project</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em">INTERNAL ONLY</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#b8b2a0;letter-spacing:.06em">—</div>
+        </div>
+        <div style="padding:12px 22px 6px;font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em;background:#fdfaf1;border-top:1px solid #ddd2b0">TASKS</div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Request list</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.06em">INTERNAL ONLY</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.06em">INTERNAL + EXTERNAL</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Form</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#b8b2a0;letter-spacing:.06em">—</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.06em">INTERNAL + EXTERNAL</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid #f0e7cd">
+          <div style="padding:16px 22px;font:500 15px 'Space Grotesk',sans-serif">Signature</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#b8b2a0;letter-spacing:.06em">—</div>
+          <div style="padding:16px 22px;border-left:1px solid #f0e7cd;font:500 12px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.06em">INTERNAL + EXTERNAL</div>
+        </div>
+      </div>
+
+      <!-- 03 · CONTAINERS -->
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:14px;margin-bottom:18px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">MODEL · 03</span>
+        <span style="flex:1;height:1px;background:#ddd2b0"></span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">CONTAINERS ARE SHARED WHOLE — THE WORK INSIDE THEM IS STILL ASSIGNED ONE BY ONE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:28px;margin-bottom:64px;align-items:start">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #ddd2b0">
+            <span style="font:700 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Folder</span>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;border:1px solid #10151a;padding:5px 10px;letter-spacing:.1em">SHARE FOLDER</span>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Files and documents</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">SHARE</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid #f0e7cd"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Sub-folders</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">SHARE</span></div>
+            <div style="padding:16px 24px;border-top:1px solid #f0e7cd;font:400 11.5px/1.6 'IBM Plex Mono',monospace;color:#7c878d">NO WORK LIVES HERE — SO NOTHING TO ASSIGN.</div>
+          </div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fdfaf1">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #ddd2b0">
+            <span style="font:700 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Project</span>
+            <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;border:1px solid #10151a;padding:5px 10px;letter-spacing:.1em">SHARE PROJECT</span>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Files and documents</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">SHARE</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid #f0e7cd"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Sub-folders</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">SHARE</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid #f0e7cd"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Request list</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">ASSIGN</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid #f0e7cd"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Forms</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">ASSIGN</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-top:1px solid #f0e7cd"><span style="font:400 15px 'Space Grotesk',sans-serif;color:#4c565c">Signatures</span><span style="font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">ASSIGN</span></div>
+            <div style="padding:16px 24px;border-top:1px solid #f0e7cd;font:400 11.5px/1.6 'IBM Plex Mono',monospace;color:#8a6a1c">ONE SHARE FOR THE CONTAINER — THEN AS MANY ASSIGNS AS THERE IS WORK.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 · TASKS -->
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:14px;margin-bottom:18px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">MODEL · 04</span>
+        <span style="flex:1;height:1px;background:#ddd2b0"></span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">EVERY TASK TYPE HAS TWO LAYERS — SHARE THE COLLECTION, ASSIGN THE WORK INSIDE IT</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px;align-items:start">
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff">
+          <div style="padding:20px 22px;border-bottom:1px solid #ddd2b0;display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font:700 19px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Request list</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">TASK · 01</span>
+          </div>
+          <div style="padding:20px 22px;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">LAYER 01 · SHARE THE LIST</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Gives the team visibility into all items in the list.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">INTERNAL ONLY</span>
+          </div>
+          <div style="padding:20px 22px;background:#fdfaf1;border-top:1px solid #f0e7cd;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">LAYER 02 · ASSIGN EACH ITEM</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Hands each individual item to whoever has to complete it.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">INTERNAL + EXTERNAL</span>
+          </div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff">
+          <div style="padding:20px 22px;border-bottom:1px solid #ddd2b0;display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font:700 19px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Form</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">TASK · 02</span>
+          </div>
+          <div style="padding:20px 22px;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">LAYER 01 · SHARE THE FORM</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Gives the team visibility into all questions in the form.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">INTERNAL ONLY</span>
+          </div>
+          <div style="padding:20px 22px;background:#fdfaf1;border-top:1px solid #f0e7cd;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">LAYER 02 · ASSIGN THE QUESTIONS</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Hands the questions to whoever has to answer them.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">INTERNAL + EXTERNAL</span>
+          </div>
+        </div>
+        <div data-reveal="" style="border:1px solid #ddd2b0;background:#fff">
+          <div style="padding:20px 22px;border-bottom:1px solid #ddd2b0;display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font:700 19px 'Space Grotesk',sans-serif;letter-spacing:-.02em">Signature</span>
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">TASK · 03</span>
+          </div>
+          <div style="padding:20px 22px;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#10151a;letter-spacing:.14em">LAYER 01 · SHARE THE REQUEST</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Gives the team visibility into every document waiting to be signed.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#ece7d8;padding:5px 10px;letter-spacing:.1em">INTERNAL ONLY</span>
+          </div>
+          <div style="padding:20px 22px;background:#fdfaf1;border-top:1px solid #f0e7cd;display:flex;flex-direction:column;gap:8px">
+            <span style="font:600 10px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.14em">LAYER 02 · ASSIGN THE DOCUMENT</span>
+            <p style="margin:0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Hands the document to whoever has to sign it.</p>
+            <span style="align-self:flex-start;font:500 10px 'IBM Plex Mono',monospace;color:#fff;background:#8a6a1c;padding:5px 10px;letter-spacing:.1em">INTERNAL + EXTERNAL</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="display:inline-flex;align-items:center;gap:12px;border:1px dashed #e0b45f;padding:12px 18px;margin-bottom:44px">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;color:#10151a;background:#e0b45f;padding:4px 10px;letter-spacing:.1em">THE RULE THAT CAME OUT OF IT</span>
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:#6b6552;letter-spacing:.06em">IF NOBODY OWES ANYTHING AFTERWARDS, IT'S A SHARE. IF SOMEONE DOES, IT'S AN ASSIGN.</span>
+      </div>
+
+      <div data-reveal="">
+        <div style="display:flex;justify-content:space-between;align-items:center;background:#10151a;padding:14px 20px;flex-wrap:wrap;gap:10px">
+          <span style="font:600 13px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">DOC-02 · EXPLORATIONS — SIMPLE TO COMPLEX</span>
+          <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">SCROLL · ZOOM · DOWNLOAD — FULL VIEWER CONTROLS</span>
+        </div>
+        <div style="border:1px solid #ddd2b0;border-top:none;background:#fff;padding:10px">
+          <p style="margin:8px 4px 14px;font:400 15px/1.7 'Space Grotesk',sans-serif;color:#4c565c;max-width:760px">Here's a snippet of the explorations we did, from simpler interactions to complex ones — we diverged significantly from all feature perspectives and converged into one.</p>
+          <iframe data-pdf="media/sharefile/share-assign/conceptual-model-deck.pdf" title="Explorations — simpler interactions to complex ones" style="width:100%;height:780px;border:none;display:block;background:#f4f6f7"></iframe>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px 6px;flex-wrap:wrap;gap:10px">
+            <span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 07-E · EXPLORATIONS AS CIRCULATED — READ IT IN FULL</span>
+            <span style="display:flex;gap:14px"><a href="media/sharefile/share-assign/conceptual-model-deck.pdf" target="_blank" rel="noopener" style="font:500 9.5px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em;border-bottom:1px solid #ddd2b0">OPEN FULL SCREEN ↗</a><a href="media/sharefile/share-assign/conceptual-model-deck.pdf" download="" style="font:500 9.5px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em;border-bottom:1px solid #ddd2b0">DOWNLOAD PDF ↓</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ DIRECTION ============ -->
+    <div id="design" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Direction">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">One shell, four <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">decisions.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 08 / THE DIRECTION WE CONVERGED ON</span>
+      </div>
+      
+
+      <!-- D1 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">D-1</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">One adaptive shell</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">SAME BONES · CONTEXT-AWARE SURFACE</div>
+        </div>
+        <div>
+          <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">The modal is one component everywhere. The <strong style="color:#10151a">title reads the context and the selection</strong>. The <strong style="color:#10151a">permissions change with where you are</strong>. And the tangential machinery — copy link, create link, link settings, multiple links — only appears where the use case genuinely calls for it.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:8px 14px">SHARE "REFERENCE FILES"</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:8px 14px">SHARE 2 FILES</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:8px 14px">MANAGE ACCESS FOR "PROJECT"</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;border:1px solid #10151a;padding:8px 14px">ASSIGN "ONBOARDING FORM"</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="border: 1px solid #ddd2b0; padding: 10px; margin-bottom: 88px; background-color: #FFFFFF00">
+        <img src="media/sharefile/share-assign/image10.png" alt="One adaptive modal — share a file, share many, manage project access, assign a form" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 08-A · FOUR CONTEXTS, ONE SHELL — TITLE, PERMISSIONS AND LINK CONTROLS ADAPT</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · DIRECTION</span></div>
+      </div>
+
+      <!-- D2 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">D-2</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Presets, not a matrix</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">DATA-INFORMED · ACTION-ORIENTED LABELS</div>
+        </div>
+        <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">If 70% of shares are the same combination, the interface should offer that combination — not the parts to assemble it. Permissions collapse into a short list of presets named after what the person can actually do: <strong style="color:#10151a">Owner, Editor, Viewer</strong> for containers; <strong style="color:#10151a">Assignee, Reviewer</strong> for work. Each one carries a plain-language line describing its consequence, right where the choice is made.</p>
+      </div>
+      <div data-reveal="" style="border: 1px solid #ddd2b0; padding: 10px; margin-bottom: 88px; background-color: #FFFFFF00">
+        <img src="media/sharefile/share-assign/image6.png" alt="Permission presets with plain-language descriptions" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 08-B · PRESETS WITH CONSEQUENCES SPELLED OUT — NO MATRIX TO ASSEMBLE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · DIRECTION</span></div>
+      </div>
+
+      <!-- D3 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">D-3</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Assignment that reads the room</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">CONTEXT · GUARDRAILS · RECOVERY</div>
+        </div>
+        <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">A project is a smarter container than a folder — it knows its client entity and its team. We spend that knowledge instead of asking the user to re-supply it.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd2b0;border:1px solid #ddd2b0;margin-bottom:32px">
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">3.1</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Suggest before you search.</strong> Linked client contacts and team members who could review surface as suggestions the moment the modal opens.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">3.2</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Make the impossible unavailable.</strong> A client contact can only ever be an assignee — so that's preselected and locked, rather than offered and then rejected.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">3.3</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Explain the edge, don't just block it.</strong> Mix an internal member with a client and the reviewer role stops applying — we say why, and how to get out of it.</p></div>
+        <div data-reveal="" style="display:grid;grid-template-columns:52px 1fr;gap:16px;background:#fff;padding:22px 24px;align-items:start"><span style="font:700 12px 'IBM Plex Mono',monospace;color:#10151a">3.4</span><p style="margin:0;font:400 14.5px/1.65 'Space Grotesk',sans-serif;color:#4c565c"><strong style="color:#10151a">Assigning outside the project is a choice, not an accident.</strong> Flag it, then offer both honest paths: add them to the project, or leave them with an isolated task view.</p></div>
+      </div>
+      <div data-reveal="" style="border: 1px solid #ddd2b0; padding: 10px; margin-bottom: 88px; background-color: #FFFFFF00">
+        <img src="./group-2-mt67xgyd-b9rq.png" alt="Smarter assignment — suggestions, locked roles, edge-case explanations and outside-project handling" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 08-C · SUGGESTIONS, LOCKED ROLES, AND THE OUTSIDE-THE-PROJECT CASE HANDLED IN PLACE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · DIRECTION</span></div>
+      </div>
+
+      <!-- D4 -->
+      <div data-reveal="" style="display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start;margin-bottom:32px">
+        <div style="background:#10151a;padding:28px 30px">
+          <span style="font:700 22px 'Space Grotesk',sans-serif;color:#e0b45f">D-4</span>
+          <div style="font:600 19px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">Everything else, on request</div>
+          <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:6px;letter-spacing:.06em">PROGRESSIVE DISCLOSURE</div>
+        </div>
+        <p style="margin:0;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:640px">Messages, expiry, alerts, link settings — real needs, but not every time. They start as quiet chips and expand only when asked, so the default state of the modal is the 90% case: a name, a role, done.</p>
+      </div>
+      <div data-reveal="" style="border: 1px solid #ddd2b0; padding: 10px; background-color: #FFFFFF00">
+        <img src="media/sharefile/share-assign/image7.png" alt="Progressive disclosure — message, expiration and alerts expand only when asked" style="width:100%;display:block">
+        <div style="display:flex;justify-content:space-between;padding:12px 14px 6px"><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">FIG. 08-D · CHIPS THAT OPEN INTO CONTROLS — THE MODAL STAYS QUIET UNTIL YOU NEED MORE</span><span style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">HI-FI · DIRECTION</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PROTOTYPE ============ -->
+    <div id="prototype" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px;background:#10151a" data-screen-label="Prototype">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase;color:#fff">Go on, <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none;color:#e0b45f">click it.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">MODULE 09 / LIVE PROTOTYPE — SOLUTION DESIGN</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 32px;font:400 16px/1.75 'Space Grotesk',sans-serif;color:#8fa0aa;max-width:760px">This work is still in solution design — the production build will come through our own design system while we align teams on the patterns. What's below is the live prototype the explorations converged into. It's real: click through it.</p>
+      <sc-if value="{{ hasProto }}" hint-placeholder-val="{{ false }}">
+        <div data-reveal="">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#faf6ec;padding:12px 16px;flex-wrap:wrap;gap:10px;border:1px solid #2a333b">
+            <span style="font:600 12px 'IBM Plex Mono',monospace;color:#8a6a1c;letter-spacing:.1em">◉ LIVE PROTOTYPE — INTERACTIVE</span>
+            <span style="display:flex;gap:10px">
+              <button onClick="{{ goFullscreen }}" style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;background:#10151a;color:#fff;border:1px solid #10151a;padding:9px 16px;cursor:pointer" style-hover="background:#2a333b">{{ fsLabel }}</button>
+              <a href="{{ prototypeUrl }}" target="_blank" rel="noopener" style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#10151a;border:1px solid #d3c69e;padding:9px 16px">OPEN IN NEW TAB ↗</a>
+            </span>
+          </div>
+          <div id="proto-frame" style="{{ protoFullStyle }}">
+            <sc-if value="{{ protoFull }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;justify-content:flex-end;padding:10px 14px;background:#10151a">
+                <button onClick="{{ goFullscreen }}" style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;background:#e0b45f;color:#10151a;border:none;padding:9px 16px;cursor:pointer">EXIT FULL SCREEN ✕</button>
+              </div>
+            </sc-if>
+            <iframe src="{{ prototypeUrl }}" title="Share and Assign — live prototype" allowfullscreen="" allow="fullscreen" style="{{ protoFrameStyle }}"></iframe>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ noProto }}" hint-placeholder-val="{{ true }}">
+        <div data-reveal="" style="border:1px dashed #e0b45f;background:#161d24;padding:64px 44px;text-align:center">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.14em">PROTOTYPE SLOT — AWAITING HOSTED BUILD</div>
+          <div style="font:600 26px 'Space Grotesk',sans-serif;color:#fff;margin-top:18px;max-width:620px;margin-left:auto;margin-right:auto">The interactive build is being hosted separately. Drop its URL into the prototype tweak and it loads right here, full width.</div>
+          <div style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#8fa0aa;margin-top:16px;letter-spacing:.06em">SET THE <span style="color:#e0b45f">PROTOTYPE URL</span> PROP · FULL-SCREEN AND NEW-TAB CONTROLS COME WITH IT</div>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- ============ STATUS ============ -->
+    <div id="status" style="padding:110px 64px 100px;border-bottom:1px solid #ddd2b0;scroll-margin-top:70px" data-screen-label="Status">
+      <div data-reveal="" style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:12px">
+        <h2 style="margin:0;font:700 46px/1.12 'Space Grotesk',sans-serif;letter-spacing:-.035em;text-transform:uppercase">Shipping it without breaking <em style="font:italic 400 1em 'Instrument Serif',serif;text-transform:none">anyone's season.</em></h2>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em">MODULE 10 / WHERE THIS STANDS TODAY</span>
+      </div>
+      <p data-reveal="" style="margin:0 0 44px;font:400 17px/1.75 'Space Grotesk',sans-serif;color:#4c565c;max-width:760px">The north-star version is handed off and tested. Rather than push it everywhere at once, we're slicing off the first piece and putting it into the project space — our lowest-risk area, with the most modern user base. We measure there, build confidence, and only then take the same experience into the legacy features. Our customers' tax and litigation seasons are not a place to experiment.</p>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr;align-items:stretch;margin-bottom:44px">
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:36px 34px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">DONE</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">North star, handed off</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:12px;letter-spacing:.08em;line-height:1.7">MODEL · DIRECTION · PROTOTYPE · TESTING</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;font:400 18px 'IBM Plex Mono',monospace;color:#e0b45f">→</div>
+        <div style="border:1px solid #10151a;background:#10151a;padding:36px 34px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">NOW — IN SOLUTION DESIGN</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px;color:#fff">First slice, in Projects</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:12px;letter-spacing:.08em;line-height:1.7">LOW RISK · MODERN USER BASE · GOES LIVE Q1 27</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;font:400 18px 'IBM Plex Mono',monospace;color:#e0b45f">→</div>
+        <div style="border:1px solid #ddd2b0;background:#fff;padding:36px 34px">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.12em">NEXT — ONCE PROVEN</div>
+          <div style="font:600 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">The same model, in legacy</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#7c878d;margin-top:12px;letter-spacing:.08em;line-height:1.7">FILES &amp; FOLDERS · SEQUENCED AROUND CUSTOMER SEASONS</div>
+        </div>
+      </div>
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.14em;margin-bottom:20px">WHAT I'LL BE WATCHING</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd2b0;border:1px solid #ddd2b0">
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">M-01</span>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Steps to assign</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Time and clicks from opening the modal to work landing with the right person.</p>
+        </div>
+        <div data-reveal="" style="background:#fff;padding:30px 32px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">M-02</span>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px">Access mistakes</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#4c565c">Tickets about revoking access and accidental grants — the clearest proof that visibility works.</p>
+        </div>
+        <div data-reveal="" style="background:#10151a;padding:30px 32px">
+          <span style="font:500 10px 'IBM Plex Mono',monospace;color:#e0b45f;letter-spacing:.1em">M-03</span>
+          <div style="font:600 20px 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:14px;color:#fff">Sharing CSAT</div>
+          <p style="margin:12px 0 0;font:400 14px/1.65 'Space Grotesk',sans-serif;color:#8fa0aa">The number that started this. Legacy first — that's where the slide has been steepest.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div style="background:#10151a;padding:88px 64px 48px" data-screen-label="Footer">
+      <div data-reveal="" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em;margin-bottom:28px">END OF CASE FILE — WHERE TO NEXT?</div>
+      <div data-reveal="" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a333b;border:1px solid #2a333b;max-width:920px">
+        <a href="ShareFile.dc.html#cases" style="background:#10151a;padding:30px 32px;display:block" style-hover="background:#1a222b">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">RETURN TO</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">All ShareFile case studies ↗</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.06em">WORK LOG 01 — PROGRESS SHAREFILE</div>
+        </a>
+        <a href="ShareFile IA Navigation Patterns.dc.html" style="background:#10151a;padding:30px 32px;display:block" style-hover="background:#1a222b">
+          <div style="font:400 9.5px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.12em">OR READ NEXT</div>
+          <div style="font:600 24px 'Space Grotesk',sans-serif;color:#fff;margin-top:12px">IA, navigation &amp; page patterns ↗</div>
+          <div style="font:400 10.5px 'IBM Plex Mono',monospace;color:#e0b45f;margin-top:8px;letter-spacing:.06em">2026 · PRODUCT-WIDE REDESIGN · RESEARCH</div>
+        </a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:72px;padding-top:24px;border-top:1px solid #2a333b;flex-wrap:wrap;gap:16px">
+        <a href="ShareFile.dc.html" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#fff;border:1px solid #2a333b;padding:13px 22px;display:inline-block" style-hover="background:#1a222b;color:#fff">← BACK TO SHAREFILE</a>
+        <a href="Portfolio - Control Tower.dc.html" style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em" style-hover="color:#fff">CONTROL TOWER — HOME ↗</a>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.1em">© 2026 SABEEL DHAR</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<sc-if value="{{ lightboxSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:300;background:rgba(16,21,26,.95);display:flex;flex-direction:column;cursor:zoom-out">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;flex:none">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:#8fa0aa;letter-spacing:.14em">FULL-SCREEN VIEW — CLICK ANYWHERE OR PRESS ESC TO CLOSE</span>
+      <button onClick="{{ closeLightbox }}" style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;background:transparent;color:#fff;border:1px solid #2a333b;padding:10px 18px;cursor:pointer" style-hover="border-color:#e0b45f;color:#e0b45f">CLOSE ✕</button>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 44px 36px;box-sizing:border-box">
+      <div id="lightbox-img" role="img" aria-label="Full-screen view" onClick="{{ swallowClick }}" style="width:100%;height:100%;background-image:url('{{ lightboxSrc }}');background-size:contain;background-position:center;background-repeat:no-repeat;cursor:default"></div>
+    </div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;prototypeUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://suikoshurr.github.io/Share-and-Assign/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Prototype&quot;}, &quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = { lightboxSrc: null };
+
+  componentDidMount() {
+    this._cleanup = [];
+    this._t = setTimeout(() => this.setupMotion(), 80);
+    this.loadPdfs();
+
+    this._onImgClick = (e) => {
+      const img = e.target.closest && e.target.closest('img');
+      if (!img) return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.setState({ lightboxSrc: img.currentSrc || img.src });
+      document.body.style.overflow = 'hidden';
+    };
+    document.addEventListener('click', this._onImgClick, true);
+    this._onKey = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
+    document.addEventListener('keydown', this._onKey);
+    this._cleanup.push(() => document.removeEventListener('click', this._onImgClick, true));
+    this._cleanup.push(() => document.removeEventListener('keydown', this._onKey));
+  }
+
+  // Preview/host sandboxes won't serve a raw file to an iframe or a new tab
+  // (no auth token on that navigation) — fetch each PDF and serve it as a blob URL instead.
+  loadPdfs() {
+    this._blobs = this._blobs || [];
+    const frames = Array.from(document.querySelectorAll('iframe[data-pdf]'));
+    frames.forEach(async (frame) => {
+      const path = frame.dataset.pdf;
+      let url = path;
+      try {
+        const res = await fetch(path);
+        if (res.ok) {
+          const blob = await res.blob();
+          url = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }));
+          this._blobs.push(url);
+        }
+      } catch (e) { /* fall back to the raw path */ }
+      frame.src = url + '#view=FitH&toolbar=1&navpanes=0';
+      const box = frame.parentElement;
+      if (box) box.querySelectorAll('a[href$=".pdf"]').forEach(a => {
+        const name = a.getAttribute('href').split('/').pop();
+        a.href = url;
+        if (a.hasAttribute('download')) a.setAttribute('download', name);
+      });
+    });
+  }
+
+  closeLightbox() {
+    if (!this.state.lightboxSrc) return;
+    this.setState({ lightboxSrc: null });
+    document.body.style.overflow = '';
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._t);
+    (this._cleanup || []).forEach(fn => fn());
+    (this._blobs || []).forEach(u => URL.revokeObjectURL(u));
+  }
+
+  setupMotion() {
+    const ease = 'cubic-bezier(.22,.61,.2,1)';
+    if ((this.props.motion ?? true) === false) return;
+    document.querySelectorAll('[data-rise]').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(46px)';
+      el.style.transition = `opacity .7s ${ease} ${i * 0.12}s, transform .8s ${ease} ${i * 0.12}s`;
+    });
+    setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    }, 150);
+    setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(el => {
+        if (getComputedStyle(el).opacity !== '1') {
+          el.style.transition = 'none';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+      });
+    }, 1600);
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.dataset.hidden = '1';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        if (el.dataset.hidden) {
+          el.style.transition = `opacity .65s ${ease}, transform .75s ${ease}`;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          delete el.dataset.hidden;
+        }
+        this.runCounters(el);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+    this._cleanup.push(() => io.disconnect());
+    document.querySelectorAll('[data-count]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) this.runCounters(el.closest('[data-reveal]') || el);
+    });
+  }
+
+  runCounters(scope) {
+    const counters = scope.matches && scope.matches('[data-count]') ? [scope] : Array.from(scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : []);
+    counters.forEach(el => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      const target = parseFloat(el.dataset.target);
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  renderVals() {
+    const url = (this.props.prototypeUrl ?? 'https://suikoshurr.github.io/Share-and-Assign/').trim();
+    return {
+      prototypeUrl: url,
+      hasProto: !!url,
+      noProto: !url,
+      protoFull: !!this.state.protoFull,
+      protoFullStyle: this.state.protoFull
+        ? 'position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;z-index:2147483000;background:#10151a;border:none;overflow:hidden;transform:none'
+        : 'border:1px solid #2a333b;border-top:none;background:#fff',
+      protoFrameStyle: this.state.protoFull
+        ? 'width:100vw;height:calc(100vh - 52px);border:none;display:block'
+        : 'width:100%;height:820px;border:none;display:block',
+      fsLabel: this.state.protoFull ? 'EXIT FULL SCREEN ✕' : 'FULL SCREEN ⤢',
+      goFullscreen: () => {
+        const box = document.getElementById('proto-frame');
+        const next = !this.state.protoFull;
+        if (box) {
+          if (next) {
+            // neutralize transformed ancestors so position:fixed anchors to the viewport
+            this._protoAncestors = [];
+            let n = box.parentElement;
+            while (n && n !== document.documentElement) {
+              const t = getComputedStyle(n).transform;
+              if (t && t !== 'none') {
+                this._protoAncestors.push([
+                  n,
+                  n.style.getPropertyValue('transform'), n.style.getPropertyPriority('transform'),
+                  n.style.getPropertyValue('transition'), n.style.getPropertyPriority('transition'),
+                  n.style.getPropertyValue('animation'), n.style.getPropertyPriority('animation'),
+                ]);
+                n.style.setProperty('transition', 'none', 'important');
+                n.style.setProperty('animation', 'none', 'important');
+                n.style.setProperty('transform', 'none', 'important');
+              }
+              n = n.parentElement;
+            }
+            this._protoScrollLock = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+            this._protoEsc = (e) => { if (e.key === 'Escape') this.renderVals().goFullscreen(); };
+            document.addEventListener('keydown', this._protoEsc);
+          } else {
+            (this._protoAncestors || []).forEach(([n, v, p, tv, tp, av, ap]) => {
+              if (v) n.style.setProperty('transform', v, p); else n.style.removeProperty('transform');
+              if (av) n.style.setProperty('animation', av, ap); else n.style.removeProperty('animation');
+              requestAnimationFrame(() => {
+                if (tv) n.style.setProperty('transition', tv, tp); else n.style.removeProperty('transition');
+              });
+            });
+            this._protoAncestors = null;
+            document.body.style.overflow = this._protoScrollLock || '';
+            if (this._protoEsc) { document.removeEventListener('keydown', this._protoEsc); this._protoEsc = null; }
+          }
+        }
+        this.setState({ protoFull: next });
+      },
+      matrixContainers: [
+        { name: 'Folder', share: 'INTERNAL + EXTERNAL', assign: '—' },
+        { name: 'Files', share: 'INTERNAL + EXTERNAL', assign: '—' },
+        { name: 'Project', share: 'INTERNAL ONLY', assign: '—' },
+      ],
+      matrixTasks: [
+        { name: 'Request list', share: 'INTERNAL ONLY', assign: 'INTERNAL + EXTERNAL' },
+        { name: 'Form', share: '—', assign: 'INTERNAL + EXTERNAL' },
+        { name: 'Signature', share: '—', assign: 'INTERNAL + EXTERNAL' },
+      ],
+      taskLayers: [
+        { name: 'Request list', index: 'TASK · 01', shareObject: 'THE LIST', shareText: 'Gives the team visibility into all items in the list.', assignObject: 'EACH ITEM', assignText: 'Hands each individual item to whoever has to complete it.' },
+        { name: 'Form', index: 'TASK · 02', shareObject: 'THE FORM', shareText: 'Gives the team visibility into all questions in the form.', assignObject: 'THE QUESTIONS', assignText: 'Hands the questions to whoever has to answer them.' },
+        { name: 'Signature', index: 'TASK · 03', shareObject: 'THE REQUEST', shareText: 'Gives the team visibility into every document waiting to be signed.', assignObject: 'THE DOCUMENT', assignText: 'Hands the document to whoever has to sign it.' },
+      ],
+      lightboxSrc: this.state.lightboxSrc,
+      closeLightbox: () => this.closeLightbox(),
+      swallowClick: (e) => e.stopPropagation(),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
