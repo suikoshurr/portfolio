@@ -84,6 +84,7 @@ img{cursor:zoom-in}
         <a href="#prototype" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">PROTOTYPE</a>
         <a href="#status" style="font:500 11px 'IBM Plex Mono',monospace;color:#7c878d;letter-spacing:.1em">STATUS</a>
       </div>
+      <div style="display:flex;align-items:center;flex-shrink:0;padding:0 24px 0 4px"><a href="#intro" data-intro-open="" style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#f4f6f7;background:#10151a;border:1px solid #10151a;padding:9px 16px" style-hover="background:#2a343b">INTRO &#9654;</a></div>
     </div>
 
     <!-- live ticker -->
@@ -675,6 +676,23 @@ img{cursor:zoom-in}
   </div>
 </sc-if>
 
+
+<!-- ============ INTRO DECK MODAL ============ -->
+<style>
+#intro-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:32px;background:rgba(16,21,26,.72);backdrop-filter:blur(6px)}
+#intro-modal.open{display:flex}
+#intro-modal .intro-frame{position:relative;width:min(1280px,100%);height:min(820px,100%);background:#10151a;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+#intro-modal iframe{width:100%;height:100%;border:0;display:block}
+#intro-modal .intro-close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;border-radius:50%;border:1px solid #d3d9dc;background:#f4f6f7;color:#10151a;font:500 18px/1 'IBM Plex Mono',monospace;cursor:pointer;z-index:2}
+#intro-modal .intro-close:hover{background:#fff}
+@media(max-width:700px){#intro-modal{padding:12px}#intro-modal .intro-close{top:6px;right:6px}}
+</style>
+<div id="intro-modal" role="dialog" aria-modal="true" aria-label="Intro deck">
+  <div class="intro-frame">
+    <button type="button" class="intro-close" aria-label="Close intro deck">&times;</button>
+    <iframe title="Sabeel Dhar - Intro Deck" data-src="./intro-deck.html" allow="fullscreen"></iframe>
+  </div>
+</div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;prototypeUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://suikoshurr.github.io/Share-and-Assign/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Prototype&quot;}, &quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
 class Component extends DCLogic {
@@ -682,6 +700,21 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._cleanup = [];
+    // intro deck modal
+    {
+      const m = document.getElementById('intro-modal');
+      const f = m.querySelector('iframe');
+      let last;
+      const open = () => { last = document.activeElement; if (!f.getAttribute('src')) f.setAttribute('src', f.dataset.src); m.classList.add('open'); document.body.style.overflow = 'hidden'; m.querySelector('.intro-close').focus(); };
+      const close = () => { m.classList.remove('open'); document.body.style.overflow = ''; if (last) last.focus(); };
+      const onDoc = (e) => { if (e.target.closest('[data-intro-open]')) { e.preventDefault(); open(); } };
+      const onModal = (e) => { if (e.target === m || e.target.closest('.intro-close')) close(); };
+      const onEsc = (e) => { if (e.key === 'Escape' && m.classList.contains('open')) close(); };
+      document.addEventListener('click', onDoc);
+      m.addEventListener('click', onModal);
+      document.addEventListener('keydown', onEsc);
+      this._cleanup.push(() => { document.removeEventListener('click', onDoc); document.removeEventListener('keydown', onEsc); });
+    }
     this._t = setTimeout(() => this.setupMotion(), 80);
     this.loadPdfs();
 
